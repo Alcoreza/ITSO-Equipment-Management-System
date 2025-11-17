@@ -22,7 +22,7 @@
 
                 <!-- mobile-only links -->
                 <li class="nav-item d-lg-none">
-                    <a class="nav-link" href="<?= site_url('login') ?>">Login</a>
+                    <a class="nav-link" href="<?= base_url('login') ?>">Login</a>
                 </li>
                 <li class="nav-item d-lg-none">
                     <a class="nav-link" href="<?= site_url('register') ?>">Register</a>

@@ -14,7 +14,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Project styles -->
-    <link href="<?= base_url('public/css/style.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('public/css/index.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('public/css/auth.css') ?>" rel="stylesheet">
 </head>
 
-<body>
+<body class="<?= $bodyClass ?? '' ?>">

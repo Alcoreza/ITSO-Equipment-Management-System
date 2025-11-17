@@ -16,8 +16,8 @@
         </p>
 
         <div class="hero-ctas animated-up delay-3">
-            <a href="<?= site_url('login') ?>" class="btn btn-primary btn-lg me-2">Login</a>
-            <a href="<?= site_url('register') ?>" class="btn btn-outline-light btn-lg">Register</a>
+            <a href="<?= base_url('login') ?>" class="btn btn-primary btn-lg me-2">Login</a>
+            <a href="<?= base_url('register') ?>" class="btn btn-outline-light btn-lg">Register</a>
         </div>
     </div>
 

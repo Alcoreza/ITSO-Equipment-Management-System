@@ -1,60 +1,102 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const deleteButtons = document.querySelectorAll(".delete-btn");
+/* ----------------------------------------------------------
+   ITSO EMS — AUTH FORMS JS
+   Handles:
+   - Basic HTML5 validation enhancement
+   - Password match check (reset form)
+   - Password visibility toggle (login page)
+---------------------------------------------------------- */
 
-  deleteButtons.forEach((button) => {
-    button.addEventListener("click", function (e) {
-      e.preventDefault();
-      const deleteUrl = this.getAttribute("data-url");
-      const isProductPage = document
-        .querySelector("h1")
-        ?.textContent.toLowerCase()
-        .includes("product");
-      const itemType = isProductPage ? "Product" : "User";
+// -------------------------------
+// 1. Enhance validation for all forms with novalidate
+// -------------------------------
 
-      Swal.fire({
-        title: `Delete ${itemType}?`,
-        text: "This action cannot be undone.",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#f97316",
-        cancelButtonColor: "#6c757d",
-        confirmButtonText: `Yes, delete ${itemType.toLowerCase()}!`,
-        cancelButtonText: "Cancel",
-        customClass: {
-          popup: "rounded-4 shadow-lg",
-        },
-      }).then((result) => {
-        if (result.isConfirmed) {
-          window.location.href = deleteUrl;
+(function () {
+  "use strict";
+
+  const forms = document.querySelectorAll("form[novalidate]");
+
+  forms.forEach(function (form) {
+    form.addEventListener(
+      "submit",
+      function (event) {
+        let valid = true;
+
+        // -----------------------------
+        // RESET FORM — custom validation
+        // -----------------------------
+        if (form.id === "resetForm") {
+          const newPass = form.querySelector("#new_password");
+          const confirmPass = form.querySelector("#confirm_password");
+
+          if (newPass.value.length < 8) {
+            newPass.classList.add("is-invalid");
+            valid = false;
+          } else {
+            newPass.classList.remove("is-invalid");
+          }
+
+          if (newPass.value !== confirmPass.value) {
+            confirmPass.classList.add("is-invalid");
+            const feedback = document.getElementById("confirmFeedback");
+            if (feedback) feedback.textContent = "Passwords must match.";
+            valid = false;
+          } else {
+            confirmPass.classList.remove("is-invalid");
+          }
         }
-      });
-    });
+
+        // -----------------------------
+        // NORMAL HTML5 VALIDATION
+        // -----------------------------
+        if (!form.checkValidity()) {
+          Array.from(form.elements).forEach(function (el) {
+            if (el.checkValidity && !el.checkValidity()) {
+              el.classList.add("is-invalid");
+            }
+          });
+          valid = false;
+        }
+
+        if (!valid) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+      },
+      false
+    );
   });
+})();
+
+// -------------------------------
+// 2. Login Page — Toggle Password Visibility
+// -------------------------------
+
+document.addEventListener("click", function (e) {
+  if (e.target && e.target.id === "togglePwd") {
+    const button = e.target;
+    const input = document.querySelector("#password");
+    if (!input) return;
+
+    if (input.type === "password") {
+      input.type = "text";
+      button.textContent = "Hide";
+    } else {
+      input.type = "password";
+      button.textContent = "Show";
+    }
+  }
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const forms = ["addUserForm", "editUserForm"];
+// Register page - password match check
+document.addEventListener("input", function () {
+  const pass = document.getElementById("reg_password");
+  const confirm = document.getElementById("reg_confirm_password");
 
-  forms.forEach((formId) => {
-    const form = document.getElementById(formId);
-    if (!form) return;
+  if (!pass || !confirm) return;
 
-    const password = form.querySelector("#password");
-    const confirmPassword = form.querySelector("#confirmpassword");
-    const errorMsg = form.querySelector("#passwordError");
-
-    form.addEventListener("submit", function (e) {
-      if (password.value.trim() === "" && confirmPassword.value.trim() === "") {
-        return;
-      }
-      if (password.value.trim() !== confirmPassword.value.trim()) {
-        errorMsg.style.display = "block";
-        confirmPassword.classList.add("is-invalid");
-        e.preventDefault();
-      } else {
-        errorMsg.style.display = "none";
-        confirmPassword.classList.remove("is-invalid");
-      }
-    });
-  });
+  if (confirm.value !== pass.value) {
+    confirm.classList.add("is-invalid");
+  } else {
+    confirm.classList.remove("is-invalid");
+  }
 });
