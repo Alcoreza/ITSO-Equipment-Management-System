@@ -1,47 +1,42 @@
-<nav class="navbar navbar-expand-lg navbar-transparent">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="<?= base_url(); ?>">AB</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<!-- app/Views/include/nav_view.php -->
+<nav class="navbar navbar-expand-lg navbar-modern">
+    <div class="container">
+
+        <!-- Brand -->
+        <a class="navbar-brand d-flex align-items-center" href="<?= site_url('/') ?>">
+            <span class="brand-text">ITSO EMS</span>
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Nav links -->
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="<?= base_url('users') ?>">Users List</a>
+                    <a class="nav-link" href="<?= site_url('about') ?>">About</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('products') ?>">Products</a>
+                <!-- mobile-only links -->
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link" href="<?= site_url('login') ?>">Login</a>
+                </li>
+                <li class="nav-item d-lg-none">
+                    <a class="nav-link" href="<?= site_url('register') ?>">Register</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                <!-- CTAs on large screens -->
+                <li class="nav-item d-none d-lg-block ms-3">
+                    <a class="btn btn-outline-light btn-sm" href="<?= site_url('register') ?>">Register</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                <li class="nav-item d-none d-lg-block ms-2">
+                    <a class="btn btn-primary btn-sm" href="<?= site_url('login') ?>">Login</a>
                 </li>
             </ul>
-
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
         </div>
+
     </div>
 </nav>

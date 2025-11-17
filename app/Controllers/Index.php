@@ -6,14 +6,15 @@ class Index extends BaseController
     public function index()
     {
         $data = array(
-            'title' => 'Aling Basyang\'s Sisigan - Welcome',
-            'name' => 'LeBron'
+            'title' => 'ITSO Equipment Management System',
+            'total_equipment' => '--', // placeholder
+            'active_users' => '--'     // placeholder
         );
 
-        return view('include\head_view', $data)
-            . view('include\nav_view')
+        return view('include/head_view', $data)
+            . view('include/nav_view')
             . view('main_view', $data)
-            . view('include\foot_view');
+            . view('include/foot_view');
     }
 }
 ?>
