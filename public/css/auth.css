@@ -1,45 +1,109 @@
-/* AUTH CARD */
+/* ------------------------------------------------------------
+   NEW MODERN AUTH CARD DESIGN
+   Clean, premium, responsive, Envizio-style UI
+------------------------------------------------------------- */
+
+/* CARD WRAPPER ---------------------------------------------------*/
 .auth-card {
+  width: 100%;
   background: #ffffff;
-  border-radius: 14px;
-  padding: 2rem;
-  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(20, 92, 42, 0.15);
+  border-radius: 18px;
+  padding: 2.2rem 2rem;
+
+  /* softer and more premium shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 18px 42px rgba(0, 0, 0, 0.12);
+
+  border: 1px solid rgba(20, 92, 42, 0.12);
+
+  /* slight elevation animation */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.auth-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 25px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* TITLE ---------------------------------------------------------*/
 .auth-title {
   font-family: "DM Sans", sans-serif;
   font-weight: 800;
   color: #145c2a;
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.5px;
 }
 
+/* SUBTITLE ------------------------------------------------------*/
 .auth-sub {
   font-family: "Poppins", sans-serif;
-  color: #6c757d;
-  font-size: 0.95rem;
+  color: #6a7a73;
+  font-size: 0.96rem;
+  margin-bottom: 1.4rem;
 }
 
+/* INPUTS --------------------------------------------------------*/
 .auth-card .form-control,
 .auth-card .form-select {
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid rgba(16, 24, 40, 0.15);
-  padding: 0.7rem;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  transition: 0.2s ease;
 }
 
 .auth-card .form-control:focus,
 .auth-card .form-select:focus {
   border-color: #1e7a3a;
-  box-shadow: 0 0 0 4px rgba(30, 122, 58, 0.2);
+  box-shadow: 0 0 0 4px rgba(30, 122, 58, 0.18);
 }
 
-.auth-card button.btn-primary {
+/* BUTTON --------------------------------------------------------*/
+.auth-card .btn-primary {
   font-family: "DM Sans", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem 1rem;
   border-radius: 12px;
+
+  background: linear-gradient(180deg, #1e7a3a, #145c2a);
+  border: none;
+  transition: background 0.25s ease, transform 0.2s ease;
 }
 
-/* Monospace token (reset password) */
+.auth-card .btn-primary:hover {
+  background: #145c2a;
+  transform: translateY(-2px);
+}
+
+/* OPTIONAL OUTLINE BUTTON --------------------------------------*/
+.auth-card .btn-outline-light {
+  border-radius: 12px;
+  border: 2px solid rgba(20, 92, 42, 0.2);
+  font-weight: 600;
+  color: #145c2a;
+}
+
+/* HELP TEXT -----------------------------------------------------*/
+.auth-note {
+  font-family: "Poppins", sans-serif;
+  color: #6a7a73;
+  font-size: 0.9rem;
+}
+
+/* TOKEN (reset password page) ----------------------------------*/
 .text-monospace {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono",
     "Courier New", monospace;
+}
+
+/* SMALL SCREENS -------------------------------------------------*/
+@media (max-width: 575.98px) {
+  .auth-card {
+    padding: 1.4rem 1.2rem;
+    border-radius: 16px;
+  }
+  .auth-title {
+    font-size: 1.55rem;
+  }
 }

@@ -18,4 +18,4 @@
     <link href="<?= base_url('public/css/auth.css') ?>" rel="stylesheet">
 </head>
 
-<body class="<?= $bodyClass ?? '' ?>">
+<body>
