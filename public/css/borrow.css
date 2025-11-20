@@ -1,0 +1,118 @@
+/* ==========================================================
+   BORROW MODULE — Dark Dashboard Integration
+   ========================================================== */
+
+.borrow-main {
+    display: flex;
+    justify-content: flex-start; /* card aligns to left inside main */
+    align-items: flex-start;     /* start from top */
+    flex: 1;                     /* take all remaining width next to sidebar */
+    padding: 0 20px 40px;        /* remove top padding so it starts at same level */
+}
+
+/* Borrow card — bright and wider */
+.borrow-card {
+    width: 100%;
+    max-width: 900px;            /* adjust width */
+    background: #f5fff1;         /* bright card */
+    border-radius: 18px;
+    padding: 2.5rem 3rem;
+    border: 1px solid rgba(34, 197, 94, 0.35);
+    box-shadow: 0 14px 40px rgba(20, 92, 42, 0.1);
+    color: #145c2a;
+    display: flex;
+    flex-direction: column;      /* stack form elements */
+    animation: slideIn 0.4s ease;
+}
+
+.borrow-input, .borrow-btn, select.borrow-input {
+    width: 100%;
+}
+
+/* Slide in animation */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Titles */
+.borrow-title {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: #145c2a;
+    margin-bottom: 4px;
+}
+
+.borrow-sub {
+    color: #4b5563;
+    margin-bottom: 22px;
+    font-size: 0.95rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Form inputs */
+.form-group { margin-bottom: 18px; }
+
+.borrow-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #145c2a;
+    margin-bottom: 6px;
+}
+
+.borrow-input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(20, 92, 42, 0.35);
+    background: #f0fdf4;
+    color: #145c2a;
+    font-size: 0.95rem;
+    font-family: "Poppins", sans-serif;
+    transition: 0.15s ease;
+}
+
+.borrow-input:focus {
+    border-color: #1e7a3a;
+    box-shadow: 0 0 0 3px rgba(34, 197, 74, 0.2);
+    outline: none;
+}
+
+/* Button */
+.borrow-btn {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #22c55e, #15803d);
+    color: white;
+    font-weight: 700;
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 14px 30px rgba(34, 197, 74, 0.2);
+    cursor: pointer;
+    transition: 0.18s ease;
+    margin-top: auto; /* push button to bottom if card taller than content */
+}
+
+.borrow-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.07);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .borrow-main {
+        justify-content: center;
+        padding: 20px 15px;
+        min-height: auto;
+    }
+
+    .borrow-card {
+        max-width: 100%;
+        padding: 2rem 1.5rem;
+    }
+}
