@@ -93,3 +93,24 @@ document.addEventListener("DOMContentLoaded", function () {
     confirm.addEventListener("input", checkRegisterPasswords);
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Activate / Deactivate Confirmation Modal Handler
+  document.addEventListener("click", function (e) {
+    const btn = e.target.closest(".users-action-toggle");
+    if (!btn) return;
+
+    const name = btn.getAttribute("data-user-name") || "this user";
+    const action = btn.getAttribute("data-action") || "deactivate";
+
+    const label = action === "activate" ? "Activate" : "Deactivate";
+
+    const titleSpan = document.getElementById("confirmActionLabel");
+    const inlineSpan = document.getElementById("confirmActionLabelInline");
+    const nameSpan = document.getElementById("confirmUserName");
+
+    if (titleSpan) titleSpan.textContent = label;
+    if (inlineSpan) inlineSpan.textContent = label.toLowerCase();
+    if (nameSpan) nameSpan.textContent = name;
+  });
+});
