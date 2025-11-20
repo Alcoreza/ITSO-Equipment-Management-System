@@ -21,6 +21,8 @@
     <link href="<?= base_url('public/css/auth.css') ?>" rel="stylesheet">
     <link href="<?= base_url('public/css/manage.css') ?>" rel="stylesheet">
     <link href="<?= base_url('public/css/borrow.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('public/css/sidebar.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('public/css/equipment.css') ?>" rel="stylesheet">
 </head>
 
 <body>
