@@ -20,9 +20,12 @@
     <link href="<?= base_url('public/css/index.css') ?>" rel="stylesheet">
     <link href="<?= base_url('public/css/auth.css') ?>" rel="stylesheet">
     <link href="<?= base_url('public/css/manage.css') ?>" rel="stylesheet">
+<<<<<<<<< Temporary merge branch 1
+    <link href="<?= base_url('public/css/borrow.css') ?>" rel="stylesheet">
+=========
     <link href="<?= base_url('public/css/sidebar.css') ?>" rel="stylesheet">
     <link href="<?= base_url('public/css/equipment.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('public/css/borrow.css') ?>" rel="stylesheet">
+>>>>>>>>> Temporary merge branch 2
 </head>
 
 <body>
