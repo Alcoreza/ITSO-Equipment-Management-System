@@ -1,0 +1,651 @@
+/* EQUIPMENT MODULE LAYOUT --------------------------- */
+.equipment-manage {
+  min-height: 100vh;
+  padding: 96px 24px 40px;
+  background: radial-gradient(
+    circle at top left,
+    #064e3b 0%,
+    #022c22 40%,
+    #020617 80%
+  );
+  display: flex;
+  gap: 24px;
+}
+
+.equipment-main {
+  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.equipment-card-wrapper {
+  border-radius: 24px;
+  padding: 1.9rem;
+  background: radial-gradient(
+    circle at top left,
+    #f8faf8 0%,
+    #e5f6eb 38%,
+    #d4f0de 100%
+  );
+  border: 1px solid rgba(148, 163, 184, 0.55);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.55);
+}
+
+/* TITLES ------------------------------------------- */
+.equipment-title {
+  font-family: "DM Sans";
+  font-weight: 800;
+  color: #145c2a;
+}
+
+.equipment-sub {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+/* INPUTS / FILTERS ---------------------------------- */
+.equipment-filters {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.equipment-input {
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+}
+
+/* BUTTON -------------------------------------------- */
+.equipment-btn {
+  background: linear-gradient(135deg, #1e7a3a, #145c2a);
+  border-radius: 999px;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  font-weight: 700;
+  border: none;
+}
+
+/* GRID ---------------------------------------------- */
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+/* CARD ---------------------------------------------- */
+.equipment-card {
+  border-radius: 18px;
+  background: radial-gradient(
+    circle at top left,
+    #0b1f16 0%,
+    #082318 55%,
+    #041812 100%
+  );
+  border: 1px solid rgba(15, 118, 110, 0.7);
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s ease;
+  overflow: hidden;
+}
+
+.equipment-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(30, 122, 58, 0.9);
+}
+
+/* CARD IMAGE ---------------------------------------- */
+.equipment-card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(15, 118, 110, 0.5);
+}
+
+/* CARD INFO ----------------------------------------- */
+.equipment-card-info {
+  padding: 1rem 1.1rem;
+}
+
+.equipment-name {
+  color: #f9fafb;
+  font-weight: 600;
+}
+
+.equipment-meta {
+  color: #cfe3d5;
+  font-size: 0.82rem;
+}
+
+/* TAGS ---------------------------------------------- */
+.equipment-tag {
+  font-size: 0.75rem;
+  padding: 0.26rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.18);
+  color: #bbf7d0;
+  border: 1px solid rgba(34, 197, 94, 0.7);
+}
+
+.equipment-tag-cable {
+  background: rgba(59, 130, 246, 0.18);
+  color: #bfdbfe;
+}
+
+.equipment-tag-accessory {
+  background: rgba(234, 179, 8, 0.18);
+  color: #facc15;
+}
+
+/* ACTION BUTTONS ------------------------------------ */
+.equipment-actions {
+  display: flex;
+  gap: 10px;
+  padding: 1rem 1.1rem;
+  margin-top: auto;
+}
+
+.equipment-action-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(6, 16, 12, 0.9);
+  border: 1px solid rgba(15, 118, 110, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.18s;
+}
+
+.equipment-action-view i {
+  background: linear-gradient(135deg, #facc15, #eab308);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.equipment-action-edit i {
+  background: linear-gradient(135deg, #93c5fd, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.equipment-action-danger i {
+  background: linear-gradient(135deg, #fca5a5, #b91c1c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* HOVER */
+.equipment-action-btn:hover {
+  transform: translateY(-2px);
+}
+.equipment-action-danger:hover {
+  border-color: rgba(185, 28, 28, 1) !important;
+  box-shadow: 0 0 16px rgba(185, 28, 28, 0.4);
+}
+
+/* ================================================
+   EQUIPMENT MODALS — FEU PREMIUM STYLE
+================================================ */
+
+/* Base modal shell */
+.equipment-modal {
+  background: linear-gradient(180deg, #f5faf6, #e9f7eb);
+  border-radius: 18px;
+  border: 1px solid rgba(16, 68, 32, 0.15);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+/* HEADER */
+.equipment-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.2rem;
+  background: linear-gradient(135deg, #1e7a3a, #145c2a);
+  color: #fff;
+}
+
+.equipment-modal-header .modal-title {
+  font-family: "DM Sans";
+  font-weight: 800;
+}
+
+.equipment-modal-icon-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.gold-icon {
+  background: linear-gradient(135deg, #facc15, #eab308);
+}
+
+.danger-icon {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+}
+
+/* CLOSE BUTTON */
+.equipment-close,
+.equipment-close-dark {
+  filter: invert(1);
+}
+
+.equipment-close-light {
+  filter: brightness(200%);
+}
+
+/* BODY */
+.equipment-modal-body {
+  padding: 1.2rem;
+  font-size: 0.95rem;
+  color: #1e2a22;
+}
+
+.equipment-label {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+/* Inputs */
+.equipment-input {
+  border-radius: 12px !important;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid rgba(16, 68, 32, 0.2);
+}
+
+/* FOOTER */
+.equipment-modal-footer {
+  padding: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background: #f8fdf8;
+}
+
+/* Premium button */
+.equipment-btn {
+  background: linear-gradient(135deg, #1e7a3a, #145c2a);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50px;
+}
+
+.equipment-btn:hover {
+  filter: brightness(1.05);
+}
+
+/* Ghost */
+.equipment-btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(16, 68, 32, 0.2);
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+/* Strong confirmation */
+.equipment-btn-strong {
+  background: linear-gradient(135deg, #b91c1c, #7f1d1d);
+  color: #fff;
+}
+
+.equipment-modal-view-dialog {
+  margin-top: 25% !important;
+}
+
+/* Base container */
+.equipment-modal-view {
+  background: linear-gradient(180deg, #0c1a15, #04100b);
+  border-radius: 20px;
+  border: 1px solid rgba(22, 163, 74, 0.25);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+  color: #e6f9ea;
+  margin-top: 5%;
+}
+
+/* HEADER */
+.equipment-modal-view-header {
+  padding: 1.3rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(135deg, #134e34, #0a2b1a);
+}
+
+.equipment-view-title {
+  font-family: "DM Sans";
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #effff4;
+}
+
+.equipment-view-sub {
+  color: #c7e2d2;
+  font-size: 0.82rem;
+}
+
+/* IMAGE */
+.equipment-view-image-wrapper {
+  text-align: center;
+}
+
+.equipment-view-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+/* INFO GRID */
+.equipment-view-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.equipment-view-info-card {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.info-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #7acfa7;
+  margin-bottom: 3px;
+  letter-spacing: 0.05em;
+}
+
+.info-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e9fdf0;
+}
+
+/* DESCRIPTION */
+.description-box {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #d6f7e1;
+  line-height: 1.45;
+}
+
+/* FOOTER */
+.equipment-modal-view-footer {
+  padding: 1rem 1.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* Add safe margin around the view modal */
+#modalViewEquipment .modal-dialog {
+  margin: 40px auto !important; /* top/bottom = 40px, centered horizontally */
+  max-width: 820px; /* keeps it premium—not too wide */
+}
+
+/* Add padding inside the modal for breathing space */
+#modalViewEquipment .modal-content {
+  padding: 24px 28px !important; /* inner padding */
+  border-radius: 20px !important; /* smoother premium corners */
+}
+
+/* If your image touches the sides, add spacing */
+.equipment-view-img {
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+/* make edit modal visually identical to view modal while keeping form controls */
+.equipment-modal-edit .info-value-input,
+.equipment-modal-edit .equipment-input,
+.equipment-modal-edit .description-box {
+  background: rgba(255, 255, 255, 0.03);
+  color: #e9fdf0;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.equipment-modal-edit .form-control,
+.equipment-modal-edit .form-select,
+.equipment-modal-edit textarea {
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.95rem;
+}
+
+/* ensure edit modal uses same width & breathing room as view modal */
+#modalEditEquipment .modal-dialog {
+  margin: 40px auto !important;
+  max-width: 820px;
+}
+
+#modalEditEquipment .modal-content {
+  padding: 20px 24px !important;
+  border-radius: 18px !important;
+}
+
+/* Fix for dropdown options inside edit modal */
+#modalEditEquipment select.equipment-input,
+#modalEditEquipment .equipment-input {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e9fdf0; /* closed select text */
+}
+
+/* Force the dropdown popup (the list of options) to be readable */
+#modalEditEquipment select.equipment-input option {
+  background: #f8faf8 !important; /* light background */
+  color: #0f172a !important; /* dark readable text */
+}
+
+/* Improve hover on dropdown items */
+#modalEditEquipment select.equipment-input option:hover {
+  background: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+/* ============================================
+   REMOVE ARROWS FROM NUMBER INPUTS
+   (Edit Equipment Modal)
+============================================ */
+#modalEditEquipment input[type="number"]::-webkit-inner-spin-button,
+#modalEditEquipment input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#modalEditEquipment input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* =============================================
+   Redesigned Confirm (Deactivate) Modal
+   ============================================= */
+
+/* make sure dialog sits below navbar and centered */
+.modal-confirm-dialog {
+  margin-top: 48px !important; /* pushes dialog below fixed navbar */
+  max-width: 420px;
+}
+
+/* overall content */
+.equipment-modal-confirm-new {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(185, 28, 28, 0.14);
+  box-shadow: 0 30px 70px rgba(8, 8, 8, 0.6);
+  background: linear-gradient(180deg, #fff6f6, #fff0f0);
+  color: #381010;
+}
+
+/* thin top attention strip */
+.confirm-topstrip {
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    rgba(185, 28, 28, 1) 0%,
+    rgba(244, 63, 94, 0.9) 60%
+  );
+  box-shadow: 0 6px 18px rgba(185, 28, 28, 0.08);
+}
+
+/* header */
+.confirm-header {
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(185, 28, 28, 0.06);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 245, 245, 0.6),
+    rgba(255, 238, 238, 0.3)
+  );
+}
+
+/* icon wrapper */
+.confirm-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(185, 28, 28, 0.12);
+}
+
+/* use provided local image as icon; fall back to font icon if needed */
+.confirm-icon-img {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(185, 28, 28, 0.18);
+}
+
+/* title */
+.confirm-title {
+  font-weight: 800;
+  color: #7b1212;
+  font-family: "DM Sans", system-ui, sans-serif;
+  margin: 0;
+}
+.confirm-sub {
+  color: #8a2b2b;
+  font-size: 0.82rem;
+}
+
+/* body */
+.confirm-body {
+  padding: 16px;
+  color: #4b2020;
+  font-size: 0.95rem;
+}
+.confirm-text {
+  font-size: 0.97rem;
+  margin-bottom: 6px;
+}
+.confirm-item {
+  color: #2f1a1a;
+}
+
+/* footer with clear CTA */
+.confirm-footer {
+  padding: 12px 16px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-top: 1px solid rgba(185, 28, 28, 0.04);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 244, 244, 0.6),
+    rgba(255, 241, 241, 0.8)
+  );
+}
+
+/* ghost */
+.confirm-btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(120, 20, 20, 0.06);
+  color: #5c2424;
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+/* danger — prominent red CTA */
+.confirm-btn-danger {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 12px 30px rgba(185, 28, 28, 0.14);
+}
+
+/* hover states */
+.confirm-btn-danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(185, 28, 28, 0.22);
+}
+.confirm-btn-ghost:hover {
+  background: rgba(185, 28, 28, 0.03);
+  transform: translateY(-1px);
+}
+
+/* z-index safety — ensure modal sits above fixed navbars */
+.modal-backdrop.show {
+  z-index: 22000 !important;
+}
+.modal.show {
+  z-index: 22050 !important;
+}
+.modal.show .modal-dialog {
+  z-index: 22060 !important;
+}
+
+/* responsive tweaks */
+@media (max-width: 575.98px) {
+  .modal-confirm-dialog {
+    margin: 18px 12px !important;
+  }
+  .confirm-header {
+    padding: 12px;
+  }
+  .confirm-body {
+    padding: 12px;
+    font-size: 0.94rem;
+  }
+  .confirm-footer {
+    padding: 10px;
+  }
+  .confirm-icon-img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Ensure close button stays on the far-right in modal headers */
+.equipment-modal-header,
+.confirm-header {
+  position: relative;
+}
+
+.equipment-modal-header .btn-close,
+.confirm-header .btn-close {
+  margin-left: auto !important;
+}
