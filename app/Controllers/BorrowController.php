@@ -2,16 +2,21 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\Controller;
+
 class BorrowController extends BaseController
 {
     // Display the Borrow form
     public function index()
     {
         $data = [
-            'title' => 'Borrow Equipment'
+            'title' => 'Borrow Equipment - ITSO EMS'
         ];
 
-        return view('borrow_view', $data);
+        return view('include/head_view', $data)
+            . view('include/nav_view')
+            . view('borrow_view', $data)
+            . view('include/foot_view');
     }
 
     // Handle form submission

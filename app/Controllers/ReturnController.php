@@ -2,16 +2,21 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\Controller;
+
 class ReturnController extends BaseController
 {
     // Display the Return form
     public function index()
     {
         $data = [
-            'title' => 'Return Equipment'
+            'title' => 'Return Equipment - ITSO EMS'
         ];
 
-        return view('return_view', $data);
+        return view('include/head_view', $data)
+            . view('include/nav_view')
+            . view('return_view', $data)
+            . view('include/foot_view');
     }
 
     // Handle form submission
