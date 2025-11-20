@@ -1,0 +1,318 @@
+/* ==========================================================
+   USER MANAGEMENT DASHBOARD — EXECUTIVE DARK CARD UI
+   ========================================================== */
+
+.users-manage {
+  min-height: 100vh;
+  padding: 96px 24px 40px;
+  background: radial-gradient(circle at top left, #020617 0%, #000000 55%);
+  display: flex;
+  gap: 24px;
+}
+
+/* SIDEBAR */
+.users-sidebar {
+  width: 260px;
+  background: #020617;
+  border-radius: 20px;
+  padding: 20px 18px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75);
+  position: sticky;
+  top: 96px;
+}
+
+.users-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.users-brand-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e7a3a, #145c2a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "DM Sans";
+  font-weight: 800;
+  color: white;
+  font-size: 1rem;
+}
+
+.users-brand-title {
+  font-weight: 700;
+  color: #e5e7eb;
+}
+
+.users-brand-sub {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+/* Navigation */
+.users-nav {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.users-nav-section-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6b7280;
+  margin-bottom: 0.3rem;
+}
+
+.users-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: 0.18s ease;
+}
+
+.users-nav-item i {
+  font-size: 1.05rem;
+}
+
+.users-nav-item:hover {
+  background: rgba(31, 41, 55, 0.85);
+  transform: translateY(-1px);
+}
+
+.users-nav-item.is-active {
+  background: linear-gradient(135deg, #1e7a3a, #145c2a);
+  box-shadow: 0 12px 26px rgba(22, 163, 74, 0.45);
+  color: #ecfdf5;
+}
+
+/* MAIN CONTENT */
+.users-main {
+  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.users-card {
+  border-radius: 22px;
+  padding: 1.9rem;
+  background: rgba(2, 8, 23, 0.95);
+  border: 2px solid rgba(34, 197, 94, 0.4);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(34, 197, 94, 0.3);
+  color: #e5e7eb;
+}
+
+.users-title {
+  font-family: "DM Sans";
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.users-sub {
+  font-family: "Poppins";
+  font-size: 0.95rem;
+  color: #9ca3af;
+}
+
+/* Search + Filters */
+.users-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon .input-icon {
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.users-input {
+  border-radius: 12px;
+  background: #020817;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  color: #e5e7eb;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+}
+
+.users-filter-search .users-input {
+  padding-left: 2.4rem;
+}
+
+/* Button */
+.users-btn {
+  background: linear-gradient(135deg, #22c55e, #15803d);
+  border-radius: 14px;
+  font-weight: 700;
+  box-shadow: 0 18px 40px rgba(22, 163, 74, 0.5);
+  border: none;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.users-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.07);
+}
+
+/* ==========================================================
+   CARD GRID — PURE PREMIUM
+   ========================================================== */
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.user-card {
+  border-radius: 18px;
+  padding: 1.3rem;
+  background: #030b18;
+  border: 2px solid rgba(34, 197, 94, 0.35);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.85), 0 0 22px rgba(34, 197, 94, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: 0.28s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.95), 0 0 32px rgba(34, 197, 94, 0.5);
+}
+
+/* User Info */
+.user-name {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.user-email {
+  color: #9ca3af;
+  font-size: 0.8rem;
+}
+
+/* Role Tags */
+.users-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.users-tag-itso {
+  background: rgba(34, 197, 94, 0.22);
+  color: #86efac;
+}
+.users-tag-associate {
+  background: rgba(59, 130, 246, 0.22);
+  color: #93c5fd;
+}
+.users-tag-student {
+  background: rgba(234, 179, 8, 0.22);
+  color: #facc15;
+}
+
+/* ============================
+   Premium Action Buttons
+   ============================ */
+.user-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.users-action-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(8, 20, 16, 0.75); /* subtle dark base */
+  border: 1px solid rgba(34, 197, 94, 0.32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.22s ease-in-out;
+  box-shadow: inset 0 0 10px rgba(34, 197, 94, 0.1);
+}
+
+.users-action-btn i {
+  font-size: 0.95rem;
+  background: linear-gradient(135deg, #22c55e, #15803d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* premium gradient icon */
+}
+
+.users-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 14px rgba(34, 197, 94, 0.45);
+  border-color: rgba(34, 197, 94, 0.7);
+}
+
+/* Deactivate (Inactive) Button */
+.users-action-danger {
+  border-color: rgba(239, 68, 68, 0.38);
+}
+.users-action-danger i {
+  background: linear-gradient(135deg, #f87171, #b91c1c);
+  -webkit-background-clip: text;
+}
+.users-action-danger:hover {
+  box-shadow: 0 0 14px rgba(239, 68, 68, 0.45);
+  border-color: rgba(239, 68, 68, 0.8);
+}
+
+/* Activate Button */
+.users-action-success {
+  border-color: rgba(34, 197, 94, 0.45);
+}
+.users-action-success i {
+  background: linear-gradient(135deg, #4ade80, #15803d);
+  -webkit-background-clip: text;
+}
+.users-action-success:hover {
+  box-shadow: 0 0 14px rgba(34, 197, 94, 0.45);
+  border-color: rgba(34, 197, 94, 0.85);
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 991.98px) {
+  .users-manage {
+    flex-direction: column;
+  }
+
+  .users-sidebar {
+    width: 100%;
+    position: static;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .users-grid {
+    grid-template-columns: 1fr;
+  }
+}
