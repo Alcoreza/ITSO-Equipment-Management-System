@@ -24,7 +24,11 @@ $routes->post('register/submit', 'Auth::submitRegister');
 // User Management (Admin Console)
 $routes->get('users', 'AdminController::users');
 
+$routes->get('/borrow', 'BorrowController::index');
+$routes->post('/borrow/submit', 'BorrowController::submit');
 
+$routes->get('/return', 'ReturnController::index');
+$routes->post('/return/submit', 'ReturnController::submit');
 
 
 
