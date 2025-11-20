@@ -1,23 +1,30 @@
 /* ==========================================================
-   USER MANAGEMENT DASHBOARD — EXECUTIVE DARK CARD UI
+   USER MANAGEMENT DASHBOARD — FEU DARK + LIGHT CARD UI (B)
    ========================================================== */
 
+/* PAGE WRAPPER ------------------------------------------------ */
 .users-manage {
   min-height: 100vh;
   padding: 96px 24px 40px;
-  background: radial-gradient(circle at top left, #020617 0%, #000000 55%);
+  /* dark green campus hallway vibe */
+  background: radial-gradient(
+    circle at top left,
+    #064e3b 0%,
+    #022c22 40%,
+    #020617 80%
+  );
   display: flex;
   gap: 24px;
 }
 
-/* SIDEBAR */
+/* SIDEBAR ----------------------------------------------------- */
 .users-sidebar {
   width: 260px;
-  background: #020617;
+  background: rgba(3, 7, 18, 0.96);
   border-radius: 20px;
   padding: 20px 18px;
-  border: 1px solid rgba(148, 163, 184, 0.4);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(15, 118, 110, 0.6);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85);
   position: sticky;
   top: 96px;
 }
@@ -36,15 +43,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "DM Sans";
+  font-family: "DM Sans", system-ui, sans-serif;
   font-weight: 800;
-  color: white;
+  color: #ecfdf5;
   font-size: 1rem;
+  box-shadow: 0 14px 32px rgba(22, 163, 74, 0.55);
 }
 
 .users-brand-title {
   font-weight: 700;
-  color: #e5e7eb;
+  color: #f9fafb;
+  font-family: "DM Sans", system-ui, sans-serif;
 }
 
 .users-brand-sub {
@@ -52,7 +61,7 @@
   color: #9ca3af;
 }
 
-/* Navigation */
+/* Sidebar nav */
 .users-nav {
   margin-top: 1.8rem;
   display: flex;
@@ -82,101 +91,109 @@
 
 .users-nav-item i {
   font-size: 1.05rem;
+  color: #9ca3af;
 }
 
 .users-nav-item:hover {
-  background: rgba(31, 41, 55, 0.85);
+  background: rgba(15, 23, 42, 0.92);
   transform: translateY(-1px);
 }
 
 .users-nav-item.is-active {
   background: linear-gradient(135deg, #1e7a3a, #145c2a);
-  box-shadow: 0 12px 26px rgba(22, 163, 74, 0.45);
+  box-shadow: 0 14px 32px rgba(22, 163, 74, 0.6);
   color: #ecfdf5;
 }
 
-/* MAIN CONTENT */
+.users-nav-item.is-active i {
+  color: #ecfdf5;
+}
+
+/* MAIN CONTENT ------------------------------------------------ */
 .users-main {
   flex: 1;
   max-width: 1100px;
   margin: 0 auto;
 }
 
+/* MAIN PANEL — LIGHT, SCHOOL-LIKE GRADIENT ------------------- */
 .users-card {
-  border-radius: 22px;
-  padding: 1.9rem;
-  background: rgba(2, 8, 23, 0.95);
-  border: 2px solid rgba(34, 197, 94, 0.4);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(34, 197, 94, 0.3);
-  color: #e5e7eb;
+  border-radius: 24px;
+  padding: 1.9rem 1.9rem 2rem;
+  background: radial-gradient(
+    circle at top left,
+    #f8faf8 0%,
+    #e5f6eb 38%,
+    #d4f0de 100%
+  );
+  border: 1px solid rgba(148, 163, 184, 0.55);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.55),
+    0 0 25px rgba(22, 163, 74, 0.25);
+  color: #1f2933;
 }
 
+/* Titles */
 .users-title {
-  font-family: "DM Sans";
+  font-family: "DM Sans", system-ui, sans-serif;
   font-weight: 800;
-  font-size: 1.5rem;
-  color: white;
+  font-size: 1.55rem;
+  color: #145c2a;
 }
 
 .users-sub {
-  font-family: "Poppins";
+  font-family: "Poppins", system-ui, sans-serif;
   font-size: 0.95rem;
-  color: #9ca3af;
+  color: #4b5563;
 }
 
-/* Search + Filters */
+/* FILTERS (role / status only now) --------------------------- */
 .users-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
-.input-with-icon {
-  position: relative;
-}
-
-.input-with-icon .input-icon {
-  position: absolute;
-  left: 0.9rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #9ca3af;
-}
-
 .users-input {
-  border-radius: 12px;
-  background: #020817;
-  border: 1px solid rgba(148, 163, 184, 0.45);
-  color: #e5e7eb;
-  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: rgba(248, 250, 252, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  color: #111827;
+  padding: 0.5rem 1rem;
   font-size: 0.9rem;
+  font-family: "Poppins", system-ui, sans-serif;
 }
 
-.users-filter-search .users-input {
-  padding-left: 2.4rem;
+.users-input:focus {
+  border-color: #1e7a3a;
+  box-shadow: 0 0 0 2px rgba(30, 122, 58, 0.25);
+  outline: none;
 }
 
-/* Button */
+/* Add User button (kept premium) ----------------------------- */
 .users-btn {
-  background: linear-gradient(135deg, #22c55e, #15803d);
-  border-radius: 14px;
+  background: linear-gradient(135deg, #1e7a3a, #145c2a);
+  border-radius: 999px;
   font-weight: 700;
-  box-shadow: 0 18px 40px rgba(22, 163, 74, 0.5);
+  font-family: "DM Sans", system-ui, sans-serif;
+  box-shadow: 0 18px 40px rgba(20, 92, 42, 0.45);
   border: none;
-  color: white;
-  transition: 0.2s ease;
+  color: #f9fafb;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  transition: 0.18s ease;
 }
 
 .users-btn:hover {
   transform: translateY(-2px);
-  filter: brightness(1.07);
+  filter: brightness(1.05);
 }
 
 /* ==========================================================
-   CARD GRID — PURE PREMIUM
+   USER CARDS — LIGHTER B VARIANT
    ========================================================== */
+
 .users-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -184,60 +201,71 @@
   margin-top: 20px;
 }
 
+/* lighter, still dark-green cards, NO shadow */
 .user-card {
   border-radius: 18px;
-  padding: 1.3rem;
-  background: #030b18;
-  border: 2px solid rgba(34, 197, 94, 0.35);
-  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.85), 0 0 22px rgba(34, 197, 94, 0.35);
+  padding: 1.3rem 1.4rem 1.1rem;
+  background: radial-gradient(
+    circle at top left,
+    #0b1f16 0%,
+    #082318 55%,
+    #041812 100%
+  );
+  border: 1px solid rgba(15, 118, 110, 0.7);
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  transition: 0.28s ease;
+  gap: 0.4rem;
+  transition: 0.2s ease;
 }
 
 .user-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.95), 0 0 32px rgba(34, 197, 94, 0.5);
+  transform: translateY(-4px);
+  border-color: rgba(30, 122, 58, 0.9);
 }
 
-/* User Info */
+/* TEXT COLORS tuned for readability */
 .user-name {
-  color: #ffffff;
+  color: #f9fafb;
   font-weight: 600;
-  margin-bottom: 2px;
+  font-size: 0.98rem;
+  margin-bottom: 1px;
+  font-family: "DM Sans", system-ui, sans-serif;
 }
 
 .user-email {
-  color: #9ca3af;
+  color: #cfe3d5;
   font-size: 0.8rem;
+  font-family: "Poppins", system-ui, sans-serif;
 }
 
-/* Role Tags */
+/* Role tags (school-colour chips) */
 .users-tag {
   font-size: 0.75rem;
   font-weight: 700;
-  padding: 0.28rem 0.55rem;
+  padding: 0.26rem 0.6rem;
   border-radius: 999px;
   display: inline-block;
 }
 
 .users-tag-itso {
-  background: rgba(34, 197, 94, 0.22);
-  color: #86efac;
-}
-.users-tag-associate {
-  background: rgba(59, 130, 246, 0.22);
-  color: #93c5fd;
-}
-.users-tag-student {
-  background: rgba(234, 179, 8, 0.22);
-  color: #facc15;
+  background: rgba(34, 197, 94, 0.18);
+  color: #bbf7d0;
+  border: 1px solid rgba(34, 197, 94, 0.7);
 }
 
-/* ============================
-   Premium Action Buttons
-   ============================ */
+.users-tag-associate {
+  background: rgba(59, 130, 246, 0.18);
+  color: #bfdbfe;
+  border: 1px solid rgba(59, 130, 246, 0.7);
+}
+
+.users-tag-student {
+  background: rgba(234, 179, 8, 0.18);
+  color: #facc15;
+  border: 1px solid rgba(234, 179, 8, 0.75);
+}
+
+/* ACTION BUTTONS — toned to match new palette */
 .user-actions {
   margin-top: auto;
   display: flex;
@@ -248,52 +276,49 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(8, 20, 16, 0.75); /* subtle dark base */
-  border: 1px solid rgba(34, 197, 94, 0.32);
+  background: rgba(6, 16, 12, 0.9);
+  border: 1px solid rgba(15, 118, 110, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.22s ease-in-out;
-  box-shadow: inset 0 0 10px rgba(34, 197, 94, 0.1);
+  transition: 0.18s ease;
 }
 
 .users-action-btn i {
   font-size: 0.95rem;
   background: linear-gradient(135deg, #22c55e, #15803d);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* premium gradient icon */
+  -webkit-text-fill-color: transparent;
 }
 
 .users-action-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 14px rgba(34, 197, 94, 0.45);
-  border-color: rgba(34, 197, 94, 0.7);
+  border-color: rgba(34, 197, 94, 0.9);
 }
 
-/* Deactivate (Inactive) Button */
+/* Deactivate */
 .users-action-danger {
-  border-color: rgba(239, 68, 68, 0.38);
+  border-color: rgba(239, 68, 68, 0.6);
 }
 .users-action-danger i {
-  background: linear-gradient(135deg, #f87171, #b91c1c);
+  background: linear-gradient(135deg, #fca5a5, #b91c1c);
   -webkit-background-clip: text;
 }
-.users-action-danger:hover {
-  box-shadow: 0 0 14px rgba(239, 68, 68, 0.45);
-  border-color: rgba(239, 68, 68, 0.8);
-}
 
-/* Activate Button */
+/* Activate */
 .users-action-success {
-  border-color: rgba(34, 197, 94, 0.45);
+  border-color: rgba(34, 197, 94, 0.7);
 }
 .users-action-success i {
   background: linear-gradient(135deg, #4ade80, #15803d);
   -webkit-background-clip: text;
 }
-.users-action-success:hover {
-  box-shadow: 0 0 14px rgba(34, 197, 94, 0.45);
-  border-color: rgba(34, 197, 94, 0.85);
+
+/* FOOTER NOTE ---------------------------------------------- */
+.users-table-footer {
+  margin-top: 0.9rem;
+  font-size: 0.8rem;
+  color: #4b5563;
 }
 
 /* ==========================================================
@@ -303,6 +328,7 @@
 @media (max-width: 991.98px) {
   .users-manage {
     flex-direction: column;
+    padding: 88px 16px 32px;
   }
 
   .users-sidebar {
@@ -312,6 +338,10 @@
 }
 
 @media (max-width: 575.98px) {
+  .users-card {
+    padding: 1.5rem 1.2rem 1.6rem;
+  }
+
   .users-grid {
     grid-template-columns: 1fr;
   }

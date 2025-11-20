@@ -66,12 +66,7 @@
             </div>
 
             <!-- FILTERS / SEARCH -->
-            <div class="users-filters mb-4">
-                <div class="input-with-icon users-filter-search">
-                    <span class="input-icon"><i class="bi bi-search"></i></span>
-                    <input type="text" class="form-control users-input" id="searchUser" placeholder="Search user...">
-                </div>
-
+            <div class="users-filters mb-3">
                 <div class="users-filter-group">
                     <select id="filterRole" class="form-select users-input">
                         <option value="">All Roles</option>
@@ -88,12 +83,12 @@
                 </div>
             </div>
 
+
             <!-- USER CARDS GRID -->
             <div class="users-grid">
 
                 <!-- Card: ITSO -->
                 <div class="user-card" data-role="itso" data-status="active">
-                    <div class="user-avatar user-role-itso">JD</div>
                     <div class="user-info">
                         <h6 class="user-name">Juan Dela Cruz</h6>
                         <p class="user-email">juan.delacruz@feutech.edu.ph</p>
@@ -111,7 +106,6 @@
 
                 <!-- Card: Student -->
                 <div class="user-card" data-role="student" data-status="inactive">
-                    <div class="user-avatar user-role-student">MS</div>
                     <div class="user-info">
                         <h6 class="user-name">Maria Santos</h6>
                         <p class="user-email">maria.santos@student.feutech.edu.ph</p>
@@ -129,7 +123,6 @@
 
                 <!-- Card: Associate -->
                 <div class="user-card" data-role="associate" data-status="active">
-                    <div class="user-avatar user-role-associate">CR</div>
                     <div class="user-info">
                         <h6 class="user-name">Carlos Reyes</h6>
                         <p class="user-email">carlos.reyes@associate.feutech.edu.ph</p>
