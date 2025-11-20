@@ -25,7 +25,13 @@ $routes->post('register/submit', 'Auth::submitRegister');
 $routes->get('users', 'AdminController::users');
 $routes->get('equipment', 'AdminController::equipment');
 
+$routes->get('/borrow', 'BorrowController::index');
+$routes->post('/borrow/submit', 'BorrowController::submit');
 
+$routes->get('/return', 'ReturnController::index');
+$routes->post('/return/submit', 'ReturnController::submit');
 
+$routes->get('/reservation', 'ReservationController::index');
+$routes->post('/reservation/submit', 'Reservation::submitReservation');
 
-
+$routes->get('/reports', 'ReportsController::index');
