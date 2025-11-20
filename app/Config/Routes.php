@@ -31,5 +31,7 @@ $routes->post('/borrow/submit', 'BorrowController::submit');
 $routes->get('/return', 'ReturnController::index');
 $routes->post('/return/submit', 'ReturnController::submit');
 
+$routes->get('/reservation', 'ReservationController::index');
+$routes->post('/reservation/submit', 'Reservation::submitReservation');
 
-
+$routes->get('/reports', 'ReportsController::index');
