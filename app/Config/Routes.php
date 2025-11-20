@@ -23,6 +23,7 @@ $routes->post('register/submit', 'Auth::submitRegister');
 
 // User Management (Admin Console)
 $routes->get('users', 'AdminController::users');
+$routes->get('equipment', 'AdminController::equipment');
 
 
 

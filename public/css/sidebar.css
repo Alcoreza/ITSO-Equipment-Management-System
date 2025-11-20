@@ -1,0 +1,103 @@
+/* sidebar.css
+   Extracted sidebar styles from main stylesheet
+*/
+
+/* SIDEBAR ----------------------------------------------------- */
+.users-sidebar {
+  width: 260px;
+  background: rgba(3, 7, 18, 0.96);
+  border-radius: 20px;
+  padding: 20px 18px;
+  border: 1px solid rgba(15, 118, 110, 0.6);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85);
+  position: sticky;
+  top: 96px;
+}
+
+.users-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.users-brand-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e7a3a, #145c2a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-weight: 800;
+  color: #ecfdf5;
+  font-size: 1rem;
+  box-shadow: 0 14px 32px rgba(22, 163, 74, 0.55);
+}
+
+.users-brand-title {
+  font-weight: 700;
+  color: #f9fafb;
+  font-family: "DM Sans", system-ui, sans-serif;
+}
+
+.users-brand-sub {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+/* Sidebar nav */
+.users-nav {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.users-nav-section-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6b7280;
+  margin-bottom: 0.3rem;
+}
+
+.users-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: 0.18s ease;
+}
+
+.users-nav-item i {
+  font-size: 1.05rem;
+  color: #9ca3af;
+}
+
+.users-nav-item:hover {
+  background: rgba(15, 23, 42, 0.92);
+  transform: translateY(-1px);
+}
+
+.users-nav-item.is-active {
+  background: linear-gradient(135deg, #1e7a3a, #145c2a);
+  box-shadow: 0 14px 32px rgba(22, 163, 74, 0.6);
+  color: #ecfdf5;
+}
+
+.users-nav-item.is-active i {
+  color: #ecfdf5;
+}
+
+/* Responsive adjustments related to sidebar */
+@media (max-width: 991.98px) {
+  .users-sidebar {
+    width: 100%;
+    position: static;
+  }
+}

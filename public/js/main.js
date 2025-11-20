@@ -114,3 +114,63 @@ document.addEventListener("DOMContentLoaded", () => {
     if (nameSpan) nameSpan.textContent = name;
   });
 });
+
+/* ===========================================
+   EQUIPMENT MODULE — FRONTEND ONLY
+   Filtering + Search + Confirm Modal Logic
+=========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const filterCategory = document.getElementById("filterCategory");
+  const filterStatus = document.getElementById("filterStatus");
+  const searchInput = document.getElementById("searchInput");
+  const cards = document.querySelectorAll(".equipment-card-item");
+
+  function applyFilters() {
+    const category = filterCategory.value.toLowerCase();
+    const status = filterStatus.value.toLowerCase();
+    const search = searchInput.value.toLowerCase();
+
+    cards.forEach((card) => {
+      const c = card.dataset.category.toLowerCase();
+      const s = card.dataset.status.toLowerCase();
+      const name = card
+        .querySelector(".equipment-name")
+        .textContent.toLowerCase();
+
+      const matchCategory = category === "" || c === category;
+      const matchStatus = status === "" || s === status;
+      const matchSearch = name.includes(search);
+
+      if (matchCategory && matchStatus && matchSearch) {
+        card.style.display = "flex";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  filterCategory.addEventListener("change", applyFilters);
+  filterStatus.addEventListener("change", applyFilters);
+  searchInput.addEventListener("input", applyFilters);
+
+  /* ===========================================
+       CONFIRM ACTIVATE / DEACTIVATE EQUIPMENT
+    ============================================ */
+  const confirmModal = document.getElementById("modalConfirmStatus");
+  if (confirmModal) {
+    confirmModal.addEventListener("show.bs.modal", (event) => {
+      const button = event.relatedTarget;
+
+      const itemName = button.getAttribute("data-name") || "Unknown Item";
+      const action = button.getAttribute("data-action") || "deactivate";
+
+      confirmModal.querySelector("#confirmEquipmentName").textContent =
+        itemName;
+      confirmModal.querySelector("#confirmEquipmentAction").textContent =
+        action;
+      confirmModal.querySelector("#confirmEquipmentActionInline").textContent =
+        action;
+    });
+  }
+});
