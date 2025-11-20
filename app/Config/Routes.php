@@ -21,6 +21,10 @@ $routes->post('password/reset', 'Auth::updatePassword');
 $routes->get('register', 'Auth::register');
 $routes->post('register/submit', 'Auth::submitRegister');
 
+// User Management (Admin Console)
+$routes->get('users', 'AdminController::users');
+
+
 
 
 
