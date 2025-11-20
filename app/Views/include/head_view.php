@@ -20,6 +20,7 @@
     <link href="<?= base_url('public/css/index.css') ?>" rel="stylesheet">
     <link href="<?= base_url('public/css/auth.css') ?>" rel="stylesheet">
     <link href="<?= base_url('public/css/manage.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('public/css/borrow.css') ?>" rel="stylesheet">
 </head>
 
 <body>
