@@ -1,118 +1,169 @@
-/* ==========================================================
-   BORROW MODULE — Dark Dashboard Integration
-   ========================================================== */
+    /* ==========================================================
+    BORROW DASHBOARD — FEU DARK + LIGHT CARD UI
+    ========================================================== */
 
-.borrow-main {
+    /* PAGE WRAPPER ------------------------------------------------ */
+    .borrow-manage {
+    min-height: 100vh;
+    padding: 96px 24px 40px;
+    background: radial-gradient(
+        circle at top left,
+        #064e3b 0%,
+        #022c22 40%,
+        #020617 80%
+    );
     display: flex;
-    justify-content: flex-start; /* card aligns to left inside main */
-    align-items: flex-start;     /* start from top */
-    flex: 1;                     /* take all remaining width next to sidebar */
-    padding: 0 20px 40px;        /* remove top padding so it starts at same level */
-}
+    gap: 24px;
+    }
 
-/* Borrow card — bright and wider */
-.borrow-card {
-    width: 100%;
-    max-width: 900px;            /* adjust width */
-    background: #f5fff1;         /* bright card */
-    border-radius: 18px;
-    padding: 2.5rem 3rem;
-    border: 1px solid rgba(34, 197, 94, 0.35);
-    box-shadow: 0 14px 40px rgba(20, 92, 42, 0.1);
-    color: #145c2a;
+    /* MAIN CONTENT ------------------------------------------------ */
+    .borrow-main {
+    flex: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    }
+
+    /* MAIN CARD --------------------------------------------------- */
+    .borrow-card {
     display: flex;
-    flex-direction: column;      /* stack form elements */
-    animation: slideIn 0.4s ease;
+    gap: 1rem;
+    border-radius: 24px;
+    background: radial-gradient(
+        circle at top left,
+        #f8faf8 0%,
+        #e5f6eb 38%,
+        #d4f0de 100%
+    );
+    border: 1px solid rgba(148, 163, 184, 0.55);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.55),
+                0 0 25px rgba(22, 163, 74, 0.25);
+    color: #1f2933;
+    align-items: stretch;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* LEFT FORM SECTION */
+    .borrow-form-section {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    }
+
+    /* RIGHT IMAGE SECTION */
+    .borrow-image-section {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 0 24px 24px 0; /* optional rounded corner */
 }
 
-.borrow-input, .borrow-btn, select.borrow-input {
-    width: 100%;
-}
+    .borrow-image-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.5s ease;
+    }
 
-/* Slide in animation */
-@keyframes slideIn {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+    .borrow-image-section img:hover {
+        transform: scale(1.1);
+    }
 
-/* Titles */
-.borrow-title {
-    font-family: "DM Sans", sans-serif;
-    font-size: 1.9rem;
-    font-weight: 800;
+    /* TITLES ------------------------------------------------------ */
+    .borrow-title {
+    font-family: "DM Sans", system-ui, sans-serif;
+    font-weight: 900;
+    font-size: 2.2rem;
     color: #145c2a;
-    margin-bottom: 4px;
-}
+    margin-bottom: 0.3rem;
+    }
 
-.borrow-sub {
+    .borrow-sub {
+    font-family: "Poppins", system-ui, sans-serif;
+    font-size: 1rem;
     color: #4b5563;
-    margin-bottom: 22px;
-    font-size: 0.95rem;
-    font-family: "Poppins", sans-serif;
-}
+    margin-bottom: 2rem;
+    }
 
-/* Form inputs */
-.form-group { margin-bottom: 18px; }
-
-.borrow-label {
+    /* LABELS ------------------------------------------------------ */
+    .borrow-label {
     display: block;
-    font-size: 0.85rem;
     font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    color: #145c2a;
-    margin-bottom: 6px;
-}
+    margin-bottom: 0.5rem;
+    color: #1f2933;
+    }
 
-.borrow-input {
+    /* INPUTS ------------------------------------------------------ */
+    .borrow-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(148, 163, 184, 0.7);
+    font-size: 0.95rem;
+    outline: none;
+    transition: 0.25s ease;
+    }
+
+    .borrow-input:focus {
+    border-color: #1e7a3a;
+    box-shadow: 0 0 0 2px rgba(30, 122, 58, 0.25);
+    }
+
+    /* BUTTON ------------------------------------------------------ */
+    .borrow-btn {
     width: 100%;
     padding: 0.85rem 1rem;
-    border-radius: 12px;
-    border: 1px solid rgba(20, 92, 42, 0.35);
-    background: #f0fdf4;
-    color: #145c2a;
-    font-size: 0.95rem;
-    font-family: "Poppins", sans-serif;
-    transition: 0.15s ease;
-}
-
-.borrow-input:focus {
-    border-color: #1e7a3a;
-    box-shadow: 0 0 0 3px rgba(34, 197, 74, 0.2);
-    outline: none;
-}
-
-/* Button */
-.borrow-btn {
-    width: 100%;
-    padding: 0.9rem;
-    border: none;
-    border-radius: 14px;
-    background: linear-gradient(180deg, #22c55e, #15803d);
-    color: white;
+    font-size: 1.05rem;
     font-weight: 700;
-    font-family: "DM Sans", sans-serif;
-    font-size: 1rem;
-    box-shadow: 0 14px 30px rgba(34, 197, 74, 0.2);
+    font-family: "DM Sans", system-ui, sans-serif;
+    color: #f9fafb;
+    background: linear-gradient(135deg, #1e7a3a, #145c2a);
+    border: none;
+    border-radius: 12px;
     cursor: pointer;
-    transition: 0.18s ease;
-    margin-top: auto; /* push button to bottom if card taller than content */
-}
+    box-shadow: 0 8px 18px rgba(20, 92, 42, 0.45);
+    transition: all 0.3s ease;
+    }
 
-.borrow-btn:hover {
+    .borrow-btn:hover {
     transform: translateY(-2px);
-    filter: brightness(1.07);
-}
-
-/* Responsive adjustments */
-@media (max-width: 991.98px) {
-    .borrow-main {
-        justify-content: center;
-        padding: 20px 15px;
-        min-height: auto;
+    filter: brightness(1.1);
+    box-shadow: 0 12px 22px rgba(20, 92, 42, 0.55);
     }
 
+    /* FORM GROUP -------------------------------------------------- */
+    .form-group {
+    margin-bottom: 1.5rem;
+    }
+
+    /* RESPONSIVE -------------------------------------------------- */
+    @media (max-width: 991.98px) {
     .borrow-card {
-        max-width: 100%;
-        padding: 2rem 1.5rem;
+        flex-direction: column;
     }
-}
+
+    .borrow-image-section {
+        margin-top: 1.5rem;
+    }
+    }
+
+    @media (max-width: 575.98px) {
+    .borrow-card {
+        padding: 1.5rem;
+    }
+
+    .borrow-title {
+        font-size: 1.8rem;
+    }
+
+    .borrow-sub {
+        font-size: 0.95rem;
+    }
+
+    .borrow-btn {
+        font-size: 1rem;
+    }
+    }
