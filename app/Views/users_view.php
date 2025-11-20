@@ -1,5 +1,3 @@
-<!-- app/Views/admin/users.php -->
-
 <div class="users-manage">
     <!-- SIDEBAR -->
     <aside class="users-sidebar">
@@ -65,13 +63,8 @@
                 </button>
             </div>
 
-            <!-- FILTERS / SEARCH -->
-            <div class="users-filters mb-4">
-                <div class="input-with-icon users-filter-search">
-                    <span class="input-icon"><i class="bi bi-search"></i></span>
-                    <input type="text" class="form-control users-input" id="searchUser" placeholder="Search user...">
-                </div>
-
+            <!-- FILTERS -->
+            <div class="users-filters mb-3">
                 <div class="users-filter-group">
                     <select id="filterRole" class="form-select users-input">
                         <option value="">All Roles</option>
@@ -93,17 +86,24 @@
 
                 <!-- Card: ITSO -->
                 <div class="user-card" data-role="itso" data-status="active">
-                    <div class="user-avatar user-role-itso">JD</div>
                     <div class="user-info">
                         <h6 class="user-name">Juan Dela Cruz</h6>
                         <p class="user-email">juan.delacruz@feutech.edu.ph</p>
                         <span class="users-tag users-tag-itso">ITSO Personnel</span>
                     </div>
                     <div class="user-actions">
+                        <!-- View -->
+                        <button class="users-action-btn" data-bs-toggle="modal" data-bs-target="#modalViewUser">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                        <!-- Edit -->
                         <button class="users-action-btn" data-bs-toggle="modal" data-bs-target="#modalEditUser">
                             <i class="bi bi-pencil"></i>
                         </button>
-                        <button class="users-action-btn users-action-danger">
+                        <!-- Deactivate -->
+                        <button class="users-action-btn users-action-danger users-action-toggle" data-bs-toggle="modal"
+                            data-bs-target="#modalConfirmDeactivate" data-user-name="Juan Dela Cruz"
+                            data-action="deactivate">
                             <i class="bi bi-power"></i>
                         </button>
                     </div>
@@ -111,17 +111,24 @@
 
                 <!-- Card: Student -->
                 <div class="user-card" data-role="student" data-status="inactive">
-                    <div class="user-avatar user-role-student">MS</div>
                     <div class="user-info">
                         <h6 class="user-name">Maria Santos</h6>
                         <p class="user-email">maria.santos@student.feutech.edu.ph</p>
                         <span class="users-tag users-tag-student">Student</span>
                     </div>
                     <div class="user-actions">
+                        <!-- View -->
+                        <button class="users-action-btn" data-bs-toggle="modal" data-bs-target="#modalViewUser">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                        <!-- Edit -->
                         <button class="users-action-btn" data-bs-toggle="modal" data-bs-target="#modalEditUser">
                             <i class="bi bi-pencil"></i>
                         </button>
-                        <button class="users-action-btn users-action-success">
+                        <!-- Activate -->
+                        <button class="users-action-btn users-action-success users-action-toggle" data-bs-toggle="modal"
+                            data-bs-target="#modalConfirmDeactivate" data-user-name="Maria Santos"
+                            data-action="activate">
                             <i class="bi bi-power"></i>
                         </button>
                     </div>
@@ -129,17 +136,24 @@
 
                 <!-- Card: Associate -->
                 <div class="user-card" data-role="associate" data-status="active">
-                    <div class="user-avatar user-role-associate">CR</div>
                     <div class="user-info">
                         <h6 class="user-name">Carlos Reyes</h6>
                         <p class="user-email">carlos.reyes@associate.feutech.edu.ph</p>
                         <span class="users-tag users-tag-associate">Associate</span>
                     </div>
                     <div class="user-actions">
+                        <!-- View -->
+                        <button class="users-action-btn" data-bs-toggle="modal" data-bs-target="#modalViewUser">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                        <!-- Edit -->
                         <button class="users-action-btn" data-bs-toggle="modal" data-bs-target="#modalEditUser">
                             <i class="bi bi-pencil"></i>
                         </button>
-                        <button class="users-action-btn users-action-danger">
+                        <!-- Deactivate -->
+                        <button class="users-action-btn users-action-danger users-action-toggle" data-bs-toggle="modal"
+                            data-bs-target="#modalConfirmDeactivate" data-user-name="Carlos Reyes"
+                            data-action="deactivate">
                             <i class="bi bi-power"></i>
                         </button>
                     </div>
@@ -152,8 +166,6 @@
             </div>
         </div>
     </main>
-</div>
-</main>
 </div>
 
 <!-- ADD USER MODAL -->
@@ -191,6 +203,41 @@
     </div>
 </div>
 
+<!-- VIEW USER MODAL -->
+<div class="modal fade" id="modalViewUser" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content users-modal">
+            <div class="modal-header users-modal-header">
+                <h5 class="modal-title">User Details</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body users-modal-body">
+                <!-- Static demo content – backend will fill real data -->
+                <div class="mb-2">
+                    <div class="users-label">Full Name</div>
+                    <div>Juan Dela Cruz</div>
+                </div>
+                <div class="mb-2">
+                    <div class="users-label">Email</div>
+                    <div>juan.delacruz@feutech.edu.ph</div>
+                </div>
+                <div class="mb-2">
+                    <div class="users-label">Role</div>
+                    <span class="users-tag users-tag-itso">ITSO Personnel</span>
+                </div>
+                <div class="mb-2">
+                    <div class="users-label">Status</div>
+                    <span class="badge bg-success rounded-pill px-3 py-1 small">Active</span>
+                </div>
+                <p class="mt-3 small text-muted mb-0">
+                    Frontend mock only — connect to backend to display actual user record.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- EDIT USER MODAL -->
 <div class="modal fade" id="modalEditUser" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-md">
@@ -222,9 +269,63 @@
                     <input type="password" class="form-control users-input"
                         placeholder="Enter a new password only if updating">
                 </div>
+                <div class="mb-3">
+                    <label class="users-label">Confirm New Password</label>
+                    <input type="password" class="form-control users-input" placeholder="Repeat new password">
+                </div>
             </div>
             <div class="modal-footer users-modal-footer">
                 <button type="button" class="btn users-btn w-100">Update User (Frontend Only)</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CONFIRM ACTIVATE / DEACTIVATE MODAL -->
+<div class="modal fade" id="modalConfirmDeactivate" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content users-modal users-modal-confirm">
+            <div class="users-modal-confirm-top"></div>
+
+            <div class="modal-header users-modal-header users-modal-confirm-header">
+                <div class="users-modal-icon-wrap">
+                    <div class="users-modal-icon-circle">
+                        <i class="bi bi-power"></i>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="modal-title mb-0">
+                        <span id="confirmActionLabel">Deactivate</span> user
+                    </h5>
+                    <small class="users-modal-subtitle">
+                        This affects the user’s access to the ITSO EMS portal.
+                    </small>
+                </div>
+                <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body users-modal-body users-modal-confirm-body">
+                <p class="mb-2">
+                    Are you sure you want to
+                    <strong><span id="confirmActionLabelInline">deactivate</span></strong>
+                    this account?
+                </p>
+                <p class="mb-2">
+                    User: <strong id="confirmUserName">Juan Dela Cruz</strong>
+                </p>
+                <p class="small users-modal-hint mb-0">
+                    Frontend demo only — backend will perform the actual activation / deactivation.
+                </p>
+            </div>
+
+            <div class="modal-footer users-modal-footer users-modal-confirm-footer">
+                <button type="button" class="btn users-btn-ghost" data-bs-dismiss="modal">
+                    Keep account
+                </button>
+                <button type="button" class="btn users-btn users-btn-strong">
+                    Yes, proceed
+                </button>
             </div>
         </div>
     </div>
