@@ -1,0 +1,570 @@
+/* ----------------------------------------------------------
+   ITSO EMS — Modern Modernized UI (no CSS variables)
+   Colors:
+   Primary Green:   #1E7A3A
+   Dark Green:      #145C2A
+   Accent Light:    #CFEFD0
+   Muted Gray:      #6c757d
+   Background:      #F8FAF8
+---------------------------------------------------------- */
+
+/* Fonts: DM Sans for headings (titles, subtitles), Poppins for body text */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* GLOBAL RESET / BASE */
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  /* body copy uses Poppins */
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: linear-gradient(180deg, #f8faf8 0%, #ffffff 100%);
+  color: #212529;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* UTILS */
+.container.py-5 {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* ---------------- NAVBAR — FIXED, TRANSPARENT, BLUR, WHITE TEXT ---------------- */
+.navbar-modern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1100;
+
+  /* beautiful frosted glass look */
+  background: rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
+
+  transition: all 0.25s ease;
+}
+
+/* soft fade under the navbar so it's not a harsh line */
+.navbar-modern::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -16px;
+  width: 100%;
+  height: 16px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.18),
+    rgba(0, 0, 0, 0.04),
+    transparent
+  );
+  filter: blur(12px);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* BRAND (white text) */
+.navbar-modern .brand-text {
+  font-weight: 700;
+  color: #ffffff !important;
+  letter-spacing: 0.4px;
+  font-size: 1.05rem;
+  /* brand uses DM Sans for crisp heading feel */
+  font-family: "DM Sans", "Poppins", sans-serif;
+}
+
+/* LOGO */
+.navbar-modern .navbar-brand img {
+  height: 40px;
+  object-fit: contain;
+}
+
+/* TOGGLER */
+.navbar-modern .navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.navbar-modern .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* NAV LINKS — ALWAYS WHITE */
+.navbar-modern .nav-link {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 600;
+  transition: color 0.18s ease, transform 0.14s ease;
+  /* nav links use Poppins */
+  font-family: "Poppins", sans-serif;
+}
+.navbar-modern .nav-link:hover {
+  color: #cfefd0 !important; /* your light green */
+  transform: translateY(-2px);
+}
+
+/* CTA BUTTONS (use your green theme) */
+.navbar-modern .btn-primary {
+  background: linear-gradient(180deg, #1e7a3a, #145c2a);
+  color: #fff !important;
+  border-radius: 8px;
+  padding: 0.38rem 0.8rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-modern .btn-outline-light {
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff !important;
+  border-radius: 8px;
+  padding: 0.38rem 0.8rem;
+  font-family: "Poppins", sans-serif;
+}
+.navbar-modern .btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #cfefd0 !important;
+}
+
+/* MOBILE COLLAPSE */
+@media (max-width: 991.98px) {
+  .navbar-modern .navbar-collapse {
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    padding: 0.8rem;
+    margin-top: 0.7rem;
+  }
+  .navbar-modern .nav-link {
+    color: #fff !important;
+  }
+}
+
+/* ---------------- FULL HERO ---------------- */
+.hero-full {
+  height: 120vh;
+  min-height: 640px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* background image (responsive) */
+.hero-bg {
+  background-image: url("../img/indextech.avif");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* subtle parallax effect */
+@media (hover: hover) {
+  .hero-full:hover .hero-bg {
+    transform: scale(1.02);
+    transition: transform 800ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+}
+
+/* HERO — darker overlay + vignette for improved contrast (Option 1 - recommended) */
+.hero-full::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* stronger dark gradient with subtle vignette edges */
+  background: radial-gradient(
+      1200px 600px at 50% 20%,
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.35) 40%,
+      rgba(0, 0, 0, 0.55) 70%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(20, 92, 42, 0.72) 0%,
+      rgba(8, 40, 20, 0.55) 60%
+    );
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Slightly stronger text shadow for readability */
+.hero-title,
+.hero-sub,
+.eyebrow {
+  text-shadow: 0 6px 22px rgba(0, 0, 0, 0.55);
+}
+
+/* CTA contrast boost */
+.navbar-modern .btn-outline-light,
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #fff !important;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  padding: 0 1rem;
+}
+
+/* eyebrow uses DM Sans */
+.eyebrow {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.6rem;
+  opacity: 0.95;
+  font-family: "DM Sans", "Poppins", sans-serif;
+}
+
+/* hero title uses DM Sans */
+.hero-title {
+  color: #fff;
+  font-weight: 800;
+  font-size: clamp(28px, 4.5vw, 44px);
+  line-height: 1.02;
+  margin-bottom: 0.6rem;
+  font-family: "DM Sans", "Poppins", sans-serif;
+}
+.hero-sub {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  font-family: "DM Sans", "Poppins", sans-serif;
+}
+
+/* CTA buttons */
+.btn-primary {
+  background: linear-gradient(180deg, #1e7a3a, #145c2a);
+  border: none;
+  color: #fff;
+  padding: 0.68rem 1.25rem;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 12px 30px rgba(20, 92, 42, 0.18);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  font-family: "Poppins", sans-serif;
+}
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 40px rgba(20, 92, 42, 0.22);
+}
+.btn-outline-light {
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  color: #fff;
+  background: transparent;
+  padding: 0.64rem 1.2rem;
+  font-family: "Poppins", sans-serif;
+}
+.btn-outline-light:hover {
+  background: #fff;
+  color: #145c2a;
+}
+
+.hero-full .btn-outline-light:hover {
+  background: #ffffff !important;
+  color: #145c2a !important; /* Dark Green text */
+  border-color: #ffffff !important;
+}
+
+/* SVG wave */
+.hero-wave {
+  position: absolute;
+  left: 0;
+  bottom: -1px; /* small negative to avoid a hairline gap */
+  width: 100%;
+  height: 100px; /* matches svg viewBox height */
+  z-index: 2;
+  display: block;
+  line-height: 0;
+}
+
+/* scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  text-decoration: none;
+}
+.mouse {
+  width: 28px;
+  height: 44px;
+  border-radius: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  position: relative;
+}
+.wheel {
+  width: 4px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 2px;
+  position: absolute;
+  left: 50%;
+  top: 9px;
+  transform: translateX(-50%);
+  animation: wheel 1.6s infinite;
+}
+@keyframes wheel {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, 6px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* ---------------- GLASS CARD ---------------- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px) saturate(120%);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+}
+
+/* ---------------- FEATURE CARDS ---------------- */
+.feature-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.6rem;
+  border: 1px solid rgba(16, 24, 40, 0.06);
+  transition: transform 0.22s cubic-bezier(0.2, 0.9, 0.25, 1), box-shadow 0.22s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 26px 60px rgba(16, 24, 40, 0.12);
+}
+
+/* accent */
+.accent-box {
+  background: #cfefd0;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid rgba(30, 122, 58, 0.1);
+}
+
+/* badges */
+.badge-soft {
+  background: rgba(30, 122, 58, 0.1);
+  color: #145c2a;
+  padding: 0.35rem 0.65rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* small text uses Poppins */
+.text-muted {
+  color: #6c757d !important;
+  font-family: "Poppins", sans-serif;
+}
+
+/* FEATURE GRID TITLES use DM Sans */
+h3.fw-bold {
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  color: #145c2a;
+  font-family: "DM Sans", "Poppins", sans-serif;
+}
+
+/* entrance animations */
+.animated-up {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: upfade 0.7s forwards cubic-bezier(0.2, 0.9, 0.25, 1);
+}
+.animated-up.delay-1 {
+  animation-delay: 0.08s;
+}
+.animated-up.delay-2 {
+  animation-delay: 0.18s;
+}
+.animated-up.delay-3 {
+  animation-delay: 0.28s;
+}
+@keyframes upfade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------- HOW IT WORKS — Numbered Stepper ---------------- */
+.how-steps {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  padding: 10px 12px;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.step-left {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.step-left::after {
+  content: "";
+  position: absolute;
+  top: 36px;
+  bottom: -8px;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 92, 42, 0.2),
+    rgba(20, 92, 42, 0.06)
+  );
+}
+
+.step:last-child .step-left::after {
+  display: none;
+}
+
+.step-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 122, 58, 0.14),
+    rgba(30, 122, 58, 0.06)
+  );
+  border: 1px solid rgba(20, 92, 42, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #145c2a;
+  font-size: 1.2rem;
+  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.step-body {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  border: 1px solid rgba(16, 24, 40, 0.05);
+  box-shadow: 0 10px 28px rgba(16, 24, 40, 0.06);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+/* step titles use DM Sans */
+.step-body h5 {
+  color: #145c2a;
+  font-weight: 700;
+  margin-bottom: 4px;
+  font-family: "DM Sans", "Poppins", sans-serif;
+}
+
+@media (hover: hover) {
+  .step:hover .step-badge {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(16, 24, 40, 0.1);
+  }
+  .step:hover .step-body {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 56px rgba(16, 24, 40, 0.1);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 767.98px) {
+  .step {
+    grid-template-columns: 1fr;
+  }
+  .step-left {
+    margin-bottom: 8px;
+  }
+  .step-left::after {
+    display: none;
+  }
+  .step-badge {
+    width: 42px;
+    height: 42px;
+  }
+  .step-body {
+    padding: 14px 16px;
+  }
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 767.98px) {
+  .hero-full {
+    min-height: 520px;
+    padding: 1.25rem;
+  }
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  .hero-sub {
+    font-size: 0.98rem;
+  }
+  .feature-card {
+    padding: 1.25rem;
+  }
+  .hero-wave {
+    height: 64px;
+  }
+}
+
+.site-footer {
+  background: #1a1a1a;
+  color: #d9d9d9;
+  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: auto;
+}
+
+/* Premium gradient line */
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #1e7a3a 0%,
+    #3fbf60 35%,
+    #cfefd0 50%,
+    #3fbf60 65%,
+    #1e7a3a 100%
+  );
+}
