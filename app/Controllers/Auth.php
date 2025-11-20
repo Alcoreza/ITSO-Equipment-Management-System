@@ -72,7 +72,6 @@ class Auth extends BaseController
     {
         $data = [
             'title' => 'Register - ITSO EMS',
-            'bodyClass' => 'auth-page'
         ];
 
         return view('include/head_view', $data)

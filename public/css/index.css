@@ -15,6 +15,7 @@
 html,
 body {
   height: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
   /* body copy uses Poppins */
@@ -547,6 +548,7 @@ h3.fw-bold {
   position: relative;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  margin-top: auto;
 }
 
 /* Premium gradient line */

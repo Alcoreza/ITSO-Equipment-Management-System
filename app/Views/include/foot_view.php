@@ -1,5 +1,5 @@
 <!-- app/Views/include/foot_view.php -->
-<footer class="site-footer mt-5">
+<footer class="site-footer">
     <div class="container py-4">
         <div class="row align-items-center gy-3">
 
