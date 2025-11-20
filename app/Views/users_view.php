@@ -1,50 +1,6 @@
 <div class="users-manage">
-    <!-- SIDEBAR -->
-    <aside class="users-sidebar">
-        <div class="users-brand mb-4">
-            <div class="users-brand-mark">IT</div>
-            <div class="users-brand-text">
-                <div class="users-brand-title">ITSO EMS</div>
-                <div class="users-brand-sub">Admin Console</div>
-            </div>
-        </div>
 
-        <nav class="users-nav">
-            <div class="users-nav-section-label">Navigation</div>
-
-            <a href="#" class="users-nav-item">
-                <i class="bi bi-speedometer2"></i>
-                <span>Dashboard</span>
-            </a>
-
-            <a href="#" class="users-nav-item is-active">
-                <i class="bi bi-people"></i>
-                <span>Users</span>
-            </a>
-
-            <a href="#" class="users-nav-item">
-                <i class="bi bi-hdd-network"></i>
-                <span>Equipment</span>
-            </a>
-
-            <a href="#" class="users-nav-item">
-                <i class="bi bi-arrow-left-right"></i>
-                <span>Borrow / Return</span>
-            </a>
-
-            <a href="#" class="users-nav-item">
-                <i class="bi bi-clock-history"></i>
-                <span>Logs</span>
-            </a>
-
-            <div class="users-nav-section-label mt-3">System</div>
-
-            <a href="#" class="users-nav-item">
-                <i class="bi bi-gear"></i>
-                <span>Settings</span>
-            </a>
-        </nav>
-    </aside>
+    <?= view('include/sidebar', ['active' => 'users']) ?>
 
     <!-- MAIN CONTENT -->
     <main class="users-main">
@@ -93,7 +49,8 @@
                     </div>
                     <div class="user-actions">
                         <!-- View -->
-                        <button class="users-action-btn" data-bs-toggle="modal" data-bs-target="#modalViewUser">
+                        <button class="users-action-btn users-action-view" data-bs-toggle="modal"
+                            data-bs-target="#modalViewUser">
                             <i class="bi bi-eye"></i>
                         </button>
                         <!-- Edit -->
@@ -118,7 +75,8 @@
                     </div>
                     <div class="user-actions">
                         <!-- View -->
-                        <button class="users-action-btn" data-bs-toggle="modal" data-bs-target="#modalViewUser">
+                        <button class="users-action-btn users-action-view" data-bs-toggle="modal"
+                            data-bs-target="#modalViewUser">
                             <i class="bi bi-eye"></i>
                         </button>
                         <!-- Edit -->
@@ -126,7 +84,7 @@
                             <i class="bi bi-pencil"></i>
                         </button>
                         <!-- Activate -->
-                        <button class="users-action-btn users-action-success users-action-toggle" data-bs-toggle="modal"
+                        <button class="users-action-btn users-action-danger users-action-toggle" data-bs-toggle="modal"
                             data-bs-target="#modalConfirmDeactivate" data-user-name="Maria Santos"
                             data-action="activate">
                             <i class="bi bi-power"></i>
@@ -143,7 +101,8 @@
                     </div>
                     <div class="user-actions">
                         <!-- View -->
-                        <button class="users-action-btn" data-bs-toggle="modal" data-bs-target="#modalViewUser">
+                        <button class="users-action-btn users-action-view" data-bs-toggle="modal"
+                            data-bs-target="#modalViewUser">
                             <i class="bi bi-eye"></i>
                         </button>
                         <!-- Edit -->
@@ -166,6 +125,7 @@
             </div>
         </div>
     </main>
+
 </div>
 
 <!-- ADD USER MODAL -->
@@ -204,39 +164,33 @@
 </div>
 
 <!-- VIEW USER MODAL -->
-<div class="modal fade" id="modalViewUser" tabindex="-1" aria-hidden="true">
+<div class="modal fade users-modal-view" id="modalViewUser" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-md">
-        <div class="modal-content users-modal">
-            <div class="modal-header users-modal-header">
+        <div class="modal-content">
+            <div class="modal-header">
                 <h5 class="modal-title">User Details</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body users-modal-body">
-                <!-- Static demo content – backend will fill real data -->
-                <div class="mb-2">
-                    <div class="users-label">Full Name</div>
-                    <div>Juan Dela Cruz</div>
-                </div>
-                <div class="mb-2">
-                    <div class="users-label">Email</div>
-                    <div>juan.delacruz@feutech.edu.ph</div>
-                </div>
-                <div class="mb-2">
-                    <div class="users-label">Role</div>
-                    <span class="users-tag users-tag-itso">ITSO Personnel</span>
-                </div>
-                <div class="mb-2">
-                    <div class="users-label">Status</div>
-                    <span class="badge bg-success rounded-pill px-3 py-1 small">Active</span>
-                </div>
-                <p class="mt-3 small text-muted mb-0">
-                    Frontend mock only — connect to backend to display actual user record.
+
+            <div class="modal-body">
+                <p><strong>Full Name:</strong> <span id="viewUserName">Juan Dela Cruz</span></p>
+                <p><strong>Email:</strong> <span id="viewUserEmail">juan.delacruz@feutech.edu.ph</span></p>
+                <p>
+                    <strong>Role:</strong>
+                    <span class="users-modal-role" id="viewUserRole">ITSO Personnel</span>
                 </p>
+                <p><strong>Status:</strong> <span id="viewUserStatus">Active</span></p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn users-btn" data-bs-dismiss="modal">
+                    Close
+                </button>
             </div>
         </div>
     </div>
 </div>
+
 
 <!-- EDIT USER MODAL -->
 <div class="modal fade" id="modalEditUser" tabindex="-1" aria-hidden="true">
@@ -313,9 +267,6 @@
                 </p>
                 <p class="mb-2">
                     User: <strong id="confirmUserName">Juan Dela Cruz</strong>
-                </p>
-                <p class="small users-modal-hint mb-0">
-                    Frontend demo only — backend will perform the actual activation / deactivation.
                 </p>
             </div>
 
