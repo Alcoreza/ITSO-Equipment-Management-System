@@ -40,85 +40,63 @@
             <!-- USER CARDS GRID -->
             <div class="users-grid">
 
-                <!-- Card: ITSO -->
-                <div class="user-card" data-role="itso" data-status="active">
-                    <div class="user-info">
-                        <h6 class="user-name">Juan Dela Cruz</h6>
-                        <p class="user-email">juan.delacruz@feutech.edu.ph</p>
-                        <span class="users-tag users-tag-itso">ITSO Personnel</span>
-                    </div>
-                    <div class="user-actions">
-                        <!-- View -->
-                        <button class="users-action-btn users-action-view" data-bs-toggle="modal"
-                            data-bs-target="#modalViewUser">
-                            <i class="bi bi-eye"></i>
-                        </button>
-                        <!-- Edit -->
-                        <button class="users-action-btn" data-bs-toggle="modal" data-bs-target="#modalEditUser">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                        <!-- Deactivate -->
-                        <button class="users-action-btn users-action-danger users-action-toggle" data-bs-toggle="modal"
-                            data-bs-target="#modalConfirmDeactivate" data-user-name="Juan Dela Cruz"
-                            data-action="deactivate">
-                            <i class="bi bi-power"></i>
-                        </button>
-                    </div>
+    <?php if (!empty($users)): ?>
+        <?php foreach ($users as $u): ?>
+
+            <div class="user-card"
+                 data-role="<?= esc($u['role']) ?>"
+                 data-status="active">
+
+                <div class="user-info">
+                    <h6 class="user-name">
+                        <?= esc($u['first_name'] . ' ' . $u['last_name']) ?>
+                    </h6>
+
+                    <p class="user-email"><?= esc($u['email']) ?></p>
+
+                    <?php
+                        // Role Badges
+                        $tagClass = 'users-tag-student';
+                        if ($u['role'] === 'itso') $tagClass = 'users-tag-itso';
+                        elseif ($u['role'] === 'associate') $tagClass = 'users-tag-associate';
+                    ?>
+                    <span class="users-tag <?= $tagClass ?>">
+                        <?= ucfirst($u['role']) ?>
+                    </span>
+
                 </div>
 
-                <!-- Card: Student -->
-                <div class="user-card" data-role="student" data-status="inactive">
-                    <div class="user-info">
-                        <h6 class="user-name">Maria Santos</h6>
-                        <p class="user-email">maria.santos@student.feutech.edu.ph</p>
-                        <span class="users-tag users-tag-student">Student</span>
-                    </div>
-                    <div class="user-actions">
-                        <!-- View -->
-                        <button class="users-action-btn users-action-view" data-bs-toggle="modal"
+                <div class="user-actions">
+                    <button class="users-action-btn users-action-view"
+                            data-bs-toggle="modal"
                             data-bs-target="#modalViewUser">
-                            <i class="bi bi-eye"></i>
-                        </button>
-                        <!-- Edit -->
-                        <button class="users-action-btn" data-bs-toggle="modal" data-bs-target="#modalEditUser">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                        <!-- Activate -->
-                        <button class="users-action-btn users-action-danger users-action-toggle" data-bs-toggle="modal"
-                            data-bs-target="#modalConfirmDeactivate" data-user-name="Maria Santos"
-                            data-action="activate">
-                            <i class="bi bi-power"></i>
-                        </button>
-                    </div>
-                </div>
+                        <i class="bi bi-eye"></i>
+                    </button>
 
-                <!-- Card: Associate -->
-                <div class="user-card" data-role="associate" data-status="active">
-                    <div class="user-info">
-                        <h6 class="user-name">Carlos Reyes</h6>
-                        <p class="user-email">carlos.reyes@associate.feutech.edu.ph</p>
-                        <span class="users-tag users-tag-associate">Associate</span>
-                    </div>
-                    <div class="user-actions">
-                        <!-- View -->
-                        <button class="users-action-btn users-action-view" data-bs-toggle="modal"
-                            data-bs-target="#modalViewUser">
-                            <i class="bi bi-eye"></i>
-                        </button>
-                        <!-- Edit -->
-                        <button class="users-action-btn" data-bs-toggle="modal" data-bs-target="#modalEditUser">
-                            <i class="bi bi-pencil"></i>
-                        </button>
-                        <!-- Deactivate -->
-                        <button class="users-action-btn users-action-danger users-action-toggle" data-bs-toggle="modal"
-                            data-bs-target="#modalConfirmDeactivate" data-user-name="Carlos Reyes"
+                    <button class="users-action-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalEditUser">
+                        <i class="bi bi-pencil"></i>
+                    </button>
+
+                    <button class="users-action-btn users-action-danger users-action-toggle"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalConfirmDeactivate"
+                            data-user-name="<?= esc($u['first_name'] . ' ' . $u['last_name']) ?>"
                             data-action="deactivate">
-                            <i class="bi bi-power"></i>
-                        </button>
-                    </div>
+                        <i class="bi bi-power"></i>
+                    </button>
                 </div>
 
             </div>
+
+        <?php endforeach; ?>
+    <?php else: ?>
+        <p>No users found.</p>
+    <?php endif; ?>
+
+</div>
+
 
             <div class="users-table-footer mt-3">
                 <span class="small text-muted">Frontend demo only — no backend connection.</span>
