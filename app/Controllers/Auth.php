@@ -16,12 +16,48 @@ class Auth extends BaseController
             . view('include/foot_view');
     }
 
-    public function attempt()   
-    {
-        // FRONTEND ONLY placeholder - backend team will implement authentication logic.
-        session()->setFlashdata('error', 'Demo mode: authentication not implemented.');
-        return redirect()->to(base_url('login'));
+   public function attempt()
+{
+    $request = service('request');
+    $email = trim($request->getPost('email'));
+    $password = $request->getPost('password');
+
+    $itsoModel = new \App\Models\Users_model();
+
+    // check email exists
+    $user = $itsoModel->where('email', $email)->first();
+
+    if (!$user) {
+        session()->setFlashdata('error', 'Email not found.');
+        return redirect()->back()->withInput();
     }
+
+    // validate password
+    if (!password_verify($password, $user['password'])) {
+        session()->setFlashdata('error', 'Incorrect password.');
+        return redirect()->back()->withInput();
+    }
+
+    // 🔥 CHECK ROLE HERE
+    if ($user['role'] !== 'itso') {
+        session()->setFlashdata('error', 'Access denied. Only ITSO users can log in.');
+        return redirect()->back()->withInput();
+    }
+
+    // success → store session
+    session()->set([
+        'isLoggedIn' => true,
+        'user_id'    => $user['id'],
+        'username'   => $user['username'],
+        'email'      => $user['email'],
+        'role'       => $user['role']
+    ]);
+
+    session()->setFlashdata('success', 'Welcome back!');
+
+    return redirect()->to(base_url('users'));
+}
+
 
     public function logout()
     {
@@ -106,18 +142,14 @@ class Auth extends BaseController
     // Split full name into parts
     $parts = explode(" ", $fullname);
     $first_name = $parts[0] ?? '';
-    $middle_name = (count($parts) == 3) ? $parts[1] : null;
     $last_name = $parts[count($parts) - 1] ?? '';
-    $suffix = null; // If you want suffix input, add it later
 
     // Prepare data to match your DB columns
     $data = [
         'username'   => $email, 
         'password'   => password_hash($password, PASSWORD_DEFAULT),
         'first_name' => $first_name,
-        'middle_name'=> $middle_name,
         'last_name'  => $last_name,
-        'suffix'     => $suffix,
         'email'      => $email,
         'role'       => $role
     ];
