@@ -19,10 +19,6 @@ class Borrowed_model extends Model
     ];
 
     protected bool $allowEmptyInserts = false;
-
-    // If you want timestamps, set to true.
-    // Your table does NOT include created_at / updated_at,
-    // so we keep timestamps disabled.
     protected $useTimestamps = false;
 }
 ?>
