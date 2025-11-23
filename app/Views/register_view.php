@@ -84,8 +84,15 @@
                     <span class="input-icon">
                         <i class="bi bi-lock-fill"></i>
                     </span>
-                    <input type="password" class="form-control auth-input" id="reg_confirm_password" minlength="8"
-                        placeholder="Retype your password" required>
+                    <input type="password"
+                        class="form-control auth-input"
+                        id="reg_confirm_password"
+                        name="confirm_password"
+                        minlength="8"
+                        placeholder="Retype your password"
+                    required>
+
+
                 </div>
                 <div class="invalid-feedback">Passwords do not match.</div>
             </div>

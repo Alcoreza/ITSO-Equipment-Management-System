@@ -35,3 +35,7 @@ $routes->get('/reservation', 'ReservationController::index');
 $routes->post('/reservation/submit', 'Reservation::submitReservation');
 
 $routes->get('/reports', 'ReportsController::index');
+
+//for register
+$routes->get('register', 'Auth::register');
+$routes->post('register/submit', 'Auth::submitRegister');

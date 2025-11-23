@@ -16,7 +16,7 @@ class Auth extends BaseController
             . view('include/foot_view');
     }
 
-    public function attempt()
+    public function attempt()   
     {
         // FRONTEND ONLY placeholder - backend team will implement authentication logic.
         session()->setFlashdata('error', 'Demo mode: authentication not implemented.');
@@ -80,10 +80,58 @@ class Auth extends BaseController
             . view('include/foot_view');
     }
 
-    public function submitRegister()
-    {
-        // front-end only demo
-        session()->setFlashdata('success', 'Demo: Registration submitted. (Backend not implemented)');
-        return redirect()->to(base_url('register'));
+   public function submitRegister()
+{
+    $request = service('request');
+    $users = new \App\Models\Users_model();
+
+    // Get form inputs
+    $fullname = trim($request->getPost('fullname'));
+    $email = trim($request->getPost('email'));
+    $role = $request->getPost('role');
+    $password = $request->getPost('password');
+    $confirm = $request->getPost('confirm_password');
+
+    // Basic validation
+    if ($password !== $confirm) {
+        session()->setFlashdata('error', 'Passwords do not match.');
+        return redirect()->back()->withInput();
     }
+
+    if (strlen($password) < 8) {
+        session()->setFlashdata('error', 'Password must be at least 8 characters.');
+        return redirect()->back()->withInput();
+    }
+
+    // Split full name into parts
+    $parts = explode(" ", $fullname);
+    $first_name = $parts[0] ?? '';
+    $middle_name = (count($parts) == 3) ? $parts[1] : null;
+    $last_name = $parts[count($parts) - 1] ?? '';
+    $suffix = null; // If you want suffix input, add it later
+
+    // Prepare data to match your DB columns
+    $data = [
+        'username'   => $email, 
+        'password'   => password_hash($password, PASSWORD_DEFAULT),
+        'first_name' => $first_name,
+        'middle_name'=> $middle_name,
+        'last_name'  => $last_name,
+        'suffix'     => $suffix,
+        'email'      => $email,
+        'role'       => $role
+    ];
+
+    // Insert into database
+    if ($users->insert($data)) {
+        session()->setFlashdata('success', 'Account created successfully!');
+
+        // Redirect to index page
+        return redirect()->to(base_url('/'));
+    } else {
+        session()->setFlashdata('error', 'Error saving data.');
+        return redirect()->back()->withInput();
+    }
+}
+
 }
