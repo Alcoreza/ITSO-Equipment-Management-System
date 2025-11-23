@@ -21,14 +21,8 @@ class AdminController extends BaseController
         . view('include/nav_view', $data)
         . view('users_view', $data)
         . view('include/foot_view', $data);
-<<<<<<< Updated upstream
+
 }
-
-
-=======
-    }
-
-
 public function equipment()
     {
         $data = [
@@ -42,8 +36,8 @@ public function equipment()
             . view('equipment_view', $data)   // front-end only
             . view('include/foot_view', $data);
     }
->>>>>>> Stashed changes
 }
+
 
 /* public function users()
 {
