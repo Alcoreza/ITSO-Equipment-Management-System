@@ -115,6 +115,82 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+  /* ==================================================
+     EDIT USER MODAL HANDLER (AUTO-FILL + OPEN)
+     ================================================== */
+
+  document.querySelectorAll('.btn-edit-user').forEach(button => {
+    button.addEventListener('click', function () {
+
+      document.getElementById('editUserId').value = this.dataset.id;
+      document.getElementById('editFirstName').value = this.dataset.first;
+      document.getElementById('editLastName').value = this.dataset.last;
+      document.getElementById('editEmail').value = this.dataset.email;
+      document.getElementById('editRole').value = this.dataset.role;
+
+      
+
+      const editModal = new bootstrap.Modal(
+        document.getElementById('modalEditUser')
+      );
+      editModal.show();
+
+    });
+  });
+
+/* ==================================================
+   VIEW USER MODAL HANDLER (FETCH + AUTO-FILL + OPEN)
+   ================================================== */
+document.querySelectorAll('.users-action-view').forEach(button => {
+    button.addEventListener('click', async function () {
+        const userId = this.dataset.id; // Get the user ID from the data-id attribute
+
+        try {
+            const response = await fetch(`/Envizio/admin/user/${userId}`); // Fetch data from the server
+            if (!response.ok) {
+                throw new Error('Failed to fetch user data');
+            }
+
+            const user = await response.json(); // Parse the response as JSON
+
+            // Populate the modal with user data
+            document.getElementById('viewUserName').textContent = `${user.first_name} ${user.last_name}`;
+            document.getElementById('viewUserEmail').textContent = user.email;
+            document.getElementById('viewUserRole').textContent = user.role;
+            document.getElementById('viewUserStatus').textContent = user.status_text;
+
+            // Show the modal
+            const viewModal = new bootstrap.Modal(document.getElementById('modalViewUser'));
+            viewModal.show();
+
+        } catch (error) {
+            alert(error.message); // Show an error if the fetch fails
+        }
+    });
+});
+
+// Reset the modal when it is closed (to prevent lingering data and gray backdrop)
+document.getElementById('modalViewUser').addEventListener('hidden.bs.modal', function () {
+    // Reset the modal content to avoid showing outdated information
+    document.getElementById('viewUserName').textContent = '';
+    document.getElementById('viewUserEmail').textContent = '';
+    document.getElementById('viewUserRole').textContent = '';
+    document.getElementById('viewUserStatus').textContent = '';
+
+    // Ensure the backdrop and modal are fully reset
+    const modalBackdrop = document.querySelector('.modal-backdrop');
+    if (modalBackdrop) {
+        modalBackdrop.remove(); // Remove the backdrop manually if it's lingering
+    }
+
+    // If you need to manually hide the modal (in case the modal doesn't close on its own)
+    const modal = bootstrap.Modal.getInstance(document.getElementById('modalViewUser'));
+    if (modal) {
+        modal.hide(); // Ensure the modal is hidden
+    }
+});
+
 /* ===========================================
    EQUIPMENT MODULE — FRONTEND ONLY
    Filtering + Search + Confirm Modal Logic
