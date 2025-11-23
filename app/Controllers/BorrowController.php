@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Borrowed_model;
 use CodeIgniter\Controller;
 
 class BorrowController extends BaseController
@@ -22,19 +23,35 @@ class BorrowController extends BaseController
     // Handle form submission
     public function submit()
     {
-        // Retrieve POST data
-        $borrower_name = $this->request->getPost('borrower_name');
-        $email = $this->request->getPost('email');
-        $equipment = $this->request->getPost('equipment_id');
-        $return_date = $this->request->getPost('return_date');
+        // Validate form inputs
+        $validation = $this->validate([
+            'borrower_id' => 'required|numeric',
+            'email'       => 'required|valid_email',
+            'equipment_id'=> 'required|numeric',
+            'return_date' => 'permit_empty|valid_date'
+        ]);
 
-        // For now, just log the submission
-        log_message('info', "Borrow submitted: $borrower_name, $email, $equipment, $return_date");
+        if (!$validation) {
+            return redirect()->back()->withInput()->with('error', 'Please check the form and try again.');
+        }
 
-        // Set flashdata message for success
+        // Load model
+        $borrowModel = new Borrowed_model();
+
+        // Prepare data for DB
+        $data = [
+            'borrower_id' => $this->request->getPost('borrower_id'),
+            'email'       => $this->request->getPost('email'),
+            'equipment_id'=> $this->request->getPost('equipment_id'),
+            'return_date' => $this->request->getPost('return_date')
+        ];
+
+        // Insert into database
+        $borrowModel->insert($data);
+
+        // Flash success message
         session()->setFlashdata('success', 'Equipment borrow recorded successfully!');
 
-        // Redirect back to the borrow page
         return redirect()->to('/borrow');
     }
 }
