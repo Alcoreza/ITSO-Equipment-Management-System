@@ -21,9 +21,28 @@ class AdminController extends BaseController
         . view('include/nav_view', $data)
         . view('users_view', $data)
         . view('include/foot_view', $data);
+<<<<<<< Updated upstream
 }
 
 
+=======
+    }
+
+
+public function equipment()
+    {
+        $data = [
+            'title' => 'Equipment Management - ITSO EMS',
+            'bodyClass' => 'equipment-page',
+            'active' => 'equipment'
+        ];
+
+        return view('include/head_view', $data)
+            . view('include/nav_view', $data)
+            . view('equipment_view', $data)   // front-end only
+            . view('include/foot_view', $data);
+    }
+>>>>>>> Stashed changes
 }
 
 /* public function users()
