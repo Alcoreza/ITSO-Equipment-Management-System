@@ -1,10 +1,10 @@
-<div class="equipment-manage">
+<div class="equipment-manage users-manage">
 
     <!-- SIDEBAR -->
     <?= view('include/sidebar', ['active' => 'equipment']) ?>
 
     <!-- MAIN -->
-    <main class="equipment-main">
+    <main class="equipment-main users-main">
         <div class="equipment-card-wrapper">
 
             <!-- Header -->
