@@ -23,21 +23,6 @@ class AdminController extends BaseController
         . view('include/foot_view', $data);
     }
 
-<<<<<<< HEAD
-    public function equipment()
-    {
-        $data = [
-            'title' => 'Equipment Management - ITSO EMS',
-            'bodyClass' => 'equipment-page',
-            'active' => 'equipment'
-        ];
-
-        return view('include/head_view', $data)
-            . view('include/nav_view', $data)
-            . view('equipment_view', $data)   // front-end only
-            . view('include/foot_view', $data);
-    }
-=======
 //update user details
 public function updateUser()
 {
@@ -66,7 +51,6 @@ public function updateUser()
     $usersModel->update($id, $data);
 
     return redirect()->to('/users')->with('success', 'User updated successfully.');
->>>>>>> e7ce3e73e1eed9ef6c274731dbb92a46497e7c66
 }
 
 

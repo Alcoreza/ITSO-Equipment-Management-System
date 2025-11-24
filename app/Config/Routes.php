@@ -40,18 +40,12 @@ $routes->get('/reports', 'ReportsController::index');
 $routes->get('register', 'Auth::register');
 $routes->post('register/submit', 'Auth::submitRegister');
 
-<<<<<<< HEAD
 // Reservation routes
 $routes->get('reservation', 'ReservationController::index');
 $routes->post('reservation/submitReservation', 'ReservationController::submitReservation');
-=======
+
 //for editing user details
 $routes->post('admin/updateUser', 'AdminController::updateUser');
 
 //for viewing user details
 $routes->get('admin/user/(:num)', 'AdminController::getUser/$1');
-
-
-
-
->>>>>>> e7ce3e73e1eed9ef6c274731dbb92a46497e7c66
