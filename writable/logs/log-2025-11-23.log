@@ -385,6 +385,7 @@ DEBUG - 2025-11-23 12:17:48 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-11-23 12:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-23 13:37:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-23 13:46:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
 ERROR - 2025-11-23 14:00:08 --> mysqli_sql_exception: Column 'borrow_id' cannot be null in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
 Stack trace:
 #0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `re...', 0)
@@ -499,3 +500,11 @@ in SYSTEMPATH\BaseModel.php on line 1008.
 DEBUG - 2025-11-23 14:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-23 14:21:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-23 14:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+DEBUG - 2025-11-23 14:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-23 14:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-23 14:46:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-23 14:46:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-23 14:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-23 14:50:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> 02d39389d69bc1ad165ff59f8cb60999bffdea43
