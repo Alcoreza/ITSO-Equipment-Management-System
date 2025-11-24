@@ -44,6 +44,7 @@
         <?php foreach ($users as $u): ?>
 
             <div class="user-card"
+                data-id="<?= $u['id'] ?>"
                 data-role="<?= esc($u['role']) ?>"
                 data-status="<?= $u['status'] == 1 ? 'active' : 'inactive' ?>">
 
@@ -90,8 +91,9 @@
                     <button class="users-action-btn users-action-danger users-action-toggle"
                             data-bs-toggle="modal"
                             data-bs-target="#modalConfirmDeactivate"
+                            data-id="<?= $u['id'] ?>"
                             data-user-name="<?= esc($u['first_name'] . ' ' . $u['last_name']) ?>"
-                            data-action="deactivate">
+                            data-action="<?= $u['status'] == 1 ? 'deactivate' : 'activate' ?>">
                         <i class="bi bi-power"></i>
                     </button>
                 </div>
@@ -104,8 +106,18 @@
     <?php endif; ?>
 
 </div>
-            <div class="users-table-footer mt-3">
-                <span class="small text-muted">Frontend demo only — no backend connection.</span>
+            <div class="mt-3">
+                <div class="users-table-footer mb-2">
+                    <span class="small text-muted">Showing users per page: <?= isset($perPage) ? (int)$perPage : 'all' ?></span>
+                </div>
+
+                <div class="users-pagination-wrapper">
+                    <div class="users-pagination">
+                        <?php if (isset($pager) && $pager): ?>
+                            <?= $pager->links('default', 'default_full') ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
@@ -272,9 +284,16 @@
                 <button type="button" class="btn users-btn-ghost" data-bs-dismiss="modal">
                     Keep account
                 </button>
-                <button type="button" class="btn users-btn users-btn-strong">
-                    Yes, proceed
-                </button>
+
+                <!-- Form to submit activation/deactivation -->
+                <form id="confirmToggleForm" method="post" action="<?= base_url('admin/toggleUser') ?>">
+                    <?= csrf_field() ?>
+                    <input type="hidden" name="id" id="confirmToggleId" value="">
+                    <input type="hidden" name="action" id="confirmToggleAction" value="deactivate">
+                    <button type="submit" class="btn users-btn users-btn-strong">
+                        Yes, proceed
+                    </button>
+                </form>
             </div>
         </div>
     </div>
