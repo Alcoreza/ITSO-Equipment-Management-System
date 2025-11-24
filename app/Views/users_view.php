@@ -73,15 +73,16 @@
                             data-id="<?= $u['id'] ?>">
                         <i class="bi bi-eye"></i>
                     </button>
-
-                    </button>
+                    
                     <button class="users-action-btn btn-edit-user"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalEditUser"
                         data-id="<?= $u['id'] ?>"
                         data-first="<?= esc($u['first_name']) ?>"
                         data-last="<?= esc($u['last_name']) ?>"
                         data-email="<?= esc($u['email']) ?>"
                         data-role="<?= esc($u['role']) ?>">
-                        <i class="bi bi-pencil"></i>    
+                        <i class="bi bi-pencil"></i>
                     </button>
 
 
@@ -147,13 +148,11 @@
 </div>
 
 <!-- VIEW USER MODAL -->
-<!-- VIEW USER MODAL -->
 <div class="modal fade users-modal-view" id="modalViewUser" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-md">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">User Details</h5>
-                <!-- Close button that dismisses the modal -->
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
@@ -175,8 +174,6 @@
         </div>
     </div>
 </div>
-
-
 
 <!-- EDIT USER MODAL -->
 <div class="modal fade" id="modalEditUser" tabindex="-1" aria-hidden="true">
@@ -212,9 +209,11 @@
                     <div class="mb-3">
                         <label>Role</label>
                         <select class="form-select" name="role" id="editRole" required>
+                            <option value="itso">ITSO Personnel</option>
                             <option value="Teacher">Teacher</option>
                             <option value="Student">Student</option>
                         </select>
+                    </div>
                     <div class="mb-3">
                         <label>New Password (optional)</label>
                         <input type="password" class="form-control" name="password">
