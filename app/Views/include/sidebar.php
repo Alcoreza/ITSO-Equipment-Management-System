@@ -39,12 +39,5 @@
             <i class="bi bi-clipboard-check"></i>
             <span>Reports</span>
         </a>
-
-        <div class="users-nav-section-label mt-3">System</div>
-
-        <a href="<?= base_url('settings') ?>" class="users-nav-item <?= $active === 'settings' ? 'is-active' : '' ?>">
-            <i class="bi bi-gear"></i>
-            <span>Settings</span>
-        </a>
     </nav>
 </aside>
