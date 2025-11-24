@@ -12,8 +12,7 @@
                 <p class="reservation-sub">Fill out the information below to reserve equipment.</p>
             </div>
 
-            <form id="reservationForm" method="post" action="<?= base_url('reservation/submitReservation') ?>">
-
+            <form id="reservationForm">
 
                 <!-- Associate Name -->
                 <div class="form-group mb-3">
@@ -33,18 +32,24 @@
 
                 <!-- Equipment Selection -->
                 <div class="form-group mb-3">
-                    <label class="reservation-label" for="equipment_name">
+                    <label class="reservation-label" for="equipment_id">
                         <i class="bi bi-box-fill me-2"></i> Equipment
                     </label>
-                    <select class="reservation-input" id="equipment_name" name="equipment_name" required>
+                    <select class="reservation-input" id="equipment_id" name="equipment_id" required>
                         <option disabled selected>Select Equipment</option>
-                        <?php if (!empty($equipment_list)): ?>
-                            <?php foreach ($equipment_list as $eq): ?>
-                                <option value="<?= $eq['equipment_name'] ?>"><?= $eq['equipment_name'] ?></option>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <option disabled>No equipment available</option>
-                        <?php endif; ?>
+                        <option>Laptop (with charger)</option>
+                        <option>DLP Projector (with extension cord, VGA/HDMI, power cable)</option>
+                        <option>HDMI Cable</option>
+                        <option>VGA Cable</option>
+                        <option>DLP Remote Control</option>
+                        <option>Keyboard & Mouse (Mac lab, with lightning cable)</option>
+                        <option>Wacom Drawing Tablet (with pen)</option>
+                        <option>Speaker Set</option>
+                        <option>Webcam</option>
+                        <option>Extension Cord</option>
+                        <option>Cable Crimping Tool</option>
+                        <option>Cable Tester</option>
+                        <option>Lab Room Key</option>
                     </select>
                 </div>
 
@@ -54,14 +59,6 @@
                         <i class="bi bi-calendar-fill me-2"></i> Reservation Date
                     </label>
                     <input type="date" class="reservation-input" id="reserve_date" name="reserve_date" required>
-                </div>
-
-                <!-- Optional Notes -->
-                <div class="form-group mb-3">
-                    <label class="reservation-label" for="notes">
-                        <i class="bi bi-pencil-fill me-2"></i> Notes
-                    </label>
-                    <textarea class="reservation-input" id="notes" name="notes" placeholder="Optional notes about the reservation"></textarea>
                 </div>
 
                 <button type="submit" class="reservation-btn mt-3">Reserve Equipment</button>

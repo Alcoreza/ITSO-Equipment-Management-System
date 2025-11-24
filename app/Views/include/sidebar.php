@@ -10,6 +10,11 @@
     <nav class="users-nav">
         <div class="users-nav-section-label">Navigation</div>
 
+        <a href="<?= base_url('dashboard') ?>" class="users-nav-item <?= $active === 'dashboard' ? 'is-active' : '' ?>">
+            <i class="bi bi-speedometer2"></i>
+            <span>Dashboard</span>
+        </a>
+
         <a href="<?= base_url('users') ?>" class="users-nav-item <?= $active === 'users' ? 'is-active' : '' ?>">
             <i class="bi bi-people"></i>
             <span>Users</span>

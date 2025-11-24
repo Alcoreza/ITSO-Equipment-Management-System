@@ -12,13 +12,11 @@ class Borrowed_model extends Model
     protected $returnType = 'array';
 
     protected $allowedFields = [
-    'borrower_id',
-    'email',
-    'equipment_id',
-    'return_date',
-    'status'
+        'borrower_id',
+        'email',
+        'equipment_id',
+        'return_date'
     ];
-
 
     protected bool $allowEmptyInserts = false;
     protected $useTimestamps = false;
