@@ -14,7 +14,7 @@
                     <p class="borrow-sub">Fill out the information below.</p>
                 </div>
 
-                <form id="borrowForm">
+                <form action="<?= base_url('/borrow/submit') ?>" method="post" id="borrowForm">
 
                     <div class="form-group mb-3">
                         <label class="borrow-label" for="borrower_name">
@@ -31,24 +31,14 @@
                     </div>
 
                     <div class="form-group mb-3">
-                        <label class="borrow-label" for="equipment_id">
+                        <label class="borrow-label" for="equipment_name">
                             <i class="bi bi-box-seam"></i> Equipment
                         </label>
-                        <select class="borrow-input" id="equipment_id" name="equipment_id" required>
+                        <select class="borrow-input" id="equipment_name" name="equipment_name" required>
                             <option disabled selected>Select Equipment</option>
-                            <option>Laptop (with charger)</option>
-                            <option>DLP Projector (with extension cord, VGA/HDMI, power cable)</option>
-                            <option>HDMI Cable</option>
-                            <option>VGA Cable</option>
-                            <option>DLP Remote Control</option>
-                            <option>Keyboard & Mouse (Mac lab, with lightning cable)</option>
-                            <option>Wacom Drawing Tablet (with pen)</option>
-                            <option>Speaker Set</option>
-                            <option>Webcam</option>
-                            <option>Extension Cord</option>
-                            <option>Cable Crimping Tool</option>
-                            <option>Cable Tester</option>
-                            <option>Lab Room Key</option>
+                            <?php foreach($equipment_list as $equipment): ?>
+                                <option><?= $equipment['equipment_name'] ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
 
