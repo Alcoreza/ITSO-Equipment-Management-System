@@ -244,6 +244,7 @@ WHERE `users`.`id` IN :users.id:', [...], false)
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 CRITICAL - 2025-11-24 06:48:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`borrowed_items`, CONSTRAINT `borrowed_items_ibfk_2` FOREIGN KEY (`email`) REFERENCES `users` (`email`))
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
  1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `first_name` = \'Weinard\', `last_name` = \'Manianglung\', `email` = \'weinard21123@gmail.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 06:48:37\'
@@ -351,3 +352,45 @@ INFO - 2025-11-24 08:50:35 --> Inserting Borrow Data: Array
 INFO - 2025-11-24 08:50:35 --> Borrow data inserted successfully!
 INFO - 2025-11-24 08:50:35 --> Equipment availability updated successfully.
 DEBUG - 2025-11-24 08:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+DEBUG - 2025-11-24 08:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 08:08:21 --> ErrorException: Undefined array key "status"
+[Method: GET, Route: users]
+in APPPATH\Views\users_view.php on line 48.
+ 1 APPPATH\Views\users_view.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\xampp\\htdocs\\Envizio\\app\\Views\\users_view.php', 48)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Envizio\\app\\Views\\users_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('users_view', [], true)
+ 5 APPPATH\Controllers\AdminController.php(22): view('users_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->users()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-24 08:12:56 --> ErrorException: Undefined array key "status"
+[Method: GET, Route: users]
+in APPPATH\Views\users_view.php on line 48.
+ 1 APPPATH\Views\users_view.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\xampp\\htdocs\\Envizio\\app\\Views\\users_view.php', 48)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Envizio\\app\\Views\\users_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('users_view', [], true)
+ 5 APPPATH\Controllers\AdminController.php(22): view('users_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->users()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-24 08:16:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:16:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:34:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> 2729d3c882669810b17a5b2efc605f821777c5ba
