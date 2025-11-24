@@ -3,49 +3,7 @@ DEBUG - 2025-11-24 06:16:40 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-11-24 06:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-24 06:17:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-24 06:21:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-CRITICAL - 2025-11-24 07:20:37 --> ErrorException: Undefined array key "status"
-[Method: GET, Route: users]
-in APPPATH\Views\users_view.php on line 48.
- 1 APPPATH\Views\users_view.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\xampp\\htdocs\\Envizio\\app\\Views\\users_view.php', 48)
- 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Envizio\\app\\Views\\users_view.php')
- 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('users_view', [], true)
- 5 APPPATH\Controllers\AdminController.php(22): view('users_view', [...])
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->users()
- 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2025-11-24 07:20:39 --> ErrorException: Undefined array key "status"
-[Method: GET, Route: users]
-in APPPATH\Views\users_view.php on line 48.
- 1 APPPATH\Views\users_view.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\xampp\\htdocs\\Envizio\\app\\Views\\users_view.php', 48)
- 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Envizio\\app\\Views\\users_view.php')
- 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('users_view', [], true)
- 5 APPPATH\Controllers\AdminController.php(22): view('users_view', [...])
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->users()
- 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2025-11-24 07:20:43 --> ErrorException: Undefined array key "status"
-[Method: GET, Route: users]
-in APPPATH\Views\users_view.php on line 48.
- 1 APPPATH\Views\users_view.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\xampp\\htdocs\\Envizio\\app\\Views\\users_view.php', 48)
- 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Envizio\\app\\Views\\users_view.php')
- 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
- 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('users_view', [], true)
- 5 APPPATH\Controllers\AdminController.php(22): view('users_view', [...])
- 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->users()
- 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
- 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
- 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
-10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
-11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-ERROR - 2025-11-24 07:23:14 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`reservations`, CONSTRAINT `reservations_ibfk_3` FOREIGN KEY (`email`) REFERENCES `users` (`email`) ON DELETE CASCADE) in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+ERROR - 2025-11-24 06:24:16 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`borrowed_items`, CONSTRAINT `borrowed_items_ibfk_2` FOREIGN KEY (`email`) REFERENCES `users` (`email`)) in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
 Stack trace:
 #0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `users` ...', 0)
 #1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
@@ -54,7 +12,7 @@ Stack trace:
 #4 C:\xampp\htdocs\Envizio\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
 #5 C:\xampp\htdocs\Envizio\system\BaseModel.php(1025): CodeIgniter\Model->doUpdate(Array, Array)
 #6 C:\xampp\htdocs\Envizio\system\Model.php(860): CodeIgniter\BaseModel->update(Array, Array)
-#7 C:\xampp\htdocs\Envizio\app\Controllers\AdminController.php(51): CodeIgniter\Model->update('5', Array)
+#7 C:\xampp\htdocs\Envizio\app\Controllers\AdminController.php(51): CodeIgniter\Model->update('7', Array)
 #8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\AdminController->updateUser()
 #9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
 #10 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
@@ -62,7 +20,7 @@ Stack trace:
 #12 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 #13 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 #14 {main}
-CRITICAL - 2025-11-24 07:23:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`reservations`, CONSTRAINT `reservations_ibfk_3` FOREIGN KEY (`email`) REFERENCES `users` (`email`) ON DELETE CASCADE)
+CRITICAL - 2025-11-24 06:24:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`borrowed_items`, CONSTRAINT `borrowed_items_ibfk_2` FOREIGN KEY (`email`) REFERENCES `users` (`email`))
 [Method: POST, Route: admin/updateUser]
 in SYSTEMPATH\Database\BaseConnection.php on line 684.
  1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `first_name` = :first_name:, `last_name` = :last_name:, `email` = :email:, `role` = :role:, `updated_at` = :updated_at:
@@ -70,52 +28,53 @@ WHERE `users`.`id` IN :users.id:', [...], false)
  2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
  3 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
  4 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
- 5 APPPATH\Controllers\AdminController.php(51): CodeIgniter\Model->update('5', [...])
+ 5 APPPATH\Controllers\AdminController.php(51): CodeIgniter\Model->update('7', [...])
  6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->updateUser()
  7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
  8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2025-11-24 07:23:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`reservations`, CONSTRAINT `reservations_ibfk_3` FOREIGN KEY (`email`) REFERENCES `users` (`email`) ON DELETE CASCADE)
+CRITICAL - 2025-11-24 06:24:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`borrowed_items`, CONSTRAINT `borrowed_items_ibfk_2` FOREIGN KEY (`email`) REFERENCES `users` (`email`))
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
- 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `first_name` = \'Ozbert\', `last_name` = \'Sales\', `email` = \'singkamas12345@yahoo.com\', `role` = \'Teacher\', `updated_at` = \'2025-11-24 07:23:14\'
-WHERE `users`.`id` IN (\'5\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `first_name` = \'Ozbert\', `last_name` = \'Sales\', `email` = \'singkamas12345@yahoo.com\', `role` = \'Teacher\', `updated_at` = \'2025-11-24 07:23:14\'
-WHERE `users`.`id` IN (\'5\')')
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `first_name` = \'Weinard\', `last_name` = \'Manianglung\', `email` = \'weinard12321@gmail.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 06:24:16\'
+WHERE `users`.`id` IN (\'7\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `first_name` = \'Weinard\', `last_name` = \'Manianglung\', `email` = \'weinard12321@gmail.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 06:24:16\'
+WHERE `users`.`id` IN (\'7\')')
  3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `first_name` = :first_name:, `last_name` = :last_name:, `email` = :email:, `role` = :role:, `updated_at` = :updated_at:
 WHERE `users`.`id` IN :users.id:', [...], false)
  4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
  5 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
  6 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
- 7 APPPATH\Controllers\AdminController.php(51): CodeIgniter\Model->update('5', [...])
+ 7 APPPATH\Controllers\AdminController.php(51): CodeIgniter\Model->update('7', [...])
  8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->updateUser()
  9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
 10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2025-11-24 07:23:14 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`reservations`, CONSTRAINT `reservations_ibfk_3` FOREIGN KEY (`email`) REFERENCES `users` (`email`) ON DELETE CASCADE)
+CRITICAL - 2025-11-24 06:24:16 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`borrowed_items`, CONSTRAINT `borrowed_items_ibfk_2` FOREIGN KEY (`email`) REFERENCES `users` (`email`))
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `users` SET `first_name` = \'Ozbert\', `last_name` = \'Sales\', `email` = \'singkamas12345@yahoo.com\', `role` = \'Teacher\', `updated_at` = \'2025-11-24 07:23:14\'
-WHERE `users`.`id` IN (\'5\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `first_name` = \'Ozbert\', `last_name` = \'Sales\', `email` = \'singkamas12345@yahoo.com\', `role` = \'Teacher\', `updated_at` = \'2025-11-24 07:23:14\'
-WHERE `users`.`id` IN (\'5\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `first_name` = \'Ozbert\', `last_name` = \'Sales\', `email` = \'singkamas12345@yahoo.com\', `role` = \'Teacher\', `updated_at` = \'2025-11-24 07:23:14\'
-WHERE `users`.`id` IN (\'5\')')
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `users` SET `first_name` = \'Weinard\', `last_name` = \'Manianglung\', `email` = \'weinard12321@gmail.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 06:24:16\'
+WHERE `users`.`id` IN (\'7\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `first_name` = \'Weinard\', `last_name` = \'Manianglung\', `email` = \'weinard12321@gmail.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 06:24:16\'
+WHERE `users`.`id` IN (\'7\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `first_name` = \'Weinard\', `last_name` = \'Manianglung\', `email` = \'weinard12321@gmail.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 06:24:16\'
+WHERE `users`.`id` IN (\'7\')')
  4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `first_name` = :first_name:, `last_name` = :last_name:, `email` = :email:, `role` = :role:, `updated_at` = :updated_at:
 WHERE `users`.`id` IN :users.id:', [...], false)
  5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
  6 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
  7 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
- 8 APPPATH\Controllers\AdminController.php(51): CodeIgniter\Model->update('5', [...])
+ 8 APPPATH\Controllers\AdminController.php(51): CodeIgniter\Model->update('7', [...])
  9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->updateUser()
 10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
 11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-ERROR - 2025-11-24 07:30:51 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`reservations`, CONSTRAINT `reservations_ibfk_3` FOREIGN KEY (`email`) REFERENCES `users` (`email`) ON DELETE CASCADE) in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+DEBUG - 2025-11-24 06:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-24 06:30:52 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`borrowed_items`, CONSTRAINT `borrowed_items_ibfk_2` FOREIGN KEY (`email`) REFERENCES `users` (`email`)) in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
 Stack trace:
 #0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `users` ...', 0)
 #1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
@@ -124,7 +83,7 @@ Stack trace:
 #4 C:\xampp\htdocs\Envizio\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
 #5 C:\xampp\htdocs\Envizio\system\BaseModel.php(1025): CodeIgniter\Model->doUpdate(Array, Array)
 #6 C:\xampp\htdocs\Envizio\system\Model.php(860): CodeIgniter\BaseModel->update(Array, Array)
-#7 C:\xampp\htdocs\Envizio\app\Controllers\AdminController.php(51): CodeIgniter\Model->update('5', Array)
+#7 C:\xampp\htdocs\Envizio\app\Controllers\AdminController.php(51): CodeIgniter\Model->update('7', Array)
 #8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\AdminController->updateUser()
 #9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
 #10 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
@@ -132,7 +91,7 @@ Stack trace:
 #12 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 #13 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 #14 {main}
-CRITICAL - 2025-11-24 07:30:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`reservations`, CONSTRAINT `reservations_ibfk_3` FOREIGN KEY (`email`) REFERENCES `users` (`email`) ON DELETE CASCADE)
+CRITICAL - 2025-11-24 06:30:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`borrowed_items`, CONSTRAINT `borrowed_items_ibfk_2` FOREIGN KEY (`email`) REFERENCES `users` (`email`))
 [Method: POST, Route: admin/updateUser]
 in SYSTEMPATH\Database\BaseConnection.php on line 684.
  1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `first_name` = :first_name:, `last_name` = :last_name:, `email` = :email:, `role` = :role:, `updated_at` = :updated_at:
@@ -140,107 +99,307 @@ WHERE `users`.`id` IN :users.id:', [...], false)
  2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
  3 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
  4 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
- 5 APPPATH\Controllers\AdminController.php(51): CodeIgniter\Model->update('5', [...])
+ 5 APPPATH\Controllers\AdminController.php(51): CodeIgniter\Model->update('7', [...])
  6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->updateUser()
  7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
  8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2025-11-24 07:30:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`reservations`, CONSTRAINT `reservations_ibfk_3` FOREIGN KEY (`email`) REFERENCES `users` (`email`) ON DELETE CASCADE)
+CRITICAL - 2025-11-24 06:30:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`borrowed_items`, CONSTRAINT `borrowed_items_ibfk_2` FOREIGN KEY (`email`) REFERENCES `users` (`email`))
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
- 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `first_name` = \'Ozbert\', `last_name` = \'Sales\', `email` = \'singkamas12345@yahoo.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 07:30:51\'
-WHERE `users`.`id` IN (\'5\')')
- 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `first_name` = \'Ozbert\', `last_name` = \'Sales\', `email` = \'singkamas12345@yahoo.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 07:30:51\'
-WHERE `users`.`id` IN (\'5\')')
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `first_name` = \'Weinard\', `last_name` = \'Manianglung\', `email` = \'weinard2121@gmail.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 06:30:52\'
+WHERE `users`.`id` IN (\'7\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `first_name` = \'Weinard\', `last_name` = \'Manianglung\', `email` = \'weinard2121@gmail.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 06:30:52\'
+WHERE `users`.`id` IN (\'7\')')
  3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `first_name` = :first_name:, `last_name` = :last_name:, `email` = :email:, `role` = :role:, `updated_at` = :updated_at:
 WHERE `users`.`id` IN :users.id:', [...], false)
  4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
  5 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
  6 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
- 7 APPPATH\Controllers\AdminController.php(51): CodeIgniter\Model->update('5', [...])
+ 7 APPPATH\Controllers\AdminController.php(51): CodeIgniter\Model->update('7', [...])
  8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->updateUser()
  9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
 10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-CRITICAL - 2025-11-24 07:30:51 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`reservations`, CONSTRAINT `reservations_ibfk_3` FOREIGN KEY (`email`) REFERENCES `users` (`email`) ON DELETE CASCADE)
+CRITICAL - 2025-11-24 06:30:52 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`borrowed_items`, CONSTRAINT `borrowed_items_ibfk_2` FOREIGN KEY (`email`) REFERENCES `users` (`email`))
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
- 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `users` SET `first_name` = \'Ozbert\', `last_name` = \'Sales\', `email` = \'singkamas12345@yahoo.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 07:30:51\'
-WHERE `users`.`id` IN (\'5\')', 0)
- 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `first_name` = \'Ozbert\', `last_name` = \'Sales\', `email` = \'singkamas12345@yahoo.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 07:30:51\'
-WHERE `users`.`id` IN (\'5\')')
- 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `first_name` = \'Ozbert\', `last_name` = \'Sales\', `email` = \'singkamas12345@yahoo.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 07:30:51\'
-WHERE `users`.`id` IN (\'5\')')
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `users` SET `first_name` = \'Weinard\', `last_name` = \'Manianglung\', `email` = \'weinard2121@gmail.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 06:30:52\'
+WHERE `users`.`id` IN (\'7\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `first_name` = \'Weinard\', `last_name` = \'Manianglung\', `email` = \'weinard2121@gmail.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 06:30:52\'
+WHERE `users`.`id` IN (\'7\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `first_name` = \'Weinard\', `last_name` = \'Manianglung\', `email` = \'weinard2121@gmail.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 06:30:52\'
+WHERE `users`.`id` IN (\'7\')')
  4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `first_name` = :first_name:, `last_name` = :last_name:, `email` = :email:, `role` = :role:, `updated_at` = :updated_at:
 WHERE `users`.`id` IN :users.id:', [...], false)
  5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
  6 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
  7 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
- 8 APPPATH\Controllers\AdminController.php(51): CodeIgniter\Model->update('5', [...])
+ 8 APPPATH\Controllers\AdminController.php(51): CodeIgniter\Model->update('7', [...])
  9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->updateUser()
 10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
 11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
 13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
-DEBUG - 2025-11-24 07:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 07:34:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 07:34:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 07:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 07:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 07:35:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 07:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 07:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 07:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 07:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 07:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 07:37:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-ERROR - 2025-11-24 08:31:39 --> User not found: Weinard Manianglung
-DEBUG - 2025-11-24 08:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 08:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 08:34:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 08:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-ERROR - 2025-11-24 08:34:50 --> User not found: Weinard Manianglung
-DEBUG - 2025-11-24 08:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 08:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-ERROR - 2025-11-24 08:35:59 --> User not found: Weinard Manianglung
-DEBUG - 2025-11-24 08:35:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 08:35:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-DEBUG - 2025-11-24 09:26:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
-INFO - 2025-11-24 09:26:59 --> Borrower found: Array
+DEBUG - 2025-11-24 06:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 06:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 06:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-24 06:39:37 --> mysqli_sql_exception: Duplicate entry 'singkamas@yahoo.com' for key 'email' in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\Envizio\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\Envizio\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\Envizio\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\Envizio\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\Envizio\app\Controllers\Auth.php(158): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\Auth->submitRegister()
+#9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Envizio\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-11-24 06:39:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'singkamas@yahoo.com' for key 'email'
+[Method: POST, Route: register/submit]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `first_name`, `last_name`, `email`, `role`, `created_at`, `updated_at`) VALUES (:username:, :password:, :first_name:, :last_name:, :email:, :role:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Auth.php(158): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->submitRegister()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-24 06:39:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'singkamas@yahoo.com' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `first_name`, `last_name`, `email`, `role`, `created_at`, `updated_at`) VALUES (\'singkamas@yahoo.com\', \'$2y$10$mGEBixu3wjZlVU7Ukr5pSu7NGiBRnzQ.uJZrSeIojoyUqD2Nd5f6S\', \'Ozbert\', \'Sales\', \'singkamas@yahoo.com\', \'student\', \'2025-11-24 06:39:37\', \'2025-11-24 06:39:37\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `first_name`, `last_name`, `email`, `role`, `created_at`, `updated_at`) VALUES (\'singkamas@yahoo.com\', \'$2y$10$mGEBixu3wjZlVU7Ukr5pSu7NGiBRnzQ.uJZrSeIojoyUqD2Nd5f6S\', \'Ozbert\', \'Sales\', \'singkamas@yahoo.com\', \'student\', \'2025-11-24 06:39:37\', \'2025-11-24 06:39:37\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `first_name`, `last_name`, `email`, `role`, `created_at`, `updated_at`) VALUES (:username:, :password:, :first_name:, :last_name:, :email:, :role:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Auth.php(158): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->submitRegister()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-24 06:39:37 --> [Caused by] mysqli_sql_exception: Duplicate entry 'singkamas@yahoo.com' for key 'email'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `users` (`username`, `password`, `first_name`, `last_name`, `email`, `role`, `created_at`, `updated_at`) VALUES (\'singkamas@yahoo.com\', \'$2y$10$mGEBixu3wjZlVU7Ukr5pSu7NGiBRnzQ.uJZrSeIojoyUqD2Nd5f6S\', \'Ozbert\', \'Sales\', \'singkamas@yahoo.com\', \'student\', \'2025-11-24 06:39:37\', \'2025-11-24 06:39:37\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `first_name`, `last_name`, `email`, `role`, `created_at`, `updated_at`) VALUES (\'singkamas@yahoo.com\', \'$2y$10$mGEBixu3wjZlVU7Ukr5pSu7NGiBRnzQ.uJZrSeIojoyUqD2Nd5f6S\', \'Ozbert\', \'Sales\', \'singkamas@yahoo.com\', \'student\', \'2025-11-24 06:39:37\', \'2025-11-24 06:39:37\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `first_name`, `last_name`, `email`, `role`, `created_at`, `updated_at`) VALUES (\'singkamas@yahoo.com\', \'$2y$10$mGEBixu3wjZlVU7Ukr5pSu7NGiBRnzQ.uJZrSeIojoyUqD2Nd5f6S\', \'Ozbert\', \'Sales\', \'singkamas@yahoo.com\', \'student\', \'2025-11-24 06:39:37\', \'2025-11-24 06:39:37\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `first_name`, `last_name`, `email`, `role`, `created_at`, `updated_at`) VALUES (:username:, :password:, :first_name:, :last_name:, :email:, :role:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Auth.php(158): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->submitRegister()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-24 06:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 06:48:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 06:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-24 06:48:37 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`borrowed_items`, CONSTRAINT `borrowed_items_ibfk_2` FOREIGN KEY (`email`) REFERENCES `users` (`email`)) in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `users` ...', 0)
+#1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` ...')
+#2 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` ...')
+#3 C:\xampp\htdocs\Envizio\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `users` ...', Array, false)
+#4 C:\xampp\htdocs\Envizio\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\Envizio\system\BaseModel.php(1025): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\Envizio\system\Model.php(860): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\Envizio\app\Controllers\AdminController.php(46): CodeIgniter\Model->update('7', Array)
+#8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\AdminController->updateUser()
+#9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#10 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Envizio\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-11-24 06:48:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`borrowed_items`, CONSTRAINT `borrowed_items_ibfk_2` FOREIGN KEY (`email`) REFERENCES `users` (`email`))
+[Method: POST, Route: admin/updateUser]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `first_name` = :first_name:, `last_name` = :last_name:, `email` = :email:, `role` = :role:, `updated_at` = :updated_at:
+WHERE `users`.`id` IN :users.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\AdminController.php(46): CodeIgniter\Model->update('7', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->updateUser()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
+CRITICAL - 2025-11-24 06:48:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`borrowed_items`, CONSTRAINT `borrowed_items_ibfk_2` FOREIGN KEY (`email`) REFERENCES `users` (`email`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `first_name` = \'Weinard\', `last_name` = \'Manianglung\', `email` = \'weinard21123@gmail.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 06:48:37\'
+WHERE `users`.`id` IN (\'7\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `first_name` = \'Weinard\', `last_name` = \'Manianglung\', `email` = \'weinard21123@gmail.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 06:48:37\'
+WHERE `users`.`id` IN (\'7\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `first_name` = :first_name:, `last_name` = :last_name:, `email` = :email:, `role` = :role:, `updated_at` = :updated_at:
+WHERE `users`.`id` IN :users.id:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\AdminController.php(46): CodeIgniter\Model->update('7', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->updateUser()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-24 06:48:37 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`envizio`.`borrowed_items`, CONSTRAINT `borrowed_items_ibfk_2` FOREIGN KEY (`email`) REFERENCES `users` (`email`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `users` SET `first_name` = \'Weinard\', `last_name` = \'Manianglung\', `email` = \'weinard21123@gmail.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 06:48:37\'
+WHERE `users`.`id` IN (\'7\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `users` SET `first_name` = \'Weinard\', `last_name` = \'Manianglung\', `email` = \'weinard21123@gmail.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 06:48:37\'
+WHERE `users`.`id` IN (\'7\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `users` SET `first_name` = \'Weinard\', `last_name` = \'Manianglung\', `email` = \'weinard21123@gmail.com\', `role` = \'Student\', `updated_at` = \'2025-11-24 06:48:37\'
+WHERE `users`.`id` IN (\'7\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `users` SET `first_name` = :first_name:, `last_name` = :last_name:, `email` = :email:, `role` = :role:, `updated_at` = :updated_at:
+WHERE `users`.`id` IN :users.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1025): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\AdminController.php(46): CodeIgniter\Model->update('7', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->updateUser()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-24 06:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 07:11:21 --> ParseError: syntax error, unexpected token "<<", expecting end of file
+[Method: GET, Route: equipment]
+in APPPATH\Controllers\AdminController.php on line 84.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Envizio\\app\\Controllers\\AdminController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminController')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\AdminController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-24 07:11:29 --> ParseError: syntax error, unexpected token "<<", expecting end of file
+[Method: GET, Route: equipment]
+in APPPATH\Controllers\AdminController.php on line 84.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Envizio\\app\\Controllers\\AdminController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminController')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\AdminController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-24 08:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-24 08:45:39 --> Form Data: Borrower Name = Weinard Manianglung, Email = weinard21@gmail.com, Equipment Name = Cable Crimping Tool, Return Date = 2025-11-24
+ERROR - 2025-11-24 08:45:39 --> User not found: Weinard Manianglung
+DEBUG - 2025-11-24 08:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:49:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-24 08:50:35 --> Form Data: Borrower Name = Weinard Manianglung, Email = weinard21@gmail.com, Equipment Name = Cable Crimping Tool, Return Date = 2025-11-24
+INFO - 2025-11-24 08:50:35 --> Borrower found: Array
 (
-    [id] => 1
-    [username] => 202310393@fit.edu.ph
-    [password] => $2y$10$9viKRv2Xclu823JyLz6NM.Ovhfv2iz8soZooArSFH86R/kS3zHlsm
-    [first_name] => Ozbert
-    [last_name] => Sales
-    [email] => 202310393@fit.edu.ph
-    [role] => itso
-    [created_at] => 2025-11-23 08:50:48
+    [id] => 7
+    [username] => weinard21@gmail.com
+    [password] => $2y$10$GMxb7bJEEa1wBAdGyZ70BuAxkja19O93gfXRo3ypim4n48fz6Uqhy
+    [first_name] => Weinard
+    [last_name] => Manianglung
+    [email] => weinard21@gmail.com
+    [role] => Student
+    [created_at] => 2025-11-23 10:51:41
     [updated_at] => 2025-11-24 15:22:48
     [status] => 1
     [is_verified] => 0
     [is_deactivated] => 0
 )
 
-INFO - 2025-11-24 09:26:59 --> Equipment found: Array
+INFO - 2025-11-24 08:50:35 --> Equipment found: Array
 (
-    [equipment_id] => 1188
-    [equipment_name] => Cable Tester
+    [equipment_id] => 1184
+    [equipment_name] => Cable Crimping Tool
     [available] => 1
 )
 
-INFO - 2025-11-24 09:26:59 --> Inserting Borrow Data: Array
+INFO - 2025-11-24 08:50:35 --> Inserting Borrow Data: Array
 (
-    [borrower_id] => 1
-    [email] => singkamas12345678910@yahoo.com
-    [equipment_id] => 1188
+    [borrower_id] => 7
+    [email] => weinard21@gmail.com
+    [equipment_id] => 1184
     [return_date] => 2025-11-24
     [status] => borrowed
 )
 
-INFO - 2025-11-24 09:26:59 --> Borrow data inserted successfully!
-INFO - 2025-11-24 09:26:59 --> Equipment availability updated successfully.
-DEBUG - 2025-11-24 09:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-24 08:50:35 --> Borrow data inserted successfully!
+INFO - 2025-11-24 08:50:35 --> Equipment availability updated successfully.
+DEBUG - 2025-11-24 08:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+DEBUG - 2025-11-24 08:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-24 08:08:21 --> ErrorException: Undefined array key "status"
+[Method: GET, Route: users]
+in APPPATH\Views\users_view.php on line 48.
+ 1 APPPATH\Views\users_view.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\xampp\\htdocs\\Envizio\\app\\Views\\users_view.php', 48)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Envizio\\app\\Views\\users_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('users_view', [], true)
+ 5 APPPATH\Controllers\AdminController.php(22): view('users_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->users()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-24 08:12:56 --> ErrorException: Undefined array key "status"
+[Method: GET, Route: users]
+in APPPATH\Views\users_view.php on line 48.
+ 1 APPPATH\Views\users_view.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\xampp\\htdocs\\Envizio\\app\\Views\\users_view.php', 48)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Envizio\\app\\Views\\users_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('users_view', [], true)
+ 5 APPPATH\Controllers\AdminController.php(22): view('users_view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->users()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-24 08:16:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:16:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:34:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 08:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
+DEBUG - 2025-11-24 09:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 09:48:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+>>>>>>> 2729d3c882669810b17a5b2efc605f821777c5ba
+>>>>>>> 0fb39a3b2c54aa03794d6650aaa194bf42d06835
+DEBUG - 2025-11-24 10:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-24 10:28:27 --> Return submitted: Joseph, 123@gmail.com, Speaker Set, 2025-11-24
+DEBUG - 2025-11-24 10:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 10:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

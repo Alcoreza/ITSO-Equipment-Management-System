@@ -3,16 +3,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Borrowed_model extends Model
+class Returned_model extends Model
 {
-    protected $table = 'borrowed_items';
+    protected $table = 'returned_items';
     protected $primaryKey = 'id';
     protected $useAutoIncrement = true;
 
     protected $returnType = 'array';
 
     protected $allowedFields = [
-<<<<<<< HEAD
+        'borrow_id',
         'borrower_id',
         'email',
         'equipment_id',
@@ -23,17 +23,3 @@ class Borrowed_model extends Model
     protected $useTimestamps = false;
 }
 ?>
-=======
-    'borrower_id',
-    'email',
-    'equipment_id',
-    'return_date',
-    'status'
-    ];
-
-
-    protected bool $allowEmptyInserts = false;
-    protected $useTimestamps = false;
-}
-?>
->>>>>>> 02cbaf3fba9ec4bc6896141e1d08df63bc069c56
