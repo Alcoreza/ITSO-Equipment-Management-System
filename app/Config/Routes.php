@@ -39,3 +39,13 @@ $routes->get('/reports', 'ReportsController::index');
 //for register
 $routes->get('register', 'Auth::register');
 $routes->post('register/submit', 'Auth::submitRegister');
+
+// Reservation routes
+$routes->get('reservation', 'ReservationController::index');
+$routes->post('reservation/submitReservation', 'ReservationController::submitReservation');
+
+//for editing user details
+$routes->post('admin/updateUser', 'AdminController::updateUser');
+
+//for viewing user details
+$routes->get('admin/user/(:num)', 'AdminController::getUser/$1');
