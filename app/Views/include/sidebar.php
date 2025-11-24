@@ -10,11 +10,6 @@
     <nav class="users-nav">
         <div class="users-nav-section-label">Navigation</div>
 
-        <a href="<?= base_url('dashboard') ?>" class="users-nav-item <?= $active === 'dashboard' ? 'is-active' : '' ?>">
-            <i class="bi bi-speedometer2"></i>
-            <span>Dashboard</span>
-        </a>
-
         <a href="<?= base_url('users') ?>" class="users-nav-item <?= $active === 'users' ? 'is-active' : '' ?>">
             <i class="bi bi-people"></i>
             <span>Users</span>
@@ -26,13 +21,23 @@
         </a>
 
         <a href="<?= base_url('borrow') ?>" class="users-nav-item <?= $active === 'borrow' ? 'is-active' : '' ?>">
-            <i class="bi bi-arrow-left-right"></i>
-            <span>Borrow / Return</span>
+            <i class="bi bi-arrow-left"></i>
+            <span>Borrow</span>
         </a>
 
-        <a href="<?= base_url('logs') ?>" class="users-nav-item <?= $active === 'logs' ? 'is-active' : '' ?>">
-            <i class="bi bi-clock-history"></i>
-            <span>Logs</span>
+        <a href="<?= base_url('return') ?>" class="users-nav-item <?= $active === 'return' ? 'is-active' : '' ?>">
+            <i class="bi bi-arrow-right"></i>
+            <span>Return</span>
+        </a>
+
+        <a href="<?= base_url('reservation') ?>" class="users-nav-item <?= $active === 'reservation' ? 'is-active' : '' ?>">
+            <i class="bi bi-calendar-check"></i>
+            <span>Reservation</span>
+        </a>
+
+        <a href="<?= base_url('reports') ?>" class="users-nav-item <?= $active === 'reports' ? 'is-active' : '' ?>">
+            <i class="bi bi-clipboard-check"></i>
+            <span>Reports</span>
         </a>
 
         <div class="users-nav-section-label mt-3">System</div>
