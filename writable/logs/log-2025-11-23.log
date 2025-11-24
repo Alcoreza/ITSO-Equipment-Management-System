@@ -352,6 +352,7 @@ DEBUG - 2025-11-23 11:47:25 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-11-23 11:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-23 11:47:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-23 11:47:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
 >>>>>>> b47020b62f266ff0a3b6065c342a473475c098d4
 CRITICAL - 2025-11-23 12:17:05 --> ErrorException: session_start(): Failed to decode session object. Session has been destroyed
 [Method: GET, Route: login]
@@ -508,3 +509,7 @@ DEBUG - 2025-11-23 14:46:38 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-11-23 14:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-23 14:50:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 >>>>>>> 02d39389d69bc1ad165ff59f8cb60999bffdea43
+=======
+DEBUG - 2025-11-23 14:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-23 14:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> 955de9cf0e6791394e7cdb115736a796cc2102d8
