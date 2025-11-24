@@ -44,8 +44,8 @@
         <?php foreach ($users as $u): ?>
 
             <div class="user-card"
-                 data-role="<?= esc($u['role']) ?>"
-                 data-status="active">
+                data-role="<?= esc($u['role']) ?>"
+                data-status="<?= $u['status'] == 1 ? 'active' : 'inactive' ?>">
 
                 <div class="user-info">
                     <h6 class="user-name">
@@ -67,17 +67,24 @@
                 </div>
 
                 <div class="user-actions">
-                    <button class="users-action-btn users-action-view"
+                   <button class="users-action-btn users-action-view"
                             data-bs-toggle="modal"
-                            data-bs-target="#modalViewUser">
+                            data-bs-target="#modalViewUser"
+                            data-id="<?= $u['id'] ?>">
                         <i class="bi bi-eye"></i>
                     </button>
 
-                    <button class="users-action-btn"
-                            data-bs-toggle="modal"
-                            data-bs-target="#modalEditUser">
-                        <i class="bi bi-pencil"></i>
                     </button>
+                    <button class="users-action-btn btn-edit-user"
+                        data-id="<?= $u['id'] ?>"
+                        data-first="<?= esc($u['first_name']) ?>"
+                        data-last="<?= esc($u['last_name']) ?>"
+                        data-email="<?= esc($u['email']) ?>"
+                        data-role="<?= esc($u['role']) ?>">
+                        <i class="bi bi-pencil"></i>    
+                    </button>
+
+
 
                     <button class="users-action-btn users-action-danger users-action-toggle"
                             data-bs-toggle="modal"
@@ -96,8 +103,6 @@
     <?php endif; ?>
 
 </div>
-
-
             <div class="users-table-footer mt-3">
                 <span class="small text-muted">Frontend demo only — no backend connection.</span>
             </div>
@@ -142,12 +147,14 @@
 </div>
 
 <!-- VIEW USER MODAL -->
+<!-- VIEW USER MODAL -->
 <div class="modal fade users-modal-view" id="modalViewUser" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-md">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">User Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <!-- Close button that dismisses the modal -->
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
             <div class="modal-body">
@@ -170,45 +177,59 @@
 </div>
 
 
+
 <!-- EDIT USER MODAL -->
 <div class="modal fade" id="modalEditUser" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-md">
         <div class="modal-content users-modal">
-            <div class="modal-header users-modal-header">
-                <h5 class="modal-title">Edit User</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-            <div class="modal-body users-modal-body">
-                <div class="mb-3">
-                    <label class="users-label">Full Name</label>
-                    <input type="text" class="form-control users-input" value="Juan Dela Cruz">
+
+            <form action="<?= base_url('admin/updateUser') ?>" method="post">
+
+                <div class="modal-header users-modal-header">
+                    <h5 class="modal-title">Edit User</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="mb-3">
-                    <label class="users-label">Email</label>
-                    <input type="email" class="form-control users-input" value="juan.delacruz@feutech.edu.ph">
+
+                <div class="modal-body users-modal-body">
+
+                    <input type="hidden" name="id" id="editUserId">
+
+                    <div class="mb-3">
+                        <label>First Name</label>
+                        <input type="text" class="form-control" name="first_name" id="editFirstName" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Last Name</label>
+                        <input type="text" class="form-control" name="last_name" id="editLastName" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="email" id="editEmail" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Role</label>
+                        <select class="form-select" name="role" id="editRole" required>
+                            <option value="Teacher">Teacher</option>
+                            <option value="Student">Student</option>
+                        </select>
+                    <div class="mb-3">
+                        <label>New Password (optional)</label>
+                        <input type="password" class="form-control" name="password">
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Confirm New Password</label>
+                        <input type="password" class="form-control" name="password_confirm">
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label class="users-label">Role</label>
-                    <select class="form-select users-input">
-                        <option value="itso" selected>ITSO Personnel</option>
-                        <option value="associate">Associate</option>
-                        <option value="student">Student</option>
-                    </select>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary w-100">Update User</button>
                 </div>
-                <div class="mb-3">
-                    <label class="users-label">New Password (optional)</label>
-                    <input type="password" class="form-control users-input"
-                        placeholder="Enter a new password only if updating">
-                </div>
-                <div class="mb-3">
-                    <label class="users-label">Confirm New Password</label>
-                    <input type="password" class="form-control users-input" placeholder="Repeat new password">
-                </div>
-            </div>
-            <div class="modal-footer users-modal-footer">
-                <button type="button" class="btn users-btn w-100">Update User (Frontend Only)</button>
-            </div>
+            </form>
         </div>
     </div>
 </div>
