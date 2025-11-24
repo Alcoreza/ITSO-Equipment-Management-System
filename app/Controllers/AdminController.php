@@ -8,13 +8,19 @@ class AdminController extends BaseController
 {
     $usersModel = new \App\Models\Users_model();
 
-    // Fetch all users from DB
-    $allUsers = $usersModel->findAll();
+    // Pagination settings
+    $perPage = 6; // users per page
+
+    // Fetch paginated users (oldest first so new accounts appear at the back)
+    $users = $usersModel->orderBy('id', 'ASC')->paginate($perPage);
+    $pager = $usersModel->pager;
 
     $data = [
         'title' => 'User Management - ITSO EMS',
         'bodyClass' => 'users-page',
-        'users' => $allUsers
+        'users' => $users,
+        'pager' => $pager,
+        'perPage' => $perPage
     ];
 
     return view('include/head_view', $data)
@@ -103,6 +109,68 @@ public function getUser($id)
 
     // Return user data as JSON
     return $this->response->setJSON($user);
+}
+
+// Toggle user status (activate / deactivate)
+public function toggleUser()
+{
+    $usersModel = new \App\Models\Users_model();
+
+    $id = $this->request->getPost('id');
+    $action = $this->request->getPost('action');
+
+    if (empty($id) || !is_numeric($id)) {
+        return redirect()->back()->with('error', 'Invalid user id.');
+    }
+
+    $user = $usersModel->find((int)$id);
+    if (!$user) {
+        return redirect()->back()->with('error', 'User not found.');
+    }
+
+    // Determine new status
+    $newStatus = null;
+    if ($action === 'deactivate') $newStatus = 0;
+    elseif ($action === 'activate') $newStatus = 1;
+    else {
+        // toggle
+        $newStatus = ($user['status'] == 1) ? 0 : 1;
+    }
+
+    try {
+        $updated = $usersModel->update((int)$id, ['status' => $newStatus]);
+
+        // Check DB error
+        $dbError = [];
+        if (isset($usersModel->db)) {
+            $dbError = $usersModel->db->error();
+        }
+        if (!empty($dbError) && !empty($dbError['code'])) {
+            log_message('error', 'Toggle user DB error: ' . $dbError['message']);
+            if ($this->request->isAJAX()) {
+                return $this->response->setStatusCode(500)->setJSON(['error' => $dbError['message']]);
+            }
+            return redirect()->back()->with('error', 'Database error: ' . $dbError['message']);
+        }
+
+        if ($updated === false) {
+            if ($this->request->isAJAX()) {
+                return $this->response->setStatusCode(500)->setJSON(['error' => 'Failed to update user status.']);
+            }
+            return redirect()->back()->with('error', 'Failed to update user status.');
+        }
+    } catch (\Exception $e) {
+        if ($this->request->isAJAX()) {
+            return $this->response->setStatusCode(500)->setJSON(['error' => $e->getMessage()]);
+        }
+        return redirect()->back()->with('error', 'Error updating status: ' . $e->getMessage());
+    }
+
+    $msg = $newStatus == 1 ? 'User activated.' : 'User deactivated.';
+    if ($this->request->isAJAX()) {
+        return $this->response->setJSON(['success' => true, 'status' => $newStatus, 'message' => $msg]);
+    }
+    return redirect()->to('/users')->with('success', $msg);
 }
 
 
