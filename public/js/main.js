@@ -166,8 +166,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (titleSpan) titleSpan.textContent = label;
     if (inlineSpan) inlineSpan.textContent = label.toLowerCase();
     if (nameSpan) nameSpan.textContent = name;
+
+    // Populate hidden form fields inside the confirm modal (if present)
+    const confirmId = document.getElementById('confirmToggleId');
+    const confirmAction = document.getElementById('confirmToggleAction');
+    if (confirmId) confirmId.value = btn.getAttribute('data-id') || '';
+    if (confirmAction) confirmAction.value = btn.getAttribute('data-action') || action;
   });
 });
+
+// Note: confirm toggle form submits normally to allow server redirect back to /users
 
 /* ===========================================
    EQUIPMENT MODULE — FRONTEND ONLY
