@@ -65,3 +65,49 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
  8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
  9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-24 03:33:42 --> Error: Class "App\Models\Reservation_model" not found
+[Method: POST, Route: reservation/submitReservation]
+in APPPATH\Controllers\ReservationController.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservationController->submitReservation()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-24 03:34:16 --> Error: Class "App\Models\Reservation_model" not found
+[Method: POST, Route: reservation/submitReservation]
+in APPPATH\Controllers\ReservationController.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservationController->submitReservation()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-24 03:36:03 --> Error: Class "App\Models\Reservation_model" not found
+[Method: POST, Route: reservation/submitReservation]
+in APPPATH\Controllers\ReservationController.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservationController->submitReservation()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-24 03:37:34 --> Error: Class "App\Models\Reservations_model" not found
+[Method: POST, Route: reservation/submitReservation]
+in APPPATH\Controllers\ReservationController.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservationController->submitReservation()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-24 03:37:37 --> Error: Class "App\Models\Reservations_model" not found
+[Method: POST, Route: reservation/submitReservation]
+in APPPATH\Controllers\ReservationController.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservationController->submitReservation()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservationController))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-24 03:38:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
