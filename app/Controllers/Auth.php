@@ -154,14 +154,36 @@ class Auth extends BaseController
         'role'       => $role
     ];
 
-    // Insert into database
-    if ($users->insert($data)) {
-        session()->setFlashdata('success', 'Account created successfully!');
+    // Check for duplicate email
+    $existing = $users->where('email', $email)->first();
+    if ($existing) {
+        session()->setFlashdata('error', 'That email is already in use.');
+        return redirect()->back()->withInput();
+    }
 
-        // Redirect to index page
+    // Insert into database
+    try {
+        $inserted = $users->insert($data);
+        if ($inserted === false) {
+            // check DB error
+            $dbError = [];
+            if (isset($users->db)) {
+                $dbError = $users->db->error();
+            }
+            $msg = 'Error saving data.';
+            if (!empty($dbError) && !empty($dbError['message'])) {
+                log_message('error', 'Register DB error: ' . $dbError['message']);
+                $msg = 'Database error: ' . $dbError['message'];
+            }
+            session()->setFlashdata('error', $msg);
+            return redirect()->back()->withInput();
+        }
+
+        session()->setFlashdata('success', 'Account created successfully!');
         return redirect()->to(base_url('/'));
-    } else {
-        session()->setFlashdata('error', 'Error saving data.');
+    } catch (\Exception $e) {
+        log_message('error', 'Register exception: ' . $e->getMessage());
+        session()->setFlashdata('error', 'An error occurred while creating account.');
         return redirect()->back()->withInput();
     }
 }
