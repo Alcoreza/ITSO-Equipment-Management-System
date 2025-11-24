@@ -2,15 +2,26 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\Controller;
+use App\Models\Borrowed_model;
+use App\Models\Equipment_model;
+use App\Models\Users_model;
 
 class BorrowController extends BaseController
 {
-    // Display the Borrow form
     public function index()
     {
+        $equipmentModel = new Equipment_model();
+
+        // Get distinct equipment names where available
+        $builder = $equipmentModel->builder();
+        $builder->select('equipment_name');
+        $builder->where('available', 1);
+        $builder->groupBy('equipment_name');
+        $distinctEquipment = $builder->get()->getResultArray();
+
         $data = [
-            'title' => 'Borrow Equipment - ITSO EMS'
+            'title' => 'Borrow Equipment - ITSO EMS',
+            'equipment_list' => $distinctEquipment
         ];
 
         return view('include/head_view', $data)
@@ -19,22 +30,61 @@ class BorrowController extends BaseController
             . view('include/foot_view');
     }
 
-    // Handle form submission
     public function submit()
     {
-        // Retrieve POST data
-        $borrower_name = $this->request->getPost('borrower_name');
-        $email = $this->request->getPost('email');
-        $equipment = $this->request->getPost('equipment_id');
-        $return_date = $this->request->getPost('return_date');
+        $validation = $this->validate([
+            'borrower_name'   => 'required|string',
+            'email'           => 'required|valid_email',
+            'equipment_name'  => 'required|string',
+            'return_date'     => 'permit_empty|valid_date'
+        ]);
 
-        // For now, just log the submission
-        log_message('info', "Borrow submitted: $borrower_name, $email, $equipment, $return_date");
+        if (!$validation) {
+            return redirect()->back()->withInput()->with('error', 'Please check the form and try again.');
+        }
 
-        // Set flashdata message for success
+        $borrowerName    = $this->request->getPost('borrower_name');
+        $email           = $this->request->getPost('email');
+        $equipment_name  = $this->request->getPost('equipment_name');
+        $return_date     = $this->request->getPost('return_date');
+
+        // Lookup user by first_name
+        $usersModel = new Users_model();
+        $user = $usersModel->where('first_name', $borrowerName)->first();
+
+        if (!$user) {
+            return redirect()->back()->withInput()->with('error', 'Borrower not found.');
+        }
+
+        $borrower_id = $user['id'];
+
+        // Find first available equipment with that name
+        $equipmentModel = new Equipment_model();
+        $equipment = $equipmentModel
+            ->where('equipment_name', $equipment_name)
+            ->where('available', 1)
+            ->orderBy('equipment_id', 'ASC')
+            ->first();
+
+        if (!$equipment) {
+            return redirect()->back()->withInput()->with('error', 'Selected equipment is currently unavailable.');
+        }
+
+        $equipment_id = $equipment['equipment_id'];
+
+        // Insert borrow record
+        $borrowModel = new Borrowed_model();
+        $borrowModel->insert([
+            'borrower_id' => $borrower_id,
+            'email'       => $email,
+            'equipment_id'=> $equipment_id,
+            'return_date' => $return_date
+        ]);
+
+        // Mark equipment as unavailable
+        $equipmentModel->update($equipment_id, ['available' => 0]);
+
         session()->setFlashdata('success', 'Equipment borrow recorded successfully!');
-
-        // Redirect back to the borrow page
         return redirect()->to('/borrow');
     }
 }

@@ -8,7 +8,6 @@ class Users_model extends Model
     protected $table = 'users';
     protected $primaryKey = 'id';
     protected $useAutoIncrement = true;
-
     protected $returnType = 'array';
 
     protected $allowedFields = [
@@ -18,6 +17,7 @@ class Users_model extends Model
         'last_name',
         'email',
         'role',
+        'status',       // <-- add this
         'created_at',
         'updated_at'
     ];
@@ -27,4 +27,3 @@ class Users_model extends Model
     protected $createdField = 'created_at';
     protected $updatedField = 'updated_at';
 }
-?>
