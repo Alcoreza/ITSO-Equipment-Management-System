@@ -23,7 +23,54 @@ class AdminController extends BaseController
         . view('include/foot_view', $data);
     }
 
-    public function equipment()
+//update user details
+public function updateUser()
+{
+    $usersModel = new \App\Models\Users_model();
+
+    $id = $this->request->getPost('id');
+
+    $data = [
+        'first_name' => $this->request->getPost('first_name'),
+        'last_name'  => $this->request->getPost('last_name'),
+        'email'      => $this->request->getPost('email'),
+        'role'       => $this->request->getPost('role'), // ✅ added role
+    ];
+
+    $password = $this->request->getPost('password');
+    $confirm  = $this->request->getPost('password_confirm');
+
+    // Only update password if user typed one
+    if (!empty($password)) {
+        if ($password !== $confirm) {
+            return redirect()->back()->with('error', 'Passwords do not match.');
+        }
+        $data['password'] = password_hash($password, PASSWORD_DEFAULT);
+    }
+
+    $usersModel->update($id, $data);
+
+    return redirect()->to('/users')->with('success', 'User updated successfully.');
+}
+
+
+//view user details
+public function getUser($id)
+{
+    $usersModel = new \App\Models\Users_model();
+    $user = $usersModel->find($id);
+
+    if (!$user) {
+        return $this->response->setStatusCode(404)->setJSON(['error' => 'User not found']);
+    }
+
+    // Convert status 1/0 to Active/Inactive
+    $user['status_text'] = isset($user['status']) && $user['status'] == 1 ? 'Active' : 'Inactive';
+
+    return $this->response->setJSON($user);
+}
+
+ public function equipment()
     {
         $data = [
             'title' => 'Equipment Management - ITSO EMS',
@@ -37,6 +84,7 @@ class AdminController extends BaseController
             . view('include/foot_view', $data);
     }
 }
+
 
 
 /* public function users()
