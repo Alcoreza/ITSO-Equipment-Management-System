@@ -399,3 +399,7 @@ DEBUG - 2025-11-24 09:48:50 --> Session: Class initialized using 'CodeIgniter\Se
 =======
 >>>>>>> 2729d3c882669810b17a5b2efc605f821777c5ba
 >>>>>>> 0fb39a3b2c54aa03794d6650aaa194bf42d06835
+DEBUG - 2025-11-24 10:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-24 10:28:27 --> Return submitted: Joseph, 123@gmail.com, Speaker Set, 2025-11-24
+DEBUG - 2025-11-24 10:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-24 10:29:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
