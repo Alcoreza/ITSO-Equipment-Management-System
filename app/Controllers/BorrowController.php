@@ -40,7 +40,8 @@ class BorrowController extends BaseController
         ]);
 
         if (!$validation) {
-            return redirect()->back()->withInput()->with('error', 'Please check the form and try again.');
+            session()->setFlashdata('error', 'Please check the form and try again.');
+            return redirect()->back()->withInput();
         }
 
         $borrowerName    = $this->request->getPost('borrower_name');
@@ -48,12 +49,19 @@ class BorrowController extends BaseController
         $equipment_name  = $this->request->getPost('equipment_name');
         $return_date     = $this->request->getPost('return_date');
 
-        // Lookup user by first_name
+        // Lookup user by email
         $usersModel = new Users_model();
-        $user = $usersModel->where('first_name', $borrowerName)->first();
+        $user = $usersModel->where('email', $email)->first();
 
         if (!$user) {
-            return redirect()->back()->withInput()->with('error', 'Borrower not found.');
+            session()->setFlashdata('error', 'Borrower not found.');
+            return redirect()->back()->withInput();
+        }
+
+        // Prevent inactive users from borrowing
+        if (isset($user['status']) && $user['status'] != 1) {
+            session()->setFlashdata('error', 'This account is inactive and cannot borrow equipment.');
+            return redirect()->back()->withInput();
         }
 
         $borrower_id = $user['id'];
@@ -67,7 +75,8 @@ class BorrowController extends BaseController
             ->first();
 
         if (!$equipment) {
-            return redirect()->back()->withInput()->with('error', 'Selected equipment is currently unavailable.');
+            session()->setFlashdata('error', 'Selected equipment is currently unavailable.');
+            return redirect()->back()->withInput();
         }
 
         $equipment_id = $equipment['equipment_id'];
@@ -75,10 +84,12 @@ class BorrowController extends BaseController
         // Insert borrow record
         $borrowModel = new Borrowed_model();
         $borrowModel->insert([
-            'borrower_id' => $borrower_id,
-            'email'       => $email,
-            'equipment_id'=> $equipment_id,
-            'return_date' => $return_date
+            'borrower_name'   => $borrowerName,
+            'borrower_id'     => $borrower_id,
+            'email'           => $email,
+            'equipment_id'    => $equipment_id,
+            'return_date'     => $return_date,
+            'status'          => 'borrowed'
         ]);
 
         // Mark equipment as unavailable
