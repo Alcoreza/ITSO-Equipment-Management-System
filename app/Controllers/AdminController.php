@@ -24,7 +24,7 @@ class AdminController extends BaseController
     }
 
 //update user details
-    public function updateUser()
+public function updateUser()
 {
     $usersModel = new \App\Models\Users_model();
 
@@ -34,6 +34,7 @@ class AdminController extends BaseController
         'first_name' => $this->request->getPost('first_name'),
         'last_name'  => $this->request->getPost('last_name'),
         'email'      => $this->request->getPost('email'),
+        'role'       => $this->request->getPost('role'), // ✅ added role
     ];
 
     $password = $this->request->getPost('password');
@@ -51,6 +52,7 @@ class AdminController extends BaseController
 
     return redirect()->to('/users')->with('success', 'User updated successfully.');
 }
+
 
 //view user details
 public function getUser($id)
