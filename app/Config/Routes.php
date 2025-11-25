@@ -49,3 +49,5 @@ $routes->post('admin/updateUser', 'AdminController::updateUser');
 
 //for viewing user details
 $routes->get('admin/user/(:num)', 'AdminController::getUser/$1');
+
+$routes->get('/about', 'AboutController::index');
