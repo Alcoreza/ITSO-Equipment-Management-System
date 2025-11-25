@@ -174,3 +174,54 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+/* ===========================================
+   EQUIPMENT MODAL LOGIC
+=========================================== */
+
+// Populate View Modal
+function populateViewModal(el) {
+    const card = el.closest('.equipment-card');
+    document.getElementById('viewEquipmentName').textContent = card.dataset.name;
+    document.getElementById('viewEquipmentType').textContent = card.dataset.type;
+    document.getElementById('viewEquipmentStatus').textContent = card.dataset.statusText;
+    document.getElementById('viewEquipmentAvailable').textContent = card.dataset.available;
+    document.getElementById('viewEquipmentImage').src = card.querySelector('img').src;
+    document.getElementById('viewEquipmentDescription').textContent = card.dataset.description || 'No description available.';
+}
+
+// Populate Edit Modal
+function populateEditModal(el) {
+    const card = el.closest('.equipment-card');
+    document.getElementById('editEquipmentName').value = card.dataset.name;
+    document.getElementById('editEquipmentType').value = card.dataset.type;
+    document.getElementById('editEquipmentStatus').value = card.dataset.statusText;
+    document.getElementById('editEquipmentAvailable').value = card.dataset.available;
+    document.getElementById('editEquipmentID').value = card.dataset.id;
+    document.getElementById('editEquipmentImage').src = card.querySelector('img').src;
+    document.getElementById('editEquipmentDescription').value = card.dataset.description || '';
+}
+
+// Populate Confirm Modal
+function populateConfirmModal(el) {
+    const card = el.closest('.equipment-card');
+    document.getElementById('confirmEquipmentName').textContent = card.dataset.name;
+    document.getElementById('confirmEquipmentID').value = card.dataset.id;
+    const action = card.dataset.statusText === 'active' ? 'Deactivate' : 'Activate';
+    document.getElementById('confirmActionLabel').textContent = action;
+    document.getElementById('confirmActionLabelInline').textContent = action.toLowerCase();
+}
+
+// Filtering functionality
+document.getElementById('filterCategory').addEventListener('change', filterCards);
+document.getElementById('filterStatus').addEventListener('change', filterCards);
+
+function filterCards() {
+    const category = document.getElementById('filterCategory').value.toLowerCase();
+    const status = document.getElementById('filterStatus').value.toLowerCase();
+    document.querySelectorAll('.equipment-card').forEach(card => {
+        const matchCategory = !category || card.dataset.category.toLowerCase() === category;
+        const matchStatus = !status || card.dataset.status.toLowerCase() === status;
+        card.style.display = (matchCategory && matchStatus) ? 'block' : 'none';
+    });
+}
