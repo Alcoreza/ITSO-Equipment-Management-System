@@ -125,11 +125,13 @@
                     <label class="equipment-label">Category</label>
                     <select class="form-select equipment-input">
                         <option disabled selected>Select category</option>
-                        <option>Laptop</option>
-                        <option>DLP</option>
-                        <option>Cable</option>
-                        <option>Accessory</option>
-                        <option>Others</option>
+                        <option value="Laptop">Laptop</option>
+                        <option value="Drawing Tablet">Drawing Tablet</option>
+                        <option value="Remote">Remote Control</option>
+                        <option value="Projector">Projector</option>
+                        <option value="Cable">Cable</option>
+                        <option value="Accessory">Accessory</option>
+                        <option value="Others">Others</option>
                     </select>
                 </div>
 
