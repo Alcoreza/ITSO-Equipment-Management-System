@@ -13,30 +13,38 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Nav links -->
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav ms-auto align-items-lg-center">
+
                 <li class="nav-item">
                     <a class="nav-link" href="<?= site_url('about') ?>">About</a>
                 </li>
 
-                <!-- mobile-only links -->
-                <li class="nav-item d-lg-none">
-                    <a class="nav-link" href="<?= base_url('login') ?>">Login</a>
-                </li>
-                <li class="nav-item d-lg-none">
-                    <a class="nav-link" href="<?= site_url('register') ?>">Register</a>
-                </li>
+                <?php if (!session()->get('isLoggedIn')): ?>
+                    <!-- MOBILE: Login & Register -->
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="<?= site_url('login') ?>">Login</a>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="<?= site_url('register') ?>">Register</a>
+                    </li>
 
-                <!-- CTAs on large screens -->
-                <li class="nav-item d-none d-lg-block ms-3">
-                    <a class="btn btn-outline-light btn-sm" href="<?= site_url('register') ?>">Register</a>
-                </li>
-                <li class="nav-item d-none d-lg-block ms-2">
-                    <a class="btn btn-primary btn-sm" href="<?= site_url('login') ?>">Login</a>
-                </li>
+                    <!-- DESKTOP: Login & Register -->
+                    <li class="nav-item d-none d-lg-block ms-3">
+                        <a class="btn btn-outline-light btn-sm" href="<?= site_url('register') ?>">Register</a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block ms-2">
+                        <a class="btn btn-primary btn-sm" href="<?= site_url('login') ?>">Login</a>
+                    </li>
+
+                <?php else: ?>
+                    <!-- If logged in: Show Logout -->
+                    <li class="nav-item d-none d-lg-block ms-2">
+                        <a id="logoutBtn" class="btn btn-sm logout-btn" href="<?= site_url('logout') ?>">Logout</a>
+                    </li>
+                <?php endif; ?>
+
             </ul>
         </div>
-
     </div>
 </nav>
