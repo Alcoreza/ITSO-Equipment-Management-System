@@ -322,8 +322,8 @@
             <div class="confirm-topstrip"></div>
 
             <div class="confirm-header d-flex align-items-center gap-3">
-                <div class="confirm-icon-wrap">
-                    <img id="confirmImage" src="" alt="Warning" class="confirm-icon-img">
+                <div class="users-modal-icon-circle">
+                    <i class="bi bi-power"></i>
                 </div>
 
                 <div class="confirm-title-wrap">
