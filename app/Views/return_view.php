@@ -14,6 +14,26 @@
                     <p class="borrow-sub">Select the equipment being returned.</p>
                 </div>
 
+
+                <!-- flash messages -->
+                <?php if (session()->getFlashdata('error')): ?>
+                    <div class="alert-modern alert-modern-danger mb-3 text-dark" style="color:#000;">
+                        <?= esc(session()->getFlashdata('error')) ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (session()->getFlashdata('success')): ?>
+                    <div class="alert-modern alert-modern-success mb-3 text-dark" style="color:#000;">
+                        <?= esc(session()->getFlashdata('success')) ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (session()->getFlashdata('info')): ?>
+                    <div class="alert-modern alert-modern-info mb-3 text-dark" style="color:#000;">
+                        <?= esc(session()->getFlashdata('info')) ?>
+                    </div>
+                <?php endif; ?>
+
                 <form id="returnForm" method="post" action="<?= base_url('/return/submit') ?>">
 
                     <div class="form-group mb-3">

@@ -14,6 +14,25 @@
                     <p class="borrow-sub">Fill out the information below.</p>
                 </div>
 
+                <!-- flash messages -->
+                <?php if (session()->getFlashdata('error')): ?>
+                    <div class="alert-modern alert-modern-danger mb-3 text-dark" style="color:#000;">
+                        <?= esc(session()->getFlashdata('error')) ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (session()->getFlashdata('success')): ?>
+                    <div class="alert-modern alert-modern-success mb-3 text-dark" style="color:#000;">
+                        <?= esc(session()->getFlashdata('success')) ?>
+                    </div>
+                <?php endif; ?>
+
+                <?php if (session()->getFlashdata('info')): ?>
+                    <div class="alert-modern alert-modern-info mb-3 text-dark" style="color:#000;">
+                        <?= esc(session()->getFlashdata('info')) ?>
+                    </div>
+                <?php endif; ?>
+
                 <form id="borrowForm" method="post" action="<?= base_url('/borrow/submit') ?>">
 
                     <div class="form-group mb-3">

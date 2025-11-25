@@ -16,52 +16,52 @@ class Auth extends BaseController
             . view('include/foot_view');
     }
 
-   public function attempt()
-{
-    $request = service('request');
-    $email = trim($request->getPost('email'));
-    $password = $request->getPost('password');
+    public function attempt()
+    {
+        $request = service('request');
+        $email = trim($request->getPost('email'));
+        $password = $request->getPost('password');
 
-    $itsoModel = new \App\Models\Users_model();
+        $itsoModel = new \App\Models\Users_model();
 
-    // check email exists
-    $user = $itsoModel->where('email', $email)->first();
+        // check email exists
+        $user = $itsoModel->where('email', $email)->first();
 
-    if (!$user) {
-        session()->setFlashdata('error', 'Email not found.');
-        return redirect()->back()->withInput();
+        if (!$user) {
+            session()->setFlashdata('error', 'Email not found.');
+            return redirect()->back()->withInput();
+        }
+
+        // validate password
+        if (!password_verify($password, $user['password'])) {
+            session()->setFlashdata('error', 'Incorrect password.');
+            return redirect()->back()->withInput();
+        }
+
+        // 🔥 CHECK ROLE HERE
+        if ($user['role'] !== 'itso') {
+            session()->setFlashdata('error', 'Access denied. Only ITSO users can log in.');
+            return redirect()->back()->withInput();
+        }
+
+        // success → store session
+        session()->set([
+            'isLoggedIn' => true,
+            'user_id'    => $user['id'],
+            'username'   => $user['username'],
+            'email'      => $user['email'],
+            'role'       => $user['role']
+        ]);
+
+        session()->setFlashdata('success', 'Welcome back!');
+
+        return redirect()->to(base_url('users'));
     }
-
-    // validate password
-    if (!password_verify($password, $user['password'])) {
-        session()->setFlashdata('error', 'Incorrect password.');
-        return redirect()->back()->withInput();
-    }
-
-    // 🔥 CHECK ROLE HERE
-    if ($user['role'] !== 'itso') {
-        session()->setFlashdata('error', 'Access denied. Only ITSO users can log in.');
-        return redirect()->back()->withInput();
-    }
-
-    // success → store session
-    session()->set([
-        'isLoggedIn' => true,
-        'user_id'    => $user['id'],
-        'username'   => $user['username'],
-        'email'      => $user['email'],
-        'role'       => $user['role']
-    ]);
-
-    session()->setFlashdata('success', 'Welcome back!');
-
-    return redirect()->to(base_url('users'));
-}
 
 
     public function logout()
     {
-        session()->setFlashdata('info', 'Demo: logged out (no backend).');
+        session()->destroy();
         return redirect()->to(base_url('/'));
     }
 
@@ -116,33 +116,33 @@ class Auth extends BaseController
             . view('include/foot_view');
     }
 
-   public function submitRegister()
-{
-    $request = service('request');
-    $users = new \App\Models\Users_model();
+    public function submitRegister()
+    {
+        $request = service('request');
+        $users = new \App\Models\Users_model();
 
-    // Get form inputs
-    $fullname = trim($request->getPost('fullname'));
-    $email = trim($request->getPost('email'));
-    $role = $request->getPost('role');
-    $password = $request->getPost('password');
-    $confirm = $request->getPost('confirm_password');
+        // Get form inputs
+        $fullname = trim($request->getPost('fullname'));
+        $email = trim($request->getPost('email'));
+        $role = $request->getPost('role');
+        $password = $request->getPost('password');
+        $confirm = $request->getPost('confirm_password');
 
-    // Basic validation
-    if ($password !== $confirm) {
-        session()->setFlashdata('error', 'Passwords do not match.');
-        return redirect()->back()->withInput();
-    }
+        // Basic validation
+        if ($password !== $confirm) {
+            session()->setFlashdata('error', 'Passwords do not match.');
+            return redirect()->back()->withInput();
+        }
 
-    if (strlen($password) < 8) {
-        session()->setFlashdata('error', 'Password must be at least 8 characters.');
-        return redirect()->back()->withInput();
-    }
+        if (strlen($password) < 8) {
+            session()->setFlashdata('error', 'Password must be at least 8 characters.');
+            return redirect()->back()->withInput();
+        }
 
-    // Split full name into parts
-    $parts = explode(" ", $fullname);
-    $first_name = $parts[0] ?? '';
-    $last_name = $parts[count($parts) - 1] ?? '';
+        // Split full name into parts
+        $parts = explode(" ", $fullname);
+        $first_name = $parts[0] ?? '';
+        $last_name = $parts[count($parts) - 1] ?? '';
 
     // Prepare data to match your DB columns
     $data = [
@@ -154,14 +154,36 @@ class Auth extends BaseController
         'role'       => $role
     ];
 
-    // Insert into database
-    if ($users->insert($data)) {
-        session()->setFlashdata('success', 'Account created successfully!');
+    // Check for duplicate email
+    $existing = $users->where('email', $email)->first();
+    if ($existing) {
+        session()->setFlashdata('error', 'That email is already in use.');
+        return redirect()->back()->withInput();
+    }
 
-        // Redirect to index page
+    // Insert into database
+    try {
+        $inserted = $users->insert($data);
+        if ($inserted === false) {
+            // check DB error
+            $dbError = [];
+            if (isset($users->db)) {
+                $dbError = $users->db->error();
+            }
+            $msg = 'Error saving data.';
+            if (!empty($dbError) && !empty($dbError['message'])) {
+                log_message('error', 'Register DB error: ' . $dbError['message']);
+                $msg = 'Database error: ' . $dbError['message'];
+            }
+            session()->setFlashdata('error', $msg);
+            return redirect()->back()->withInput();
+        }
+
+        session()->setFlashdata('success', 'Account created successfully!');
         return redirect()->to(base_url('/'));
-    } else {
-        session()->setFlashdata('error', 'Error saving data.');
+    } catch (\Exception $e) {
+        log_message('error', 'Register exception: ' . $e->getMessage());
+        session()->setFlashdata('error', 'An error occurred while creating account.');
         return redirect()->back()->withInput();
     }
 }

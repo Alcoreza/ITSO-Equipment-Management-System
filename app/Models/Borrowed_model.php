@@ -12,6 +12,7 @@ class Borrowed_model extends Model
     protected $returnType = 'array';
 
     protected $allowedFields = [
+    'borrower_name',
     'borrower_id',
     'email',
     'equipment_id',
@@ -24,3 +25,6 @@ class Borrowed_model extends Model
     protected $useTimestamps = false;
 }
 ?>
+
+
+

@@ -42,7 +42,8 @@ class ReservationController extends BaseController
         ]);
 
         if (!$validation) {
-            return redirect()->back()->withInput()->with('error', 'Please check the form and try again.');
+            session()->setFlashdata('error', 'Please check the form and try again.');
+            return redirect()->back()->withInput();
         }
 
         $associateName = $this->request->getPost('associate_name');
@@ -51,12 +52,18 @@ class ReservationController extends BaseController
         $reserve_date = $this->request->getPost('reserve_date');
         $notes = $this->request->getPost('notes');
 
-        // Lookup user by first name
+        // Lookup user by email (more reliable) and ensure active status
         $usersModel = new Users_model();
-        $user = $usersModel->where('first_name', $associateName)->first();
+        $user = $usersModel->where('email', $email)->first();
 
         if (!$user) {
-            return redirect()->back()->withInput()->with('error', 'Associate not found.');
+            session()->setFlashdata('error', 'Associate not found.');
+            return redirect()->back()->withInput();
+        }
+
+        if (isset($user['status']) && $user['status'] != 1) {
+            session()->setFlashdata('error', 'This account is inactive and cannot make reservations.');
+            return redirect()->back()->withInput();
         }
 
         $user_id = $user['id'];
@@ -70,7 +77,8 @@ class ReservationController extends BaseController
             ->first();
 
         if (!$equipment) {
-            return redirect()->back()->withInput()->with('error', 'No available equipment of this type.');
+            session()->setFlashdata('error', 'No available equipment of this type.');
+            return redirect()->back()->withInput();
         }
 
         $equipment_id = $equipment['equipment_id'];
@@ -84,7 +92,8 @@ class ReservationController extends BaseController
             ->first();
 
         if ($existing) {
-            return redirect()->back()->withInput()->with('error', 'This equipment is already reserved for the selected date.');
+            session()->setFlashdata('error', 'This equipment is already reserved for the selected date.');
+            return redirect()->back()->withInput();
         }
 
         // Insert reservation

@@ -25,6 +25,8 @@
     <link href="<?= base_url('public/css/reports.css') ?>" rel="stylesheet">
     <link href="<?= base_url('public/css/sidebar.css') ?>" rel="stylesheet">
     <link href="<?= base_url('public/css/equipment.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('public/css/logout.css') ?>" rel="stylesheet">
+    <link href="<?= base_url('public/css/about.css') ?>" rel="stylesheet">
 </head>
 
 <body>

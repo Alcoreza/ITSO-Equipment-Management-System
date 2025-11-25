@@ -1,0 +1,121 @@
+/* about.css — About page with green overlay background */
+/* Full-page container */
+.about-container {
+    width: 100%;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+
+    padding: 120px 1rem 6rem 1rem;
+
+    /* Background image + green overlay */
+    background:
+        linear-gradient(rgba(30, 139, 63, 0.65), rgba(13, 56, 26, 0.85)),
+        url('../img/about-bg.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Header */
+.about-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.about-title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 800;
+    color: #ffffff;
+    font-size: clamp(28px, 4vw, 44px);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.about-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.9);
+}
+
+/* Grid layout */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+/* Card style (glass effect) */
+.about-card {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px) saturate(120%);
+    border-radius: 14px;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.25);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.22s cubic-bezier(0.2,0.9,0.25,1), box-shadow 0.22s;
+    position: relative;
+}
+
+/* Profile images using pseudo-element */
+.about-card::before {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+    border: 3px solid rgba(255,255,255,0.35);
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Individual student images */
+.student-elmer::before {
+    background-image: url('../img/elmer.jpg');
+}
+.student-clive::before {
+    background-image: url('../img/clive.jpg');
+}
+.student-weinard::before {
+    background-image: url('../img/weinard.jpg');
+}
+.student-ozbert::before {
+    background-image: url('../img/ozbert.jpg');
+}
+
+/* Hover effect for cards */
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 40px rgba(118, 255, 124, 0.5);
+}
+
+/* Names & roles */
+.about-name {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+}
+.about-role {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.9);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .about-title { font-size: 2rem; }
+    .about-subtitle { font-size: 1rem; }
+    .about-card::before { width: 100px; height: 100px; }
+}
+
+@media (max-width: 767.98px) {
+    .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .about-card { padding: 1.5rem 1rem 1rem 1rem; }
+    .about-title { font-size: 1.8rem; }
+    .about-subtitle { font-size: 0.95rem; }
+}
