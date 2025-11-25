@@ -34,20 +34,17 @@
       if (firstEl) firstEl.value = first;
       if (lastEl) lastEl.value = last;
       if (emailEl) emailEl.value = email;
-      if (roleEl) {
-        // Normalize role string
-        const roleVal = (typeof role === 'string') ? role.trim() : '';
 
-        if (roleVal === '') {
-          roleEl.value = '';
+      if (roleEl) {
+        const roleVal = (typeof role === "string") ? role.trim() : "";
+        if (roleVal === "") {
+          roleEl.value = "";
         } else {
-          // Try to find existing option
           const existing = Array.from(roleEl.options).find(opt => opt.value === roleVal);
           if (existing) {
             roleEl.value = roleVal;
           } else {
-            // Option not found (legacy or unexpected value) — create it and select
-            const newOpt = document.createElement('option');
+            const newOpt = document.createElement("option");
             newOpt.value = roleVal;
             newOpt.text = roleVal.charAt(0).toUpperCase() + roleVal.slice(1);
             newOpt.selected = true;
@@ -57,7 +54,6 @@
         }
       }
 
-      // Clear password fields for security
       if (passEl) passEl.value = "";
       if (passConfEl) passConfEl.value = "";
     });
@@ -129,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // REGISTER: live password match
+  // REGISTER: Live password match
   const pass = document.getElementById("reg_password");
   const confirm = document.getElementById("reg_confirm_password");
 
@@ -167,19 +163,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (inlineSpan) inlineSpan.textContent = label.toLowerCase();
     if (nameSpan) nameSpan.textContent = name;
 
-    // Populate hidden form fields inside the confirm modal (if present)
-    const confirmId = document.getElementById('confirmToggleId');
-    const confirmAction = document.getElementById('confirmToggleAction');
-    if (confirmId) confirmId.value = btn.getAttribute('data-id') || '';
-    if (confirmAction) confirmAction.value = btn.getAttribute('data-action') || action;
+    // Hidden form fields inside confirm modal
+    const confirmId = document.getElementById("confirmToggleId");
+    const confirmAction = document.getElementById("confirmToggleAction");
+    if (confirmId) confirmId.value = btn.getAttribute("data-id") || "";
+    if (confirmAction) confirmAction.value = btn.getAttribute("data-action") || action;
   });
 });
 
-// Note: confirm toggle form submits normally to allow server redirect back to /users
-
 /* ===========================================
    EQUIPMENT MODULE — FRONTEND ONLY
-   Filtering + Search + Confirm Modal Logic
 =========================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -196,19 +189,13 @@ document.addEventListener("DOMContentLoaded", () => {
     cards.forEach((card) => {
       const c = card.dataset.category.toLowerCase();
       const s = card.dataset.status.toLowerCase();
-      const name = card
-        .querySelector(".equipment-name")
-        .textContent.toLowerCase();
+      const name = card.querySelector(".equipment-name").textContent.toLowerCase();
 
       const matchCategory = category === "" || c === category;
       const matchStatus = status === "" || s === status;
       const matchSearch = name.includes(search);
 
-      if (matchCategory && matchStatus && matchSearch) {
-        card.style.display = "flex";
-      } else {
-        card.style.display = "none";
-      }
+      card.style.display = matchCategory && matchStatus && matchSearch ? "flex" : "none";
     });
   }
 
@@ -216,77 +203,107 @@ document.addEventListener("DOMContentLoaded", () => {
   filterStatus.addEventListener("change", applyFilters);
   searchInput.addEventListener("input", applyFilters);
 
-  /* ===========================================
-       CONFIRM ACTIVATE / DEACTIVATE EQUIPMENT
-    ============================================ */
+  // Equipment confirm modal
   const confirmModal = document.getElementById("modalConfirmStatus");
   if (confirmModal) {
     confirmModal.addEventListener("show.bs.modal", (event) => {
       const button = event.relatedTarget;
-
       const itemName = button.getAttribute("data-name") || "Unknown Item";
       const action = button.getAttribute("data-action") || "deactivate";
 
-      confirmModal.querySelector("#confirmEquipmentName").textContent =
-        itemName;
-      confirmModal.querySelector("#confirmEquipmentAction").textContent =
-        action;
-      confirmModal.querySelector("#confirmEquipmentActionInline").textContent =
-        action;
+      confirmModal.querySelector("#confirmEquipmentName").textContent = itemName;
+      confirmModal.querySelector("#confirmEquipmentAction").textContent = action;
+      confirmModal.querySelector("#confirmEquipmentActionInline").textContent = action;
+    });
+  }
+
+  // VIEW, EDIT, CONFIRM POPULATORS (from second script)
+  function populateViewModal(el) {
+    const card = el.closest(".equipment-card");
+    document.getElementById("viewEquipmentName").textContent = card.dataset.name;
+    document.getElementById("viewEquipmentType").textContent = card.dataset.type;
+    document.getElementById("viewEquipmentStatus").textContent = card.dataset.statusText;
+    document.getElementById("viewEquipmentAvailable").textContent = card.dataset.available;
+    document.getElementById("viewEquipmentImage").src = card.querySelector("img").src;
+    document.getElementById("viewEquipmentDescription").textContent =
+      card.dataset.description || "No description available.";
+  }
+
+  function populateEditModal(el) {
+    const card = el.closest(".equipment-card");
+    document.getElementById("editEquipmentName").value = card.dataset.name;
+    document.getElementById("editEquipmentType").value = card.dataset.type;
+    document.getElementById("editEquipmentStatus").value = card.dataset.statusText;
+    document.getElementById("editEquipmentAvailable").value = card.dataset.available;
+    document.getElementById("editEquipmentID").value = card.dataset.id;
+    document.getElementById("editEquipmentImage").src = card.querySelector("img").src;
+    document.getElementById("editEquipmentDescription").value = card.dataset.description || "";
+  }
+
+  function populateConfirmModal(el) {
+    const card = el.closest(".equipment-card");
+    document.getElementById("confirmEquipmentName").textContent = card.dataset.name;
+    document.getElementById("confirmEquipmentID").value = card.dataset.id;
+
+    const action = card.dataset.statusText === "active" ? "Deactivate" : "Activate";
+    document.getElementById("confirmActionLabel").textContent = action;
+    document.getElementById("confirmActionLabelInline").textContent = action.toLowerCase();
+  }
+
+  document.getElementById("filterCategory").addEventListener("change", filterCards);
+  document.getElementById("filterStatus").addEventListener("change", filterCards);
+
+  function filterCards() {
+    const category = document.getElementById("filterCategory").value.toLowerCase();
+    const status = document.getElementById("filterStatus").value.toLowerCase();
+
+    document.querySelectorAll(".equipment-card").forEach(card => {
+      const matchCategory = !category || card.dataset.category.toLowerCase() === category;
+      const matchStatus = !status || card.dataset.status.toLowerCase() === status;
+
+      card.style.display = (matchCategory && matchStatus) ? "block" : "none";
     });
   }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // The modal element
-    const viewUserModal = document.getElementById("modalViewUser");
+  const viewUserModal = document.getElementById("modalViewUser");
 
-    if (viewUserModal) {
-        // Event listener for when the modal is shown
-        viewUserModal.addEventListener("show.bs.modal", function (event) {
-              // Get the button that triggered the modal
-              const button = event.relatedTarget;  // The "view" button
-              const userId = button ? button.getAttribute("data-id") : null;  // Get the data-id from the button
+  if (viewUserModal) {
+    viewUserModal.addEventListener("show.bs.modal", function (event) {
+      const button = event.relatedTarget;
+      const userId = button ? button.getAttribute("data-id") : null;
 
-              // Guard: ensure we have an ID
-              if (!userId) {
-                console.error('modalViewUser: no userId found on trigger button', button);
-                return;
-              }
+      if (!userId) {
+        console.error("modalViewUser: no userId found on trigger button", button);
+        return;
+      }
 
-              // Build fetch URL using BASE_URL when available (handles subdirectory installs)
-              const base = (typeof BASE_URL !== 'undefined') ? String(BASE_URL).replace(/\/$/, '') : '';
-              const fetchUrl = base ? `${base}/admin/user/${userId}` : `admin/user/${userId}`;
+      const base = (typeof BASE_URL !== "undefined") ? String(BASE_URL).replace(/\/$/, "") : "";
+      const fetchUrl = base ? `${base}/admin/user/${userId}` : `admin/user/${userId}`;
 
-              // Make an AJAX request to fetch the user data
-              fetch(fetchUrl)
-                .then(response => {
-                  if (!response.ok) throw new Error('Network response was not ok: ' + response.status);
-                  return response.json();
-                })
-                .then(data => {
-                  if (data.error) {
-                    console.error('Error from server:', data.error);
-                    return;
-                  }
+      fetch(fetchUrl)
+        .then(response => {
+          if (!response.ok) throw new Error("Network response was not ok: " + response.status);
+          return response.json();
+        })
+        .then(data => {
+          if (data.error) {
+            console.error("Error from server:", data.error);
+            return;
+          }
 
-                  // Populate the modal with user data
-                  const nameEl = document.getElementById("viewUserName");
-                  const emailEl = document.getElementById("viewUserEmail");
-                  const roleEl = document.getElementById("viewUserRole");
-                  const statusEl = document.getElementById("viewUserStatus");
+          const nameEl = document.getElementById("viewUserName");
+          const emailEl = document.getElementById("viewUserEmail");
+          const roleEl = document.getElementById("viewUserRole");
+          const statusEl = document.getElementById("viewUserStatus");
 
-                  if (nameEl) nameEl.textContent = `${data.first_name} ${data.last_name}`;
-                  if (emailEl) emailEl.textContent = data.email || '';
-                  if (roleEl) roleEl.textContent = data.role ? (data.role.charAt(0).toUpperCase() + data.role.slice(1)) : '';
-                  if (statusEl) statusEl.textContent = data.status_text || '';
-                })
-                .catch(error => {
-                  console.error("Error fetching user details:", error);
-                });
-        });
-    }
+          if (nameEl) nameEl.textContent = `${data.first_name} ${data.last_name}`;
+          if (emailEl) emailEl.textContent = data.email || "";
+          if (roleEl) roleEl.textContent = data.role ? data.role.charAt(0).toUpperCase() + data.role.slice(1) : "";
+          if (statusEl) statusEl.textContent = data.status_text || "";
+        })
+        .catch(error => console.error("Error fetching user details:", error));
+    });
+  }
 });
-
-
-
