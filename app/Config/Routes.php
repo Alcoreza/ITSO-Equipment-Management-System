@@ -55,4 +55,7 @@ $routes->get('admin/user/(:num)', 'AdminController::getUser/$1');
 // Toggle user active/inactive
 $routes->post('admin/toggleUser', 'AdminController::toggleUser');
 
+// Add new user (admin)
+$routes->post('admin/addUser', 'AdminController::addUser');
+
 $routes->get('/about', 'AboutController::index');
