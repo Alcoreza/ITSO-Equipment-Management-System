@@ -204,3 +204,5 @@ DEBUG - 2025-11-27 14:31:35 --> Session: Class initialized using 'CodeIgniter\Se
 INFO - 2025-11-27 14:31:42 --> User verified successfully: ID=13, Email=sionbert0503@gmail.com
 DEBUG - 2025-11-27 14:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-27 14:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 15:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 15:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
