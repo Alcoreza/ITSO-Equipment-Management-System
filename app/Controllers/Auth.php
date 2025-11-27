@@ -117,32 +117,32 @@ class Auth extends BaseController
     }
 
     public function submitRegister()
-    {
-        $request = service('request');
-        $users = new \App\Models\Users_model();
+{
+    $request = service('request');
+    $users = new \App\Models\Users_model();
 
-        // Get form inputs
-        $fullname = trim($request->getPost('fullname'));
-        $email = trim($request->getPost('email'));
-        $role = $request->getPost('role');
-        $password = $request->getPost('password');
-        $confirm = $request->getPost('confirm_password');
+    // Get form inputs
+    $fullname = trim($request->getPost('fullname'));
+    $email = trim($request->getPost('email'));
+    $role = $request->getPost('role');
+    $password = $request->getPost('password');
+    $confirm = $request->getPost('confirm_password');
 
-        // Basic validation
-        if ($password !== $confirm) {
-            session()->setFlashdata('error', 'Passwords do not match.');
-            return redirect()->back()->withInput();
-        }
+    // Basic validation
+    if ($password !== $confirm) {
+        session()->setFlashdata('error', 'Passwords do not match.');
+        return redirect()->back()->withInput();
+    }
 
-        if (strlen($password) < 8) {
-            session()->setFlashdata('error', 'Password must be at least 8 characters.');
-            return redirect()->back()->withInput();
-        }
+    if (strlen($password) < 8) {
+        session()->setFlashdata('error', 'Password must be at least 8 characters.');
+        return redirect()->back()->withInput();
+    }
 
-        // Split full name into parts
-        $parts = explode(" ", $fullname);
-        $first_name = $parts[0] ?? '';
-        $last_name = $parts[count($parts) - 1] ?? '';
+    // Split full name into parts
+    $parts = explode(" ", $fullname);
+    $first_name = $parts[0] ?? '';
+    $last_name = $parts[count($parts) - 1] ?? '';
 
     // Prepare data to match your DB columns
     $data = [
@@ -151,7 +151,9 @@ class Auth extends BaseController
         'first_name' => $first_name,
         'last_name'  => $last_name,
         'email'      => $email,
-        'role'       => $role
+        'role'       => $role,
+        'token'      => bin2hex(random_bytes(16)),  // Generate verification token
+        'is_verified' => 0  // New user is not verified by default
     ];
 
     // Check for duplicate email
@@ -165,7 +167,7 @@ class Auth extends BaseController
     try {
         $inserted = $users->insert($data);
         if ($inserted === false) {
-            // check DB error
+            // Check DB error
             $dbError = [];
             if (isset($users->db)) {
                 $dbError = $users->db->error();
@@ -179,7 +181,25 @@ class Auth extends BaseController
             return redirect()->back()->withInput();
         }
 
-        session()->setFlashdata('success', 'Account created successfully!');
+        // Send email with verification link
+        $verificationLink = base_url('auth/verify/' . $data['token']);
+        $message = "<h2>Welcome to ITSO EMS!</h2><br>"
+            . "<p>Please verify your email by clicking the link below:</p>"
+            . "<p><a href='" . $verificationLink . "'>Verify your email</a></p>";
+
+        // Email setup
+        $emailService = service('email');
+        $emailService->setTo($email);
+        $emailService->setSubject('User Account Verification');
+        $emailService->setMessage($message);
+
+        // Send the email
+        if (!$emailService->send()) {
+            session()->setFlashdata('error', 'There was an issue sending the verification email.');
+            return redirect()->back()->withInput();
+        }
+
+        session()->setFlashdata('success', 'Account created successfully! Please check your email to verify your account.');
         return redirect()->to(base_url('/'));
     } catch (\Exception $e) {
         log_message('error', 'Register exception: ' . $e->getMessage());
@@ -187,5 +207,32 @@ class Auth extends BaseController
         return redirect()->back()->withInput();
     }
 }
+
+public function verify($token)
+{
+    $usersModel = new \App\Models\Users_model();
+
+    // Find user by token
+    $user = $usersModel->where('token', $token)->first();
+
+    // If user is found and token is valid
+    if ($user) {
+        // Mark the user as verified and clear the token
+        $usersModel->update($user['id'], ['is_verified' => 1, 'token' => null]);
+
+        // Set flashdata to notify the user
+        session()->setFlashdata('success', 'Your account has been successfully verified!');
+
+        // No redirection to login, just load the verification page
+        return view('verify_view'); // Load the verification view
+    } else { 
+        // If the token is invalid or expired
+        session()->setFlashdata('error', 'Invalid or expired token.');
+
+        // No redirection to login, just load the verification page with error
+        return view('verify_view'); // Load the verification view
+    }
+}
+
 
 }

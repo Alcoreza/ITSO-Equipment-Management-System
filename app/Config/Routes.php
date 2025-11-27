@@ -40,6 +40,9 @@ $routes->get('/reports', 'ReportsController::index');
 $routes->get('register', 'Auth::register');
 $routes->post('register/submit', 'Auth::submitRegister');
 
+// Email verification
+$routes->get('auth/verify/(:any)', 'Auth::verify/$1');
+
 // Reservation routes
 $routes->get('reservation', 'ReservationController::index');
 $routes->post('reservation/submitReservation', 'ReservationController::submitReservation');

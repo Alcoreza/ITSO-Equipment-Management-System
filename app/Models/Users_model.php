@@ -19,7 +19,9 @@ class Users_model extends Model
         'role',
         'status',       // <-- add this
         'created_at',
-        'updated_at'
+        'updated_at',
+        'ip_address',
+        'token'
     ];
 
     protected bool $allowEmptyInserts = false;
