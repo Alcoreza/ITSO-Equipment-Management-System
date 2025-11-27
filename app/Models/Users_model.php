@@ -21,7 +21,8 @@ class Users_model extends Model
         'created_at',
         'updated_at',
         'ip_address',
-        'token'
+        'token',
+        'is_verified'
     ];
 
     protected bool $allowEmptyInserts = false;

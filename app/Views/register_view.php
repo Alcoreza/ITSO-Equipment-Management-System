@@ -13,20 +13,24 @@
             Register as a Student or Associate to borrow and reserve equipment.
         </p>
 
-        <!-- flash messages -->
+        <!-- Flash messages -->
         <?php if (session()->getFlashdata('error')): ?>
             <div class="alert-modern alert-modern-danger mb-3">
+                <i class="bi bi-exclamation-circle me-2"></i>
                 <?= esc(session()->getFlashdata('error')) ?>
             </div>
         <?php endif; ?>
 
         <?php if (session()->getFlashdata('success')): ?>
             <div class="alert-modern alert-modern-success mb-3">
+                <i class="bi bi-check-circle me-2"></i>
                 <?= esc(session()->getFlashdata('success')) ?>
             </div>
         <?php endif; ?>
 
         <form id="registerForm" action="<?= base_url('register/submit') ?>" method="post" novalidate>
+            <?= csrf_field() ?>
+
             <!-- FULL NAME -->
             <div class="mb-3">
                 <label class="auth-label" for="fullname">Full name</label>
@@ -34,8 +38,13 @@
                     <span class="input-icon">
                         <i class="bi bi-person"></i>
                     </span>
-                    <input type="text" class="form-control auth-input" id="fullname" name="fullname"
-                        placeholder="Juan Dela Cruz" required>
+                    <input type="text" 
+                        class="form-control auth-input" 
+                        id="fullname" 
+                        name="fullname"
+                        value="<?= old('fullname') ?>"
+                        placeholder="Juan Dela Cruz" 
+                        required>
                 </div>
                 <div class="invalid-feedback">Please enter your full name.</div>
             </div>
@@ -47,8 +56,13 @@
                     <span class="input-icon">
                         <i class="bi bi-envelope"></i>
                     </span>
-                    <input type="email" class="form-control auth-input" id="reg_email" name="email"
-                        placeholder="you@fit.edu.ph" required>
+                    <input type="email" 
+                        class="form-control auth-input" 
+                        id="reg_email" 
+                        name="email"
+                        value="<?= old('email') ?>"
+                        placeholder="you@fit.edu.ph" 
+                        required>
                 </div>
                 <div class="invalid-feedback">Enter a valid FEU Tech email address.</div>
             </div>
@@ -58,8 +72,8 @@
                 <label class="auth-label" for="role">Account type</label>
                 <select name="role" id="role" class="form-select auth-select" required>
                     <option value="">Select type</option>
-                    <option value="student">Student</option>
-                    <option value="associate">Associate</option>
+                    <option value="student" <?= old('role') === 'student' ? 'selected' : '' ?>>Student</option>
+                    <option value="associate" <?= old('role') === 'associate' ? 'selected' : '' ?>>Associate</option>
                 </select>
                 <div class="invalid-feedback">Please select a valid role.</div>
             </div>
@@ -71,8 +85,13 @@
                     <span class="input-icon">
                         <i class="bi bi-lock"></i>
                     </span>
-                    <input type="password" class="form-control auth-input" id="reg_password" name="password"
-                        minlength="8" placeholder="Create a password" required>
+                    <input type="password" 
+                        class="form-control auth-input" 
+                        id="reg_password" 
+                        name="password"
+                        minlength="8" 
+                        placeholder="Create a password" 
+                        required>
                 </div>
                 <div class="invalid-feedback">Password must be at least 8 characters.</div>
             </div>
@@ -90,9 +109,7 @@
                         name="confirm_password"
                         minlength="8"
                         placeholder="Retype your password"
-                    required>
-
-
+                        required>
                 </div>
                 <div class="invalid-feedback">Passwords do not match.</div>
             </div>
@@ -109,9 +126,29 @@
                 <a href="<?= base_url('login') ?>" class="auth-link">Sign in</a>
             </p>
         </form>
-
-        <div class="mt-3 text-center auth-demo-note">
-            Frontend only — backend integration required for real authentication.
-        </div>
     </div>
 </div>
+
+<script>
+// Client-side password matching validation
+document.getElementById('registerForm').addEventListener('submit', function(e) {
+    const password = document.getElementById('reg_password').value;
+    const confirmPassword = document.getElementById('reg_confirm_password').value;
+    const confirmInput = document.getElementById('reg_confirm_password');
+
+    if (password !== confirmPassword) {
+        e.preventDefault();
+        confirmInput.classList.add('is-invalid');
+        confirmInput.setCustomValidity('Passwords do not match');
+    } else {
+        confirmInput.classList.remove('is-invalid');
+        confirmInput.setCustomValidity('');
+    }
+});
+
+// Remove invalid state when user types
+document.getElementById('reg_confirm_password').addEventListener('input', function() {
+    this.classList.remove('is-invalid');
+    this.setCustomValidity('');
+});
+</script>

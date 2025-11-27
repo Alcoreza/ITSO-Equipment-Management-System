@@ -22,10 +22,10 @@ class Auth extends BaseController
         $email = trim($request->getPost('email'));
         $password = $request->getPost('password');
 
-        $itsoModel = new \App\Models\Users_model();
+        $usersModel = new \App\Models\Users_model();
 
         // check email exists
-        $user = $itsoModel->where('email', $email)->first();
+        $user = $usersModel->where('email', $email)->first();
 
         if (!$user) {
             session()->setFlashdata('error', 'Email not found.');
@@ -38,9 +38,15 @@ class Auth extends BaseController
             return redirect()->back()->withInput();
         }
 
-        // 🔥 CHECK ROLE HERE
+        // Check if email is verified
+        if ($user['is_verified'] != 1) {
+            session()->setFlashdata('error', 'Please verify your email before logging in. Check your inbox.');
+            return redirect()->back()->withInput();
+        }
+
+        // Check role (only ITSO can access admin panel)
         if ($user['role'] !== 'itso') {
-            session()->setFlashdata('error', 'Access denied. Only ITSO users can log in.');
+            session()->setFlashdata('error', 'Access denied. Only ITSO users can log in to admin panel.');
             return redirect()->back()->withInput();
         }
 
@@ -57,7 +63,6 @@ class Auth extends BaseController
 
         return redirect()->to(base_url('users'));
     }
-
 
     public function logout()
     {
@@ -108,6 +113,7 @@ class Auth extends BaseController
     {
         $data = [
             'title' => 'Register - ITSO EMS',
+            'bodyClass' => 'auth-page'
         ];
 
         return view('include/head_view', $data)
@@ -117,122 +123,163 @@ class Auth extends BaseController
     }
 
     public function submitRegister()
-{
-    $request = service('request');
-    $users = new \App\Models\Users_model();
+    {
+        $request = service('request');
+        $users = new \App\Models\Users_model();
+        $session = session();
 
-    // Get form inputs
-    $fullname = trim($request->getPost('fullname'));
-    $email = trim($request->getPost('email'));
-    $role = $request->getPost('role');
-    $password = $request->getPost('password');
-    $confirm = $request->getPost('confirm_password');
+        // Get form inputs
+        $fullname = trim($request->getPost('fullname'));
+        $email = trim($request->getPost('email'));
+        $role = $request->getPost('role');
+        $password = $request->getPost('password');
+        $confirm = $request->getPost('confirm_password');
 
-    // Basic validation
-    if ($password !== $confirm) {
-        session()->setFlashdata('error', 'Passwords do not match.');
-        return redirect()->back()->withInput();
-    }
-
-    if (strlen($password) < 8) {
-        session()->setFlashdata('error', 'Password must be at least 8 characters.');
-        return redirect()->back()->withInput();
-    }
-
-    // Split full name into parts
-    $parts = explode(" ", $fullname);
-    $first_name = $parts[0] ?? '';
-    $last_name = $parts[count($parts) - 1] ?? '';
-
-    // Prepare data to match your DB columns
-    $data = [
-        'username'   => $email, 
-        'password'   => password_hash($password, PASSWORD_DEFAULT),
-        'first_name' => $first_name,
-        'last_name'  => $last_name,
-        'email'      => $email,
-        'role'       => $role,
-        'token'      => bin2hex(random_bytes(16)),  // Generate verification token
-        'is_verified' => 0  // New user is not verified by default
-    ];
-
-    // Check for duplicate email
-    $existing = $users->where('email', $email)->first();
-    if ($existing) {
-        session()->setFlashdata('error', 'That email is already in use.');
-        return redirect()->back()->withInput();
-    }
-
-    // Insert into database
-    try {
-        $inserted = $users->insert($data);
-        if ($inserted === false) {
-            // Check DB error
-            $dbError = [];
-            if (isset($users->db)) {
-                $dbError = $users->db->error();
-            }
-            $msg = 'Error saving data.';
-            if (!empty($dbError) && !empty($dbError['message'])) {
-                log_message('error', 'Register DB error: ' . $dbError['message']);
-                $msg = 'Database error: ' . $dbError['message'];
-            }
-            session()->setFlashdata('error', $msg);
+        // Basic validation
+        if (empty($fullname) || empty($email) || empty($role) || empty($password)) {
+            $session->setFlashdata('error', 'All fields are required.');
             return redirect()->back()->withInput();
         }
 
-        // Send email with verification link
-        $verificationLink = base_url('auth/verify/' . $data['token']);
-        $message = "<h2>Welcome to ITSO EMS!</h2><br>"
-            . "<p>Please verify your email by clicking the link below:</p>"
-            . "<p><a href='" . $verificationLink . "'>Verify your email</a></p>";
+        if ($password !== $confirm) {
+            $session->setFlashdata('error', 'Passwords do not match.');
+            return redirect()->back()->withInput();
+        }
 
-        // Email setup
+        if (strlen($password) < 8) {
+            $session->setFlashdata('error', 'Password must be at least 8 characters.');
+            return redirect()->back()->withInput();
+        }
+
+        // Validate email format
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $session->setFlashdata('error', 'Invalid email format.');
+            return redirect()->back()->withInput();
+        }
+
+        // Split full name into first and last name
+        $nameParts = explode(" ", $fullname, 2);
+        $first_name = $nameParts[0] ?? '';
+        $last_name = $nameParts[1] ?? '';
+
+        // Check for duplicate email
+        $existing = $users->where('email', $email)->first();
+        if ($existing) {
+            $session->setFlashdata('error', 'That email is already in use.');
+            return redirect()->back()->withInput();
+        }
+
+        // Generate verification token
+        try {
+            $token = bin2hex(random_bytes(16));
+        } catch (\Exception $e) {
+            $token = bin2hex(openssl_random_pseudo_bytes(16));
+        }
+
+        // Prepare insert data - MATCH YOUR DATABASE FIELDS
+        $data_insert = [
+            'username'    => $email,
+            'password'    => password_hash($password, PASSWORD_DEFAULT),
+            'first_name'  => $first_name,
+            'last_name'   => $last_name,
+            'email'       => $email,
+            'role'        => $role,
+            'token'       => $token,
+            'is_verified' => 0,
+            'status'      => 1  // Active by default
+        ];
+
+        // Prepare verification email
+        $verificationLink = base_url('auth/verify/' . $token);
+        $message = "<h2>Hello, " . esc($fullname) . "!</h2><br>"
+            . "<p>Thank you for registering with ITSO EMS.</p>"
+            . "<p>Please verify your email by clicking the link below:</p>"
+            . "<p><a href='" . $verificationLink . "' style='display:inline-block;padding:10px 20px;background-color:#007bff;color:#fff;text-decoration:none;border-radius:5px;'>Verify Email</a></p>"
+            . "<p>Or copy this link: " . $verificationLink . "</p>"
+            . "<p>If you did not register, please ignore this message.</p>"
+            . "<br><p>Best regards,<br>ITSO EMS Team</p>";
+
+        // Send email BEFORE inserting to database
         $emailService = service('email');
+
+        // Set from address if configured
+        $fromEmail = env('SITE_EMAIL', 'noreply@itsoems.com');
+        $fromName = env('SITE_NAME', 'ITSO EMS');
+        $emailService->setFrom($fromEmail, $fromName);
+
         $emailService->setTo($email);
-        $emailService->setSubject('User Account Verification');
+        $emailService->setSubject('ITSO EMS - Verify Your Email Address');
         $emailService->setMessage($message);
 
-        // Send the email
+        // Try to send email
         if (!$emailService->send()) {
-            session()->setFlashdata('error', 'There was an issue sending the verification email.');
+            log_message('error', 'Verification email failed to send to ' . $email);
+            log_message('debug', $emailService->printDebugger(['headers']));
+            
+            $session->setFlashdata('error', 'Failed to send verification email. Please contact support.');
             return redirect()->back()->withInput();
         }
 
-        session()->setFlashdata('success', 'Account created successfully! Please check your email to verify your account.');
-        return redirect()->to(base_url('/'));
-    } catch (\Exception $e) {
-        log_message('error', 'Register exception: ' . $e->getMessage());
-        session()->setFlashdata('error', 'An error occurred while creating account.');
-        return redirect()->back()->withInput();
+        // Insert user into database
+        try {
+            $inserted = $users->insert($data_insert);
+
+            if ($inserted === false) {
+                $dbError = $users->errors() ?? [];
+                log_message('error', 'User insert failed: ' . print_r($dbError, true));
+                
+                $session->setFlashdata('error', 'Failed to create account. Please try again.');
+                return redirect()->back()->withInput();
+            }
+
+            // Log successful insertion
+            $userId = is_numeric($inserted) ? $inserted : $users->getInsertID();
+            log_message('info', 'User registered successfully: ID=' . $userId . ', Email=' . $email);
+
+            $session->setFlashdata('success', 'Account created successfully! Please check your email to verify your account.');
+            return redirect()->to(base_url('login'));
+
+        } catch (\Exception $e) {
+            log_message('error', 'Register exception: ' . $e->getMessage());
+            $session->setFlashdata('error', 'An error occurred while creating your account. Please try again.');
+            return redirect()->back()->withInput();
+        }
     }
-}
 
-public function verify($token)
-{
-    $usersModel = new \App\Models\Users_model();
+    public function verify($token)
+    {
+        $usermodel = model('Users_model');
+        
+        // Find user by token
+        $user = $usermodel->where('token', $token)->first();
 
-    // Find user by token
-    $user = $usersModel->where('token', $token)->first();
+        if ($user) {
+            // Check if already verified
+            if ($user['is_verified'] == 1) {
+                session()->setFlashdata('info', 'Your account is already verified. You can log in now.');
+                return redirect()->to(base_url('login'));
+            }
+            
+            // Mark as verified and clear token
+            $updated = $usermodel->update($user['id'], [
+                'is_verified' => 1
+            ]);
 
-    // If user is found and token is valid
-    if ($user) {
-        // Mark the user as verified and clear the token
-        $usersModel->update($user['id'], ['is_verified' => 1, 'token' => null]);
+            if ($updated) {
+                log_message('info', 'User verified successfully: ID=' . $user['id'] . ', Email=' . $user['email']);
+                session()->setFlashdata('success', 'Your account has been successfully verified! You can now log in.');
+            } else {
+                log_message('error', 'Failed to update verification status for user ID=' . $user['id']);
+                session()->setFlashdata('error', 'Verification failed. Please try again or contact support.');
+            }
 
-        // Set flashdata to notify the user
-        session()->setFlashdata('success', 'Your account has been successfully verified!');
-
-        // No redirection to login, just load the verification page
-        return view('verify_view'); // Load the verification view
-    } else { 
-        // If the token is invalid or expired
-        session()->setFlashdata('error', 'Invalid or expired token.');
-
-        // No redirection to login, just load the verification page with error
-        return view('verify_view'); // Load the verification view
+            return redirect()->to(base_url('login'));
+            
+        } else {
+            // Invalid or expired token
+            log_message('warning', 'Invalid verification token attempted: ' . $token);
+            session()->setFlashdata('error', 'Invalid or expired verification token. Please register again.');
+            return redirect()->to(base_url('register'));
+        }
     }
-}
-
-
 }
