@@ -266,6 +266,168 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// ADD USER MODAL: Password matching validation
+document.addEventListener("DOMContentLoaded", function () {
+  const addUserForm = document.getElementById("addUserForm");
+  
+  if (addUserForm) {
+    const addPassword = document.getElementById("addPassword");
+    const addConfirmPassword = document.getElementById("addConfirmPassword");
+    
+    // Real-time password match check
+    function checkAddUserPasswords() {
+      if (!addPassword || !addConfirmPassword) return;
+      
+      if (addConfirmPassword.value && addConfirmPassword.value !== addPassword.value) {
+        addConfirmPassword.classList.add("is-invalid");
+      } else {
+        addConfirmPassword.classList.remove("is-invalid");
+      }
+    }
+    
+    if (addPassword && addConfirmPassword) {
+      addPassword.addEventListener("input", checkAddUserPasswords);
+      addConfirmPassword.addEventListener("input", checkAddUserPasswords);
+    }
+    
+    // Form submission validation
+    addUserForm.addEventListener("submit", function(e) {
+      const password = addPassword.value;
+      const confirmPassword = addConfirmPassword.value;
+      
+      if (password !== confirmPassword) {
+        e.preventDefault();
+        addConfirmPassword.classList.add("is-invalid");
+        return false;
+      }
+      
+      // Show loading state
+      const btnText = this.querySelector('.btn-text');
+      const btnSpinner = this.querySelector('.btn-spinner');
+      if (btnText) btnText.style.display = 'none';
+      if (btnSpinner) btnSpinner.style.display = 'inline-block';
+    });
+    
+    // Reset form when modal closes
+    const modal = document.getElementById("modalAddUser");
+    if (modal) {
+      modal.addEventListener("hidden.bs.modal", function () {
+        addUserForm.reset();
+        addUserForm.querySelectorAll(".is-invalid").forEach(el => {
+          el.classList.remove("is-invalid");
+        });
+        
+        // Reset button state
+        const btnText = addUserForm.querySelector('.btn-text');
+        const btnSpinner = addUserForm.querySelector('.btn-spinner');
+        if (btnText) btnText.style.display = 'inline';
+        if (btnSpinner) btnSpinner.style.display = 'none';
+      });
+    }
+  }
+});
+
+// USER FILTERS - Make role and status filters functional
+document.addEventListener("DOMContentLoaded", function () {
+  const filterRole = document.getElementById("filterRole");
+  const filterStatus = document.getElementById("filterStatus");
+  const userCards = document.querySelectorAll(".user-card");
+
+  function applyUserFilters() {
+    const selectedRole = filterRole ? filterRole.value.toLowerCase() : "";
+    const selectedStatus = filterStatus ? filterStatus.value.toLowerCase() : "";
+
+    userCards.forEach((card) => {
+      const cardRole = card.getAttribute("data-role") ? card.getAttribute("data-role").toLowerCase() : "";
+      const cardStatus = card.getAttribute("data-status") ? card.getAttribute("data-status").toLowerCase() : "";
+
+      const matchRole = selectedRole === "" || cardRole === selectedRole;
+      const matchStatus = selectedStatus === "" || cardStatus === selectedStatus;
+
+      // Show card if both filters match (or are empty)
+      if (matchRole && matchStatus) {
+        card.style.display = "flex";
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    // Count visible cards
+    updateUserCount();
+  }
+
+  function updateUserCount() {
+    const visibleCards = Array.from(userCards).filter(card => card.style.display !== "none");
+    const totalCards = userCards.length;
+    
+    console.log(`Showing ${visibleCards.length} of ${totalCards} users`);
+    
+    // Optional: Add a count display
+    const countDisplay = document.querySelector(".users-table-footer .text-muted");
+    if (countDisplay && visibleCards.length !== totalCards) {
+      countDisplay.textContent = `Showing ${visibleCards.length} of ${totalCards} users`;
+    }
+  }
+
+  // Attach event listeners
+  if (filterRole) {
+    filterRole.addEventListener("change", applyUserFilters);
+  }
+
+  if (filterStatus) {
+    filterStatus.addEventListener("change", applyUserFilters);
+  }
+
+  // Initial count
+  updateUserCount();
+});
+
+//reset password form validation
+document.addEventListener('DOMContentLoaded', function() {
+    const resetForm = document.getElementById('resetForm');
+    const newPassword = document.getElementById('new_password');
+    const confirmPassword = document.getElementById('confirm_password');
+
+    function checkPasswordMatch() {
+        if (confirmPassword.value && confirmPassword.value !== newPassword.value) {
+            confirmPassword.classList.add('is-invalid');
+        } else {
+            confirmPassword.classList.remove('is-invalid');
+        }
+    }
+
+    if (newPassword && confirmPassword) {
+        newPassword.addEventListener('input', checkPasswordMatch);
+        confirmPassword.addEventListener('input', checkPasswordMatch);
+    }
+
+    if (resetForm) {
+        resetForm.addEventListener('submit', function(e) {
+            if (newPassword.value !== confirmPassword.value) {
+                e.preventDefault();
+                confirmPassword.classList.add('is-invalid');
+                return false;
+            }
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const forgotForm = document.getElementById('forgotForm');
+    const btnSendReset = document.getElementById('btnSendReset');
+    
+    if (forgotForm && btnSendReset) {
+        forgotForm.addEventListener('submit', function() {
+            const btnText = btnSendReset.querySelector('.btn-text');
+            const btnSpinner = btnSendReset.querySelector('.btn-spinner');
+            
+            if (btnText) btnText.style.display = 'none';
+            if (btnSpinner) btnSpinner.style.display = 'inline';
+            btnSendReset.disabled = true;
+        });
+    }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const viewUserModal = document.getElementById("modalViewUser");
 
