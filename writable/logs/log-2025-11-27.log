@@ -260,6 +260,7 @@ DEBUG - 2025-11-27 14:31:35 --> Session: Class initialized using 'CodeIgniter\Se
 INFO - 2025-11-27 14:31:42 --> User verified successfully: ID=13, Email=sionbert0503@gmail.com
 DEBUG - 2025-11-27 14:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-27 14:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
 >>>>>>> 4c870f733b43377b59aaa3f976ca367c73673c38
 DEBUG - 2025-11-27 14:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-27 14:38:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -467,3 +468,7 @@ DEBUG - 2025-11-27 16:51:50 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-11-27 16:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-27 16:52:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-27 16:55:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+DEBUG - 2025-11-27 15:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 15:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> 7e976f2611b807a33a235ffd8eeb13ffa8336ec1
