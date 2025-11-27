@@ -56,3 +56,8 @@ $routes->get('admin/user/(:num)', 'AdminController::getUser/$1');
 $routes->post('admin/toggleUser', 'AdminController::toggleUser');
 
 $routes->get('/about', 'AboutController::index');
+
+// Add these lines somewhere in your routes config (e.g., below other POST routes)
+$routes->post('equipment/update/(:num)', 'EquipmentController::update/$1');
+$routes->post('equipment/toggle/(:num)', 'EquipmentController::toggle/$1');
+

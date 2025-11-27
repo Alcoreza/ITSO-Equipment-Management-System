@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+
 use CodeIgniter\Model;
 
 class Equipment_model extends Model
@@ -13,8 +14,15 @@ class Equipment_model extends Model
         'equipment_type',
         'available',
         'status',
+        'image',
+        'description',
     ];
 
-    // Optional: return results as arrays
+    // Return results as arrays
     protected $returnType = 'array';
+
+    // Must be typed as array to match CodeIgniter\BaseModel in PHP 8+
+    protected array $casts = [
+        'available' => 'integer',
+    ];
 }
