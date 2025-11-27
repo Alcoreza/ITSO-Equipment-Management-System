@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CRITICAL - 2025-11-27 14:21:30 --> ErrorException: ini_set(): Session ini settings cannot be changed after headers have already been sent
 [Method: GET, Route: equipment]
 in SYSTEMPATH\Session\Handlers\FileHandler.php on line 74.
@@ -52,3 +53,211 @@ DEBUG - 2025-11-27 14:21:30 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-11-27 14:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-27 14:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-27 14:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+DEBUG - 2025-11-27 12:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 12:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 12:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 12:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 12:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 12:06:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 12:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 12:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 12:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 12:07:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 12:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 12:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:36:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:41:51 --> inserted: 15
+DEBUG - 2025-11-27 13:41:51 --> inserted row: Array
+(
+    [id] => 15
+    [username] => danielalcoreza@gmail.com
+    [password] => $2y$10$kWvNwFPMe8hHtLyLKMvin.90GpvmIui/bnj7V9ByMq69h5SsVv3zu
+    [first_name] => Daniel
+    [last_name] => Alcoreza
+    [email] => danielalcoreza@gmail.com
+    [role] => Student
+    [created_at] => 2025-11-27 13:41:51
+    [updated_at] => 2025-11-27 13:41:51
+    [status] => 1
+    [is_verified] => 0
+    [is_deactivated] => 0
+    [token] => 2198092f4e77513a3694264f0bfbb2b6
+)
+
+DEBUG - 2025-11-27 13:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:43:06 --> inserted: 16
+DEBUG - 2025-11-27 13:43:06 --> inserted row: Array
+(
+    [id] => 16
+    [username] => sionbert0503@gmail.com
+    [password] => $2y$10$xW3uITtjEvL6GbmyiP1wq..vaI5MthdKQlAfVsSOJGCptzllvHDb2
+    [first_name] => Ozbert
+    [last_name] => Sales
+    [email] => sionbert0503@gmail.com
+    [role] => Student
+    [created_at] => 2025-11-27 13:43:06
+    [updated_at] => 2025-11-27 13:43:06
+    [status] => 1
+    [is_verified] => 0
+    [is_deactivated] => 0
+    [token] => 28569f49383f414d3a770cbe59ff20ec
+)
+
+DEBUG - 2025-11-27 13:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:43:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:43:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:43:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:44:31 --> inserted: 17
+DEBUG - 2025-11-27 13:44:31 --> inserted row: Array
+(
+    [id] => 17
+    [username] => sionbert0503@gmail.com
+    [password] => $2y$10$36Jzi/7JDtv6FRhOeZ4Pyubnju2zlOEX4shq3Lhh4iHkF2m6EnfFi
+    [first_name] => Ozbert
+    [last_name] => Sales
+    [email] => sionbert0503@gmail.com
+    [role] => Student
+    [created_at] => 2025-11-27 13:44:31
+    [updated_at] => 2025-11-27 13:44:31
+    [status] => 1
+    [is_verified] => 0
+    [is_deactivated] => 0
+    [token] => 590116f30a5c1da5e041df20393cc040
+)
+
+DEBUG - 2025-11-27 13:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:50:33 --> inserted: 18
+DEBUG - 2025-11-27 13:50:33 --> inserted row: Array
+(
+    [id] => 18
+    [username] => sionbert0503@gmail.com
+    [password] => $2y$10$c0g6/7/vEmLafO7O8pI1NeMG5uf1HErx/pOsWghtu5mCXRuyiiYL.
+    [first_name] => Ozbert
+    [last_name] => Sales
+    [email] => sionbert0503@gmail.com
+    [role] => Student
+    [created_at] => 2025-11-27 13:50:33
+    [updated_at] => 2025-11-27 13:50:33
+    [status] => 1
+    [is_verified] => 0
+    [is_deactivated] => 0
+    [token] => 580dff7c92268e9eb35a1b0e5e615343
+)
+
+DEBUG - 2025-11-27 13:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:50:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-11-27 13:50:47 --> ErrorException: Undefined variable $usersModel
+[Method: GET, Route: auth/verify/580dff7c92268e9eb35a1b0e5e615343]
+in APPPATH\Controllers\Auth.php on line 249.
+ 1 APPPATH\Controllers\Auth.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usersModel', 'C:\\xampp\\htdocs\\Envizio\\app\\Controllers\\Auth.php', 249)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->verify('580dff7c92268e9eb35a1b0e5e615343')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 13:51:56 --> ErrorException: Undefined variable $usersModel
+[Method: GET, Route: auth/verify/580dff7c92268e9eb35a1b0e5e615343]
+in APPPATH\Controllers\Auth.php on line 249.
+ 1 APPPATH\Controllers\Auth.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usersModel', 'C:\\xampp\\htdocs\\Envizio\\app\\Controllers\\Auth.php', 249)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->verify('580dff7c92268e9eb35a1b0e5e615343')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-27 13:51:58 --> ErrorException: Undefined variable $usersModel
+[Method: GET, Route: auth/verify/580dff7c92268e9eb35a1b0e5e615343]
+in APPPATH\Controllers\Auth.php on line 249.
+ 1 APPPATH\Controllers\Auth.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usersModel', 'C:\\xampp\\htdocs\\Envizio\\app\\Controllers\\Auth.php', 249)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->verify('580dff7c92268e9eb35a1b0e5e615343')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-27 13:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:57:27 --> Users->insert returned: 19
+DEBUG - 2025-11-27 13:57:27 --> Saved user row: Array
+(
+    [id] => 19
+    [username] => sionbert0503@gmail.com
+    [password] => $2y$10$dEux8udEZ25ceFsamYIEXOqCF0BsGqA81Ki9xq73S726/dJuwEnUC
+    [first_name] => Ozbert
+    [last_name] => Sales
+    [email] => sionbert0503@gmail.com
+    [role] => Student
+    [created_at] => 2025-11-27 13:57:23
+    [updated_at] => 2025-11-27 13:57:27
+    [status] => 0
+    [is_verified] => 0
+    [is_deactivated] => 0
+    [token] => a153af67ca0cfeeb55d01e0f9973c63b
+)
+
+DEBUG - 2025-11-27 13:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 13:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 14:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 14:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 14:06:09 --> inserted: 20
+DEBUG - 2025-11-27 14:06:09 --> inserted row: Array
+(
+    [id] => 20
+    [username] => sionbert0503@gmail.com
+    [password] => $2y$10$BK/w1mcnINXfFSY1i1NL0.mcO3.JxK6U6agHQv871CPLWn8QDGjfC
+    [first_name] => Ozbert
+    [last_name] => Sales
+    [email] => sionbert0503@gmail.com
+    [role] => Student
+    [created_at] => 2025-11-27 14:06:09
+    [updated_at] => 2025-11-27 14:06:09
+    [status] => 1
+    [is_verified] => 0
+    [is_deactivated] => 0
+    [token] => 590dd7deeb87aeb29aec36a03adbf3df
+)
+
+DEBUG - 2025-11-27 14:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 14:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 14:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 14:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 14:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 14:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-27 14:22:30 --> User registered successfully: ID=11, Email=sionbert0503@gmail.com
+DEBUG - 2025-11-27 14:22:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-27 14:22:39 --> User verified successfully: ID=11, Email=sionbert0503@gmail.com
+DEBUG - 2025-11-27 14:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 14:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 14:27:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 14:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-27 14:28:13 --> User registered successfully: ID=12, Email=sionbert0503@gmail.com
+DEBUG - 2025-11-27 14:28:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-27 14:28:21 --> User verified successfully: ID=12, Email=sionbert0503@gmail.com
+DEBUG - 2025-11-27 14:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 14:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 14:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 14:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-27 14:31:35 --> User registered successfully: ID=13, Email=sionbert0503@gmail.com
+DEBUG - 2025-11-27 14:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-11-27 14:31:42 --> User verified successfully: ID=13, Email=sionbert0503@gmail.com
+DEBUG - 2025-11-27 14:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-27 14:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> 4c870f733b43377b59aaa3f976ca367c73673c38

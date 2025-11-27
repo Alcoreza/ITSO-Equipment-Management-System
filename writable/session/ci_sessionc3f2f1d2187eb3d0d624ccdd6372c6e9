@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1764066159;_ci_previous_url|s:69:"http://localhost/Envizio/auth/verify/acc7fedff07e09773a1cb08469ab6e46";success|s:44:"Your account has been successfully verified!";__ci_vars|a:2:{s:7:"success";s:3:"old";s:5:"error";s:3:"new";}error|s:25:"Invalid or expired token.";
