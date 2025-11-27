@@ -312,7 +312,7 @@
                         <span id="confirmActionLabel">Deactivate</span> user
                     </h5>
                     <small class="users-modal-subtitle">
-                        This affects the user’s access to the ITSO EMS portal.
+                        This affects the user’s access.
                     </small>
                 </div>
                 <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal"
@@ -332,7 +332,7 @@
 
             <div class="modal-footer users-modal-footer users-modal-confirm-footer">
                 <button type="button" class="btn users-btn-ghost" data-bs-dismiss="modal">
-                    Keep account
+                    Cancel
                 </button>
 
                 <!-- Form to submit activation/deactivation -->
