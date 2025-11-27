@@ -1,5 +1,3 @@
-<!-- app/Views/auth/forgot.php -->
-
 <div class="auth-page">
     <div class="auth-card">
         <!-- Badge -->
@@ -12,53 +10,64 @@
 
         <h1 class="auth-title mb-1">Forgot Password?</h1>
         <p class="auth-sub mb-3">
-            Enter your FEU Tech email. We’ll send a secure reset link.
+            Enter your email address and we'll send you instructions to reset your password.
         </p>
 
         <!-- Flash Messages -->
         <?php if (session()->getFlashdata('success')): ?>
             <div class="alert-modern alert-modern-success mb-3">
+                <i class="bi bi-check-circle me-2"></i>
                 <?= esc(session()->getFlashdata('success')) ?>
             </div>
         <?php endif; ?>
 
         <?php if (session()->getFlashdata('error')): ?>
             <div class="alert-modern alert-modern-danger mb-3">
+                <i class="bi bi-exclamation-circle me-2"></i>
                 <?= esc(session()->getFlashdata('error')) ?>
             </div>
         <?php endif; ?>
 
-        <form id="forgotForm" method="post" action="<?= site_url('password/forgot') ?>" novalidate>
+        <form id="forgotForm" method="post" action="<?= base_url('password/forgot') ?>" novalidate>
+            <?= csrf_field() ?>
+
             <!-- EMAIL -->
             <div class="mb-4">
-                <label for="email" class="auth-label">Email</label>
+                <label for="forgot_email" class="auth-label">Email address</label>
                 <div class="input-with-icon">
                     <span class="input-icon">
                         <i class="bi bi-envelope"></i>
                     </span>
-                    <input required type="email" class="form-control auth-input" id="email" name="email"
-                        placeholder="you@fit.edu.ph" autocomplete="email">
+                    <input 
+                        required 
+                        type="email" 
+                        class="form-control auth-input" 
+                        id="forgot_email" 
+                        name="email"
+                        value="<?= old('email') ?>"
+                        placeholder="you@fit.edu.ph" 
+                        autocomplete="email">
                 </div>
                 <div class="invalid-feedback">
-                    Please provide your FEU Tech email address.
+                    Please enter a valid FEU Tech email address.
                 </div>
             </div>
 
             <!-- SUBMIT -->
             <div class="d-grid mb-3">
-                <button class="btn auth-btn" type="submit">
-                    Send Reset Link
+                <button class="btn auth-btn" type="submit" id="btnSendReset">
+                    <span class="btn-text">Send Reset Instructions</span>
+                    <span class="btn-spinner" style="display: none;">
+                        <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+                        Sending...
+                    </span>
                 </button>
             </div>
 
             <p class="text-center auth-note mb-0">
-                Remembered your password?
-                <a href="<?= site_url('login') ?>" class="auth-link">Sign in</a>
+                Remember your password?
+                <a href="<?= base_url('login') ?>" class="auth-link">Sign in</a>
             </p>
         </form>
-
-        <div class="mt-3 text-center auth-demo-note">
-            Mock UI — backend will generate a secure token email.
-        </div>
     </div>
 </div>
