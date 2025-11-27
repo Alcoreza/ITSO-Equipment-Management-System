@@ -22,7 +22,9 @@ class Users_model extends Model
         'updated_at',
         'ip_address',
         'token',
-        'is_verified'
+        'is_verified',
+        'reset_token',           // Add this
+        'reset_token_expiry'     // Add this
     ];
 
     protected bool $allowEmptyInserts = false;
