@@ -380,25 +380,23 @@
 
 /* ==========================================================
    PAGINATION STYLES (Users page)
-   Scoped to .users-pagination-wrapper/.users-pagination
+   Match reports_view.php style with green theme
    ========================================================== */
 .users-pagination-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
 }
 
-/* Center the nav/ul output from CI Pager */
-.users-pagination {
-  width: auto;
+.users-pagination nav {
+  width: 100%;
 }
 
-.users-pagination nav,
 .users-pagination .pagination {
   display: flex;
-  gap: 6px;
+  gap: 8px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -414,91 +412,48 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #000;
-  background: #f7f7f7;
-  border: 1px solid #e0e0e0;
-  padding: 6px 10px;
-  border-radius: 6px;
+  min-width: 40px;
+  height: 40px;
+  color: #0b2e20;
+  background: #f3fbf6;
+  border: 1px solid #d6f1df;
+  padding: 8px 12px;
+  border-radius: 8px;
   text-decoration: none;
+  font-weight: 500;
+  font-family: "Poppins", system-ui, sans-serif;
+  transition: all 0.2s ease;
 }
 
 .users-pagination .page-item.active .page-link {
-  background: #0d6efd;
-  color: #fff;
-  border-color: #0d6efd;
-}
-
-.users-pagination .page-link:hover {
-  background: #e9ecef;
-  color: #000;
-}
-
-@media (max-width: 576px) {
-  .users-pagination .page-link { padding: 6px 8px; }
-}
-
-/* Style for default_full pager markup (<nav><ul class="pagination"><li><a>...</a></li>) */
-.users-pagination nav ul.pagination {
-  display: flex;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.users-pagination nav ul.pagination li a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #000;
-  background: #f7f7f7;
-  border: 1px solid #e0e0e0;
-  padding: 6px 10px;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
-.users-pagination nav ul.pagination li.active a,
-.users-pagination nav ul.pagination li a.active {
-  background: #0d6efd;
-  color: #fff;
-  border-color: #0d6efd;
-}
-
-.users-pagination nav ul.pagination li a:hover {
-  background: #e9ecef;
-}
-
-/* Arrow icons for pager controls: only show arrows on the first and last
-   items. Pseudo-elements inherit color so arrows become white when the
-   control is active (matching active page numbers). */
-.users-pagination nav ul.pagination li:first-child a::before {
-  content: '\00AB'; /* « */
-  margin-right: 6px;
-  color: inherit;
-  font-weight: 700;
-}
-.users-pagination nav ul.pagination li:last-child a::after {
-  content: '\00BB'; /* » */
-  margin-left: 6px;
-  color: inherit;
-  font-weight: 700;
-}
-
-/* Give pager controls a green-accent look that complements the UI */
-.users-pagination nav ul.pagination li a {
-  color: #0b2e20;
-  background: #f3fbf6;
-  border-color: #d6f1df;
-}
-.users-pagination nav ul.pagination li a:hover {
-  background: #e9f7ef;
-  color: #08301f;
-  border-color: #bfe9cc;
-}
-.users-pagination nav ul.pagination li.active a,
-.users-pagination nav ul.pagination li a.active {
   background: #145c2a;
   color: #fff;
   border-color: #145c2a;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(20, 92, 42, 0.3);
+}
+
+.users-pagination .page-item.disabled .page-link {
+  background: #f0f0f0;
+  color: #999;
+  border-color: #ddd;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.users-pagination .page-link:hover:not(.active):not(.disabled) {
+  background: #e9f7ef;
+  color: #08301f;
+  border-color: #bfe9cc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(20, 92, 42, 0.15);
+}
+
+@media (max-width: 576px) {
+  .users-pagination .page-link { 
+    min-width: 36px;
+    height: 36px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 DEBUG - 2025-11-28 01:33:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-28 01:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-28 01:35:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -293,3 +294,1464 @@ DEBUG - 2025-11-28 14:03:54 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-11-28 14:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-28 14:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-28 14:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+DEBUG - 2025-11-28 11:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:18:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:30:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:30:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:30:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:30:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:36:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:51:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:51:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:52:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:52:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:52:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:52:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:52:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:53:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:53:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:53:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:53:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 11:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:06:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:06:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:07:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:07:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:07:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:08:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-28 12:14:02 --> mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list' in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowe...', 0)
+#1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowe...')
+#2 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowe...')
+#3 C:\xampp\htdocs\Envizio\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowe...', Array, false)
+#4 C:\xampp\htdocs\Envizio\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Envizio\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Envizio\app\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+#8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+#9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Envizio\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-11-28 12:14:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+[Method: GET, Route: reports]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:14:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:14:02 --> [Caused by] mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-28 12:23:08 --> mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list' in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowe...', 0)
+#1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowe...')
+#2 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowe...')
+#3 C:\xampp\htdocs\Envizio\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowe...', Array, false)
+#4 C:\xampp\htdocs\Envizio\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Envizio\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Envizio\app\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+#8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+#9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Envizio\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-11-28 12:23:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+[Method: GET, Route: reports]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:23:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:23:08 --> [Caused by] mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-28 12:23:09 --> mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list' in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowe...', 0)
+#1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowe...')
+#2 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowe...')
+#3 C:\xampp\htdocs\Envizio\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowe...', Array, false)
+#4 C:\xampp\htdocs\Envizio\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Envizio\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Envizio\app\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+#8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+#9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Envizio\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-11-28 12:23:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+[Method: GET, Route: reports]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:23:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:23:09 --> [Caused by] mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-28 12:23:10 --> mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list' in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowe...', 0)
+#1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowe...')
+#2 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowe...')
+#3 C:\xampp\htdocs\Envizio\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowe...', Array, false)
+#4 C:\xampp\htdocs\Envizio\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Envizio\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Envizio\app\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+#8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+#9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Envizio\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-11-28 12:23:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+[Method: GET, Route: reports]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:23:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:23:10 --> [Caused by] mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-28 12:23:11 --> mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list' in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowe...', 0)
+#1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowe...')
+#2 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowe...')
+#3 C:\xampp\htdocs\Envizio\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowe...', Array, false)
+#4 C:\xampp\htdocs\Envizio\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Envizio\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Envizio\app\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+#8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+#9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Envizio\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-11-28 12:23:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+[Method: GET, Route: reports]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:23:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:23:11 --> [Caused by] mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-28 12:23:17 --> mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list' in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowe...', 0)
+#1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowe...')
+#2 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowe...')
+#3 C:\xampp\htdocs\Envizio\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowe...', Array, false)
+#4 C:\xampp\htdocs\Envizio\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Envizio\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Envizio\app\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+#8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+#9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Envizio\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-11-28 12:23:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+[Method: GET, Route: reports]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:23:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:23:17 --> [Caused by] mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 12:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-11-28 12:23:19 --> mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list' in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowe...', 0)
+#1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowe...')
+#2 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowe...')
+#3 C:\xampp\htdocs\Envizio\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowe...', Array, false)
+#4 C:\xampp\htdocs\Envizio\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Envizio\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Envizio\app\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+#8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+#9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Envizio\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-11-28 12:23:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+[Method: GET, Route: reports]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:23:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:23:19 --> [Caused by] mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-28 12:24:07 --> mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list' in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowe...', 0)
+#1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowe...')
+#2 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowe...')
+#3 C:\xampp\htdocs\Envizio\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowe...', Array, false)
+#4 C:\xampp\htdocs\Envizio\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Envizio\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Envizio\app\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+#8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+#9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Envizio\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-11-28 12:24:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+[Method: GET, Route: reports]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:24:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:24:07 --> [Caused by] mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-28 12:24:08 --> mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list' in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowe...', 0)
+#1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowe...')
+#2 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowe...')
+#3 C:\xampp\htdocs\Envizio\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowe...', Array, false)
+#4 C:\xampp\htdocs\Envizio\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Envizio\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Envizio\app\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+#8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+#9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Envizio\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-11-28 12:24:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+[Method: GET, Route: reports]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:24:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:24:08 --> [Caused by] mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-28 12:24:09 --> mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list' in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowe...', 0)
+#1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowe...')
+#2 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowe...')
+#3 C:\xampp\htdocs\Envizio\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowe...', Array, false)
+#4 C:\xampp\htdocs\Envizio\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Envizio\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Envizio\app\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+#8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+#9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Envizio\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-11-28 12:24:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+[Method: GET, Route: reports]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:24:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:24:09 --> [Caused by] mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-28 12:24:10 --> mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list' in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowe...', 0)
+#1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowe...')
+#2 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowe...')
+#3 C:\xampp\htdocs\Envizio\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowe...', Array, false)
+#4 C:\xampp\htdocs\Envizio\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Envizio\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Envizio\app\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+#8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+#9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Envizio\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-11-28 12:24:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+[Method: GET, Route: reports]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:24:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:24:10 --> [Caused by] mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-28 12:24:36 --> mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list' in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowe...', 0)
+#1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowe...')
+#2 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowe...')
+#3 C:\xampp\htdocs\Envizio\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowe...', Array, false)
+#4 C:\xampp\htdocs\Envizio\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Envizio\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Envizio\app\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+#8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+#9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Envizio\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-11-28 12:24:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+[Method: GET, Route: reports]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:24:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:24:36 --> [Caused by] mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-11-28 12:24:37 --> mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list' in C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\Envizio\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowe...', 0)
+#1 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowe...')
+#2 C:\xampp\htdocs\Envizio\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowe...')
+#3 C:\xampp\htdocs\Envizio\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowe...', Array, false)
+#4 C:\xampp\htdocs\Envizio\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Envizio\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Envizio\app\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+#8 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+#9 C:\xampp\htdocs\Envizio\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Envizio\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Envizio\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Envizio\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-11-28 12:24:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+[Method: GET, Route: reports]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:24:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-11-28 12:24:37 --> [Caused by] mysqli_sql_exception: Unknown column 'borrowed_items.created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `borrowed_items`.*, `equipment`.`equipment_name`, `equipment`.`equipment_type`, `users`.`first_name`, `users`.`last_name`, `borrowed_items`.`created_at` as `borrow_date`
+FROM `borrowed_items`
+LEFT JOIN `equipment` ON `borrowed_items`.`equipment_id` = `equipment`.`equipment_id`
+LEFT JOIN `users` ON `borrowed_items`.`borrower_id` = `users`.`id`
+ORDER BY `borrowed_items`.`id` DESC
+ LIMIT 3', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\ReportsController.php(41): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReportsController->index()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReportsController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-11-28 12:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:37:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:43:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:43:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:45:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:45:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:45:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:45:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:45:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:46:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:46:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:46:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:46:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:46:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:48:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:48:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:48:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:48:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:55:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:55:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:55:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:55:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:55:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:56:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:56:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:56:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:56:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 12:56:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:25:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:25:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:25:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:25:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:27:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:27:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:27:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:28:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:28:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:29:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:29:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:29:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:29:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:29:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:32:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:32:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:37:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-11-28 13:37:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> 223fd781f43543dbdc0d5b9a5016937455a3ae1f
