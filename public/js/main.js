@@ -327,61 +327,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// USER FILTERS - Make role and status filters functional
-document.addEventListener("DOMContentLoaded", function () {
-  const filterRole = document.getElementById("filterRole");
-  const filterStatus = document.getElementById("filterStatus");
-  const userCards = document.querySelectorAll(".user-card");
-
-  function applyUserFilters() {
-    const selectedRole = filterRole ? filterRole.value.toLowerCase() : "";
-    const selectedStatus = filterStatus ? filterStatus.value.toLowerCase() : "";
-
-    userCards.forEach((card) => {
-      const cardRole = card.getAttribute("data-role") ? card.getAttribute("data-role").toLowerCase() : "";
-      const cardStatus = card.getAttribute("data-status") ? card.getAttribute("data-status").toLowerCase() : "";
-
-      const matchRole = selectedRole === "" || cardRole === selectedRole;
-      const matchStatus = selectedStatus === "" || cardStatus === selectedStatus;
-
-      // Show card if both filters match (or are empty)
-      if (matchRole && matchStatus) {
-        card.style.display = "flex";
-      } else {
-        card.style.display = "none";
-      }
-    });
-
-    // Count visible cards
-    updateUserCount();
-  }
-
-  function updateUserCount() {
-    const visibleCards = Array.from(userCards).filter(card => card.style.display !== "none");
-    const totalCards = userCards.length;
-    
-    console.log(`Showing ${visibleCards.length} of ${totalCards} users`);
-    
-    // Optional: Add a count display
-    const countDisplay = document.querySelector(".users-table-footer .text-muted");
-    if (countDisplay && visibleCards.length !== totalCards) {
-      countDisplay.textContent = `Showing ${visibleCards.length} of ${totalCards} users`;
-    }
-  }
-
-  // Attach event listeners
-  if (filterRole) {
-    filterRole.addEventListener("change", applyUserFilters);
-  }
-
-  if (filterStatus) {
-    filterStatus.addEventListener("change", applyUserFilters);
-  }
-
-  // Initial count
-  updateUserCount();
-});
-
 //reset password form validation
 document.addEventListener('DOMContentLoaded', function() {
     const resetForm = document.getElementById('resetForm');
