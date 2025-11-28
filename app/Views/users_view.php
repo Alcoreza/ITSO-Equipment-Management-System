@@ -21,20 +21,22 @@
 
             <!-- FILTERS -->
             <div class="users-filters mb-3">
-                <div class="users-filter-group">
-                    <select id="filterRole" class="form-select users-input">
-                        <option value="">All Roles</option>
-                        <option value="itso">ITSO Personnel</option>
-                        <option value="associate">Associate</option>
-                        <option value="student">Student</option>
-                    </select>
+                <form method="get" action="<?= base_url('users') ?>" id="filterForm">
+                    <div class="users-filter-group">
+                        <select name="role" id="filterRole" class="form-select users-input" onchange="this.form.submit()">
+                            <option value="">All Roles</option>
+                            <option value="itso" <?= (isset($filterRole) && $filterRole === 'itso') ? 'selected' : '' ?>>ITSO Personnel</option>
+                            <option value="associate" <?= (isset($filterRole) && $filterRole === 'associate') ? 'selected' : '' ?>>Associate</option>
+                            <option value="student" <?= (isset($filterRole) && $filterRole === 'student') ? 'selected' : '' ?>>Student</option>
+                        </select>
 
-                    <select id="filterStatus" class="form-select users-input">
-                        <option value="">All Status</option>
-                        <option value="active">Active</option>
-                        <option value="inactive">Inactive</option>
-                    </select>
-                </div>
+                        <select name="status" id="filterStatus" class="form-select users-input" onchange="this.form.submit()">
+                            <option value="">All Status</option>
+                            <option value="active" <?= (isset($filterStatus) && $filterStatus === 'active') ? 'selected' : '' ?>>Active</option>
+                            <option value="inactive" <?= (isset($filterStatus) && $filterStatus === 'inactive') ? 'selected' : '' ?>>Inactive</option>
+                        </select>
+                    </div>
+                </form>
             </div>
 
             <!-- USER CARDS GRID -->
@@ -105,19 +107,53 @@
         <p>No users found.</p>
     <?php endif; ?>
 
-</div>
+    </div>
             <!-- PAGINATION -->
-                <div class="users-pagination-wrapper">
-                    <div class="users-pagination">
-                        <?php if (isset($pager) && $pager): ?>
-                            <?= $pager->links('default', 'default_full') ?>
-                        <?php endif; ?>
-                    </div>
+            <div class="users-pagination-wrapper">
+                <div class="users-pagination">
+                    <nav aria-label="User pagination">
+                        <ul class="pagination justify-content-center">
+                            <?php if (isset($pager) && $pager): ?>
+                                <?php
+                                // Get current page
+                                $currentPage = $pager->getCurrentPage();
+                                $totalPages = $pager->getPageCount();
+                                
+                                // Build query string to preserve filters
+                                $queries = [];
+                                if (!empty($filterRole)) $queries['role'] = $filterRole;
+                                if (!empty($filterStatus)) $queries['status'] = $filterStatus;
+                                $queryString = !empty($queries) ? '&' . http_build_query($queries) : '';
+                                ?>
+                                
+                                <!-- Previous Button -->
+                                <li class="page-item <?= $currentPage <= 1 ? 'disabled' : '' ?>">
+                                    <a class="page-link" href="<?= base_url('users?page=' . ($currentPage - 1) . $queryString) ?>" <?= $currentPage <= 1 ? 'tabindex="-1"' : '' ?>>
+                                        Previous
+                                    </a>
+                                </li>
+
+                                <!-- Page Numbers -->
+                                <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+                                    <li class="page-item <?= $currentPage === $i ? 'active' : '' ?>">
+                                        <a class="page-link" href="<?= base_url('users?page=' . $i . $queryString) ?>">
+                                            <?= $i ?>
+                                        </a>
+                                    </li>
+                                <?php endfor; ?>
+
+                                <!-- Next Button -->
+                                <li class="page-item <?= $currentPage >= $totalPages ? 'disabled' : '' ?>">
+                                    <a class="page-link" href="<?= base_url('users?page=' . ($currentPage + 1) . $queryString) ?>" <?= $currentPage >= $totalPages ? 'tabindex="-1"' : '' ?>>
+                                        Next
+                                    </a>
+                                </li>
+                            <?php endif; ?>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-        </div>
     </main>
-
 </div>
 
 <!-- ADD USER MODAL -->
@@ -312,7 +348,7 @@
                         <span id="confirmActionLabel">Deactivate</span> user
                     </h5>
                     <small class="users-modal-subtitle">
-                        This affects the user’s access to the ITSO EMS portal.
+                        This affects the user's access.
                     </small>
                 </div>
                 <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="modal"
@@ -332,7 +368,7 @@
 
             <div class="modal-footer users-modal-footer users-modal-confirm-footer">
                 <button type="button" class="btn users-btn-ghost" data-bs-dismiss="modal">
-                    Keep account
+                    Cancel
                 </button>
 
                 <!-- Form to submit activation/deactivation -->

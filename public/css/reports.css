@@ -1,5 +1,5 @@
 /* ==========================================================
-   REPORTS DASHBOARD — MAIN CARD WITH SUBCARDS
+   REPORTS DASHBOARD – MAIN CARD WITH SUBCARDS
    ========================================================== */
 
 .reports-manage {
@@ -98,7 +98,8 @@
 
 .status-badge.active { background: #22c55e; }      /* green */
 .status-badge.unusable { background: #ef4444; }    /* red */
-.status-badge.borrowed { background: #facc15; color: #1f2933; } /* yellow
+.status-badge.borrowed { background: #facc15; color: #1f2933; }
+.status-badge.returned { background: #3b82f6; }    /* blue */
 
 /* LIST ITEMS */
 .report-list {
@@ -121,6 +122,86 @@
 
 .report-list li:last-child {
     border-bottom: none;
+}
+
+/* ==========================================================
+   PAGINATION STYLES (Reports page)
+   Same style as users with green theme
+   ========================================================== */
+.users-pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.users-pagination nav {
+  width: 100%;
+}
+
+.users-pagination .pagination {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.users-pagination .page-item {
+  display: inline-block;
+}
+
+.users-pagination .page-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  color: #0b2e20;
+  background: #f3fbf6;
+  border: 1px solid #d6f1df;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: "Poppins", system-ui, sans-serif;
+  transition: all 0.2s ease;
+}
+
+.users-pagination .page-item.active .page-link {
+  background: #145c2a;
+  color: #fff;
+  border-color: #145c2a;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(20, 92, 42, 0.3);
+}
+
+.users-pagination .page-item.disabled .page-link {
+  background: #f0f0f0;
+  color: #999;
+  border-color: #ddd;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.users-pagination .page-link:hover:not(.active):not(.disabled) {
+  background: #e9f7ef;
+  color: #08301f;
+  border-color: #bfe9cc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(20, 92, 42, 0.15);
+}
+
+@media (max-width: 576px) {
+  .users-pagination .page-link { 
+    min-width: 36px;
+    height: 36px;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
 }
 
 /* RESPONSIVE */

@@ -59,12 +59,6 @@
 
             <!-- REMEMBER + FORGOT -->
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="remember" name="remember">
-                    <label class="form-check-label" for="remember">
-                        Remember me
-                    </label>
-                </div>
                 <a href="<?= site_url('password/forgot') ?>" class="auth-link-small">
                     Forgot password?
                 </a>
@@ -95,9 +89,5 @@
                 <a href="#" class="auth-link">Privacy Policy</a>.
             </p>
         </form>
-
-        <div class="mt-3 text-center auth-demo-note">
-            Frontend only — backend integration required for real authentication.
-        </div>
     </div>
 </div>
