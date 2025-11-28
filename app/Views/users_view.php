@@ -106,11 +106,7 @@
     <?php endif; ?>
 
 </div>
-            <div class="mt-3">
-                <div class="users-table-footer mb-2">
-                    <span class="small text-muted">Showing users per page: <?= isset($perPage) ? (int)$perPage : 'all' ?></span>
-                </div>
-
+            <!-- PAGINATION -->
                 <div class="users-pagination-wrapper">
                     <div class="users-pagination">
                         <?php if (isset($pager) && $pager): ?>
@@ -128,33 +124,87 @@
 <div class="modal fade" id="modalAddUser" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-md">
         <div class="modal-content users-modal">
-            <div class="modal-header users-modal-header">
-                <h5 class="modal-title">Add New User</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-            <div class="modal-body users-modal-body">
-                <div class="mb-3">
-                    <label class="users-label">Full Name</label>
-                    <input type="text" class="form-control users-input" placeholder="Enter full name">
+            <form id="addUserForm" action="<?= base_url('admin/addUser') ?>" method="post">
+                <?= csrf_field() ?>
+                
+                <div class="modal-header users-modal-header">
+                    <h5 class="modal-title">Add New User</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
-                <div class="mb-3">
-                    <label class="users-label">Email</label>
-                    <input type="email" class="form-control users-input" placeholder="user@feutech.edu.ph">
+                
+                <div class="modal-body users-modal-body">
+                    <!-- Flash messages inside modal -->
+                    <div id="addUserAlert" style="display: none;" class="alert mb-3"></div>
+                    
+                    <div class="mb-3">
+                        <label class="users-label">Full Name</label>
+                        <input type="text" 
+                               class="form-control users-input" 
+                               name="fullname" 
+                               id="addFullname"
+                               placeholder="Enter full name" 
+                               required>
+                        <div class="invalid-feedback">Please enter full name.</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="users-label">Email</label>
+                        <input type="email" 
+                               class="form-control users-input" 
+                               name="email" 
+                               id="addEmail"
+                               placeholder="user@feutech.edu.ph" 
+                               required>
+                        <div class="invalid-feedback">Enter a valid email address.</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="users-label">Role</label>
+                        <select class="form-select users-input" name="role" id="addRole" required>
+                            <option value="" selected disabled>Select role</option>
+                            <option value="itso">ITSO Personnel</option>
+                            <option value="associate">Associate</option>
+                            <option value="student">Student</option>
+                        </select>
+                        <div class="invalid-feedback">Please select a role.</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="users-label">Password</label>
+                        <input type="password" 
+                               class="form-control users-input" 
+                               name="password" 
+                               id="addPassword"
+                               minlength="8"
+                               placeholder="Create a password" 
+                               required>
+                        <div class="invalid-feedback">Password must be at least 8 characters.</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="users-label">Confirm Password</label>
+                        <input type="password" 
+                               class="form-control users-input" 
+                               name="confirm_password" 
+                               id="addConfirmPassword"
+                               minlength="8"
+                               placeholder="Retype password" 
+                               required>
+                        <div class="invalid-feedback">Passwords do not match.</div>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label class="users-label">Role</label>
-                    <select class="form-select users-input">
-                        <option selected disabled>Select role</option>
-                        <option value="itso">ITSO Personnel</option>
-                        <option value="associate">Associate</option>
-                        <option value="student">Student</option>
-                    </select>
+                
+                <div class="modal-footer users-modal-footer">
+                    <button type="submit" class="btn users-btn w-100">
+                        <span class="btn-text">Create User</span>
+                        <span class="btn-spinner" style="display: none;">
+                            <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+                            Creating...
+                        </span>
+                    </button>
                 </div>
-            </div>
-            <div class="modal-footer users-modal-footer">
-                <button type="button" class="btn users-btn w-100">Save User (Frontend Only)</button>
-            </div>
+            </form>
         </div>
     </div>
 </div>
@@ -222,8 +272,8 @@
                         <label>Role</label>
                         <select class="form-select" name="role" id="editRole" required>
                             <option value="itso">ITSO Personnel</option>
-                            <option value="Teacher">Teacher</option>
-                            <option value="Student">Student</option>
+                            <option value="associate">Associate</option>
+                            <option value="student">Student</option>
                         </select>
                     </div>
                     <div class="mb-3">

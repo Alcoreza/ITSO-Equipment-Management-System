@@ -55,9 +55,16 @@ $routes->get('admin/user/(:num)', 'AdminController::getUser/$1');
 // Toggle user active/inactive
 $routes->post('admin/toggleUser', 'AdminController::toggleUser');
 
+<<<<<<< HEAD
 $routes->get('/about', 'AboutController::index');
 
 // Add these lines somewhere in your routes config (e.g., below other POST routes)
 $routes->post('equipment/update/(:num)', 'EquipmentController::update/$1');
 $routes->post('equipment/toggle/(:num)', 'EquipmentController::toggle/$1');
 
+=======
+// Add new user (admin)
+$routes->post('admin/addUser', 'AdminController::addUser');
+
+$routes->get('/about', 'AboutController::index');
+>>>>>>> 03e767f25024e8397e6295e9862449fe41dec2ac

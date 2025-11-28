@@ -74,6 +74,7 @@
                     <option value="">Select type</option>
                     <option value="student" <?= old('role') === 'student' ? 'selected' : '' ?>>Student</option>
                     <option value="associate" <?= old('role') === 'associate' ? 'selected' : '' ?>>Associate</option>
+                    <option value="itso" <?= old('role') === 'itso' ? 'selected' : '' ?>>ITSO Personnel</option>
                 </select>
                 <div class="invalid-feedback">Please select a valid role.</div>
             </div>
