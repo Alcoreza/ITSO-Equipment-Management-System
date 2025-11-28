@@ -21,7 +21,7 @@ class ReportsController extends BaseController
         $inactiveEquipment = [];
         $recentBorrows = [];
 
-        // Page 1: Active Equipment
+        // Page 1: Active Equipment (available items with active status)
         if ($currentPage === 1) {
             $activeEquipment = $equipmentModel
                 ->select('equipment_name, equipment_type, COUNT(*) as total_qty, SUM(available) as available_qty')
@@ -30,14 +30,11 @@ class ReportsController extends BaseController
                 ->having('available_qty >', 0)
                 ->findAll();
         }
-        // Page 2: Reserved Equipment
+        // Page 2: Unusable Equipment (inactive status)
         elseif ($currentPage === 2) {
             $inactiveEquipment = $equipmentModel
-                ->select('equipment_name, equipment_type, status, COUNT(*) as total_qty, SUM(CASE WHEN available = 0 THEN 1 ELSE 0 END) as unavailable_qty')
-                ->groupStart()
-                    ->where('available', 0)
-                    ->orWhere('status', 'inactive')
-                ->groupEnd()
+                ->select('equipment_name, equipment_type, status, COUNT(*) as total_qty')
+                ->where('status', 'inactive')
                 ->groupBy(['equipment_name', 'equipment_type', 'status'])
                 ->findAll();
         }

@@ -10,7 +10,7 @@
             <!-- HEADER -->
             <div class="mb-4 text-center">
                 <h1 class="reports-title">Reports Dashboard</h1>
-                <p class="reports-sub">View active equipment, reserved equipment, and recent borrowing history.</p>
+                <p class="reports-sub">View active equipment, unusable equipment, and recent borrowing history.</p>
             </div>
 
             <!-- REPORT CARDS STACK -->
@@ -41,9 +41,9 @@
                 <?php endif; ?>
 
                 <?php if ($currentPage === 2): ?>
-                    <!-- Reserved Equipment Card (Page 2) -->
+                    <!-- Unusable Equipment Card (Page 2) -->
                     <div class="report-subcard">
-                        <h2 class="report-subcard-title">Reserved Equipment</h2>
+                        <h2 class="report-subcard-title">Unusable Equipment</h2>
                         <?php if (!empty($inactiveEquipment)): ?>
                             <ul class="report-list">
                                 <?php foreach ($inactiveEquipment as $equipment): ?>
@@ -55,13 +55,13 @@
                                             - <?= esc($equipment['total_qty']) ?> total
                                         </span>
                                         <span class="status-badge unusable">
-                                            <?= esc(ucfirst($equipment['status'] ?? 'Unavailable')) ?>
+                                            Inactive
                                         </span>
                                     </li>
                                 <?php endforeach; ?>
                             </ul>
                         <?php else: ?>
-                            <p class="text-muted">No reserved equipment found.</p>
+                            <p class="text-muted">No unusable equipment found.</p>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
