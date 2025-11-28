@@ -1754,6 +1754,7 @@ DEBUG - 2025-11-28 13:37:33 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-11-28 13:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-28 13:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-28 13:37:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
 >>>>>>> 223fd781f43543dbdc0d5b9a5016937455a3ae1f
 DEBUG - 2025-11-28 14:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-28 14:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -1782,3 +1783,5 @@ DEBUG - 2025-11-28 15:12:16 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-11-28 17:02:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-28 17:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-11-28 17:11:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+>>>>>>> eb8bff960c2b2ab6fe6ff3110afccdb5ccc6f7f8
