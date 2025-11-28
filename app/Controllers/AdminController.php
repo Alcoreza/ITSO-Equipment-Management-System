@@ -10,30 +10,51 @@ class AdminController extends BaseController
     // ===============================
     // USERS MANAGEMENT (Merged & Updated)
     // ===============================
-    public function users()
-    {
-        $usersModel = new Users_model();
+   public function users()
+{
+    $usersModel = new Users_model();
+    $request = service('request');
 
-        // Pagination settings
-        $perPage = 6; // users per page
+    // Get filter parameters from URL/query string
+    $filterRole = $request->getGet('role');
+    $filterStatus = $request->getGet('status');
 
-        // Fetch paginated users (oldest first so new accounts appear at the back)
-        $users = $usersModel->orderBy('id', 'ASC')->paginate($perPage);
-        $pager = $usersModel->pager;
+    // Pagination settings
+    $perPage = 6;
 
-        $data = [
-            'title' => 'User Management - ITSO EMS',
-            'bodyClass' => 'users-page',
-            'users' => $users,
-            'pager' => $pager,
-            'perPage' => $perPage
-        ];
+    // Start building query
+    $builder = $usersModel->orderBy('id', 'ASC');
 
-        return view('include/head_view', $data)
-            . view('include/nav_view', $data)
-            . view('users_view', $data)
-            . view('include/foot_view', $data);
+    // Apply role filter if provided
+    if ($filterRole && in_array($filterRole, ['itso', 'associate', 'student'])) {
+        $builder->where('role', $filterRole);
     }
+
+    // Apply status filter if provided
+    if ($filterStatus !== null && $filterStatus !== '') {
+        $statusValue = ($filterStatus === 'active') ? 1 : 0;
+        $builder->where('status', $statusValue);
+    }
+
+    // Paginate filtered results
+    $users = $builder->paginate($perPage);
+    $pager = $usersModel->pager;
+
+    $data = [
+        'title' => 'User Management - ITSO EMS',
+        'bodyClass' => 'users-page',
+        'users' => $users,
+        'pager' => $pager,
+        'perPage' => $perPage,
+        'filterRole' => $filterRole ?? '',
+        'filterStatus' => $filterStatus ?? ''
+    ];
+
+    return view('include/head_view', $data)
+        . view('include/nav_view', $data)
+        . view('users_view', $data)
+        . view('include/foot_view', $data);
+}
 
     // ===============================
     // Update User
