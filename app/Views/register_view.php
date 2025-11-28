@@ -28,7 +28,7 @@
             </div>
         <?php endif; ?>
 
-        <form id="registerForm" action="<?= base_url('register/submit') ?>" method="post" novalidate>
+        <form id="registerForm" action="<?= base_url('register/submit') ?>" method="post">
             <?= csrf_field() ?>
 
             <!-- FULL NAME -->
@@ -46,7 +46,6 @@
                         placeholder="Juan Dela Cruz" 
                         required>
                 </div>
-                <div class="invalid-feedback">Please enter your full name.</div>
             </div>
 
             <!-- EMAIL -->
@@ -64,7 +63,6 @@
                         placeholder="you@fit.edu.ph" 
                         required>
                 </div>
-                <div class="invalid-feedback">Enter a valid FEU Tech email address.</div>
             </div>
 
             <!-- ACCOUNT TYPE -->
@@ -72,11 +70,10 @@
                 <label class="auth-label" for="role">Account type</label>
                 <select name="role" id="role" class="form-select auth-select" required>
                     <option value="">Select type</option>
-                    <option value="student" <?= old('role') === 'student' ? 'selected' : '' ?>>Student</option>
-                    <option value="associate" <?= old('role') === 'associate' ? 'selected' : '' ?>>Associate</option>
+                    <option value="Student" <?= old('role') === 'Student' ? 'selected' : '' ?>>Student</option>
+                    <option value="Associate" <?= old('role') === 'Associate' ? 'selected' : '' ?>>Associate</option>
                     <option value="itso" <?= old('role') === 'itso' ? 'selected' : '' ?>>ITSO Personnel</option>
                 </select>
-                <div class="invalid-feedback">Please select a valid role.</div>
             </div>
 
             <!-- PASSWORD -->
@@ -90,11 +87,9 @@
                         class="form-control auth-input" 
                         id="reg_password" 
                         name="password"
-                        minlength="8" 
                         placeholder="Create a password" 
                         required>
                 </div>
-                <div class="invalid-feedback">Password must be at least 8 characters.</div>
             </div>
 
             <!-- CONFIRM PASSWORD -->
@@ -108,11 +103,9 @@
                         class="form-control auth-input"
                         id="reg_confirm_password"
                         name="confirm_password"
-                        minlength="8"
                         placeholder="Retype your password"
                         required>
                 </div>
-                <div class="invalid-feedback">Passwords do not match.</div>
             </div>
 
             <!-- SUBMIT -->
@@ -129,27 +122,3 @@
         </form>
     </div>
 </div>
-
-<script>
-// Client-side password matching validation
-document.getElementById('registerForm').addEventListener('submit', function(e) {
-    const password = document.getElementById('reg_password').value;
-    const confirmPassword = document.getElementById('reg_confirm_password').value;
-    const confirmInput = document.getElementById('reg_confirm_password');
-
-    if (password !== confirmPassword) {
-        e.preventDefault();
-        confirmInput.classList.add('is-invalid');
-        confirmInput.setCustomValidity('Passwords do not match');
-    } else {
-        confirmInput.classList.remove('is-invalid');
-        confirmInput.setCustomValidity('');
-    }
-});
-
-// Remove invalid state when user types
-document.getElementById('reg_confirm_password').addEventListener('input', function() {
-    this.classList.remove('is-invalid');
-    this.setCustomValidity('');
-});
-</script>
