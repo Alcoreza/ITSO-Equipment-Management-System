@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------
-   ITSO EMS — AUTH FORMS JS
+   ITSO EMS – AUTH FORMS JS
    - HTML5 validation enhancement
    - Reset password custom checks
    - Login: password visibility toggle
@@ -67,7 +67,7 @@
       function (event) {
         let valid = true;
 
-        // RESET FORM — custom validation
+        // RESET FORM – custom validation
         if (form.id === "resetForm") {
           const newPass = form.querySelector("#new_password");
           const confirmPass = form.querySelector("#confirm_password");
@@ -144,6 +144,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// ----------------------------------------------------------
+// USER MANAGEMENT
+// ----------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
   // Activate / Deactivate Confirmation Modal Handler
   document.addEventListener("click", function (e) {
@@ -169,101 +172,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (confirmId) confirmId.value = btn.getAttribute("data-id") || "";
     if (confirmAction) confirmAction.value = btn.getAttribute("data-action") || action;
   });
-});
-
-/* ===========================================
-   EQUIPMENT MODULE — FRONTEND ONLY
-=========================================== */
-
-document.addEventListener("DOMContentLoaded", () => {
-  const filterCategory = document.getElementById("filterCategory");
-  const filterStatus = document.getElementById("filterStatus");
-  const searchInput = document.getElementById("searchInput");
-  const cards = document.querySelectorAll(".equipment-card-item");
-
-  function applyFilters() {
-    const category = filterCategory.value.toLowerCase();
-    const status = filterStatus.value.toLowerCase();
-    const search = searchInput.value.toLowerCase();
-
-    cards.forEach((card) => {
-      const c = card.dataset.category.toLowerCase();
-      const s = card.dataset.status.toLowerCase();
-      const name = card.querySelector(".equipment-name").textContent.toLowerCase();
-
-      const matchCategory = category === "" || c === category;
-      const matchStatus = status === "" || s === status;
-      const matchSearch = name.includes(search);
-
-      card.style.display = matchCategory && matchStatus && matchSearch ? "flex" : "none";
-    });
-  }
-
-  filterCategory.addEventListener("change", applyFilters);
-  filterStatus.addEventListener("change", applyFilters);
-  searchInput.addEventListener("input", applyFilters);
-
-  // Equipment confirm modal
-  const confirmModal = document.getElementById("modalConfirmStatus");
-  if (confirmModal) {
-    confirmModal.addEventListener("show.bs.modal", (event) => {
-      const button = event.relatedTarget;
-      const itemName = button.getAttribute("data-name") || "Unknown Item";
-      const action = button.getAttribute("data-action") || "deactivate";
-
-      confirmModal.querySelector("#confirmEquipmentName").textContent = itemName;
-      confirmModal.querySelector("#confirmEquipmentAction").textContent = action;
-      confirmModal.querySelector("#confirmEquipmentActionInline").textContent = action;
-    });
-  }
-
-  // VIEW, EDIT, CONFIRM POPULATORS (from second script)
-  function populateViewModal(el) {
-    const card = el.closest(".equipment-card");
-    document.getElementById("viewEquipmentName").textContent = card.dataset.name;
-    document.getElementById("viewEquipmentType").textContent = card.dataset.type;
-    document.getElementById("viewEquipmentStatus").textContent = card.dataset.statusText;
-    document.getElementById("viewEquipmentAvailable").textContent = card.dataset.available;
-    document.getElementById("viewEquipmentImage").src = card.querySelector("img").src;
-    document.getElementById("viewEquipmentDescription").textContent =
-      card.dataset.description || "No description available.";
-  }
-
-  function populateEditModal(el) {
-    const card = el.closest(".equipment-card");
-    document.getElementById("editEquipmentName").value = card.dataset.name;
-    document.getElementById("editEquipmentType").value = card.dataset.type;
-    document.getElementById("editEquipmentStatus").value = card.dataset.statusText;
-    document.getElementById("editEquipmentAvailable").value = card.dataset.available;
-    document.getElementById("editEquipmentID").value = card.dataset.id;
-    document.getElementById("editEquipmentImage").src = card.querySelector("img").src;
-    document.getElementById("editEquipmentDescription").value = card.dataset.description || "";
-  }
-
-  function populateConfirmModal(el) {
-    const card = el.closest(".equipment-card");
-    document.getElementById("confirmEquipmentName").textContent = card.dataset.name;
-    document.getElementById("confirmEquipmentID").value = card.dataset.id;
-
-    const action = card.dataset.statusText === "active" ? "Deactivate" : "Activate";
-    document.getElementById("confirmActionLabel").textContent = action;
-    document.getElementById("confirmActionLabelInline").textContent = action.toLowerCase();
-  }
-
-  document.getElementById("filterCategory").addEventListener("change", filterCards);
-  document.getElementById("filterStatus").addEventListener("change", filterCards);
-
-  function filterCards() {
-    const category = document.getElementById("filterCategory").value.toLowerCase();
-    const status = document.getElementById("filterStatus").value.toLowerCase();
-
-    document.querySelectorAll(".equipment-card").forEach(card => {
-      const matchCategory = !category || card.dataset.category.toLowerCase() === category;
-      const matchStatus = !status || card.dataset.status.toLowerCase() === status;
-
-      card.style.display = (matchCategory && matchStatus) ? "block" : "none";
-    });
-  }
 });
 
 // ADD USER MODAL: Password matching validation
@@ -327,52 +235,62 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//reset password form validation
-document.addEventListener('DOMContentLoaded', function() {
-    const resetForm = document.getElementById('resetForm');
-    const newPassword = document.getElementById('new_password');
-    const confirmPassword = document.getElementById('confirm_password');
+// USER FILTERS - Make role and status filters functional
+document.addEventListener("DOMContentLoaded", function () {
+  const filterRole = document.getElementById("filterRole");
+  const filterStatus = document.getElementById("filterStatus");
+  const userCards = document.querySelectorAll(".user-card");
 
-    function checkPasswordMatch() {
-        if (confirmPassword.value && confirmPassword.value !== newPassword.value) {
-            confirmPassword.classList.add('is-invalid');
-        } else {
-            confirmPassword.classList.remove('is-invalid');
-        }
-    }
+  function applyUserFilters() {
+    const selectedRole = filterRole ? filterRole.value.toLowerCase() : "";
+    const selectedStatus = filterStatus ? filterStatus.value.toLowerCase() : "";
 
-    if (newPassword && confirmPassword) {
-        newPassword.addEventListener('input', checkPasswordMatch);
-        confirmPassword.addEventListener('input', checkPasswordMatch);
-    }
+    userCards.forEach((card) => {
+      const cardRole = card.getAttribute("data-role") ? card.getAttribute("data-role").toLowerCase() : "";
+      const cardStatus = card.getAttribute("data-status") ? card.getAttribute("data-status").toLowerCase() : "";
 
-    if (resetForm) {
-        resetForm.addEventListener('submit', function(e) {
-            if (newPassword.value !== confirmPassword.value) {
-                e.preventDefault();
-                confirmPassword.classList.add('is-invalid');
-                return false;
-            }
-        });
-    }
-});
+      const matchRole = selectedRole === "" || cardRole === selectedRole;
+      const matchStatus = selectedStatus === "" || cardStatus === selectedStatus;
 
-document.addEventListener('DOMContentLoaded', function() {
-    const forgotForm = document.getElementById('forgotForm');
-    const btnSendReset = document.getElementById('btnSendReset');
+      // Show card if both filters match (or are empty)
+      if (matchRole && matchStatus) {
+        card.style.display = "flex";
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    // Count visible cards
+    updateUserCount();
+  }
+
+  function updateUserCount() {
+    const visibleCards = Array.from(userCards).filter(card => card.style.display !== "none");
+    const totalCards = userCards.length;
     
-    if (forgotForm && btnSendReset) {
-        forgotForm.addEventListener('submit', function() {
-            const btnText = btnSendReset.querySelector('.btn-text');
-            const btnSpinner = btnSendReset.querySelector('.btn-spinner');
-            
-            if (btnText) btnText.style.display = 'none';
-            if (btnSpinner) btnSpinner.style.display = 'inline';
-            btnSendReset.disabled = true;
-        });
+    console.log(`Showing ${visibleCards.length} of ${totalCards} users`);
+    
+    // Optional: Add a count display
+    const countDisplay = document.querySelector(".users-table-footer .text-muted");
+    if (countDisplay && visibleCards.length !== totalCards) {
+      countDisplay.textContent = `Showing ${visibleCards.length} of ${totalCards} users`;
     }
+  }
+
+  // Attach event listeners
+  if (filterRole) {
+    filterRole.addEventListener("change", applyUserFilters);
+  }
+
+  if (filterStatus) {
+    filterStatus.addEventListener("change", applyUserFilters);
+  }
+
+  // Initial count
+  updateUserCount();
 });
 
+// VIEW USER MODAL - Fetch user details
 document.addEventListener("DOMContentLoaded", function () {
   const viewUserModal = document.getElementById("modalViewUser");
 
@@ -413,4 +331,380 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Error fetching user details:", error));
     });
   }
+});
+
+/* ===========================================
+   EQUIPMENT MODULE – FRONTEND + MODALS
+=========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const filterCategory = document.getElementById("filterCategory");
+  const filterStatus = document.getElementById("filterStatus");
+  const searchInput = document.getElementById("searchInput");
+  const cards = document.querySelectorAll(".equipment-card");
+
+  // Apply filters to equipment cards
+  function applyFilters() {
+    const category = filterCategory ? filterCategory.value.toLowerCase() : "";
+    const status = filterStatus ? filterStatus.value.toLowerCase() : "";
+    const search = searchInput ? searchInput.value.toLowerCase() : "";
+
+    cards.forEach((card) => {
+      const c = (card.dataset.category || "").toLowerCase();
+      const s = (card.dataset.status || "").toLowerCase();
+      const name = (card.dataset.name || "").toLowerCase();
+
+      const matchCategory = category === "" || c === category;
+      const matchStatus = status === "" || s === status;
+      const matchSearch = search === "" || name.includes(search);
+
+      card.style.display = matchCategory && matchStatus && matchSearch ? "flex" : "none";
+    });
+  }
+
+  if (filterCategory) filterCategory.addEventListener("change", applyFilters);
+  if (filterStatus) filterStatus.addEventListener("change", applyFilters);
+  if (searchInput) searchInput.addEventListener("input", applyFilters);
+
+  /* ===================================
+     VIEW EQUIPMENT MODAL (Aggregate)
+  =================================== */
+  const viewModal = document.getElementById("modalViewEquipment");
+  if (viewModal) {
+    viewModal.addEventListener("show.bs.modal", (event) => {
+      const button = event.relatedTarget;
+      const name = button.getAttribute("data-name");
+      const category = button.getAttribute("data-category");
+      const status = button.getAttribute("data-status");
+      const available = button.getAttribute("data-available");
+      const total = button.getAttribute("data-total");
+      const image = button.getAttribute("data-image");
+
+      // Populate modal with aggregate data
+      document.getElementById("viewName").textContent = name || "N/A";
+      document.getElementById("viewCategory").textContent = category || "N/A";
+      document.getElementById("viewStatus").textContent = status ? status.charAt(0).toUpperCase() + status.slice(1) : "N/A";
+      document.getElementById("viewTotal").textContent = total || "0";
+      document.getElementById("viewAvailable").textContent = available || "0";
+      document.getElementById("viewImage").src = image || "/Envizio/public/img/indextech.avif";
+      document.getElementById("viewDescription").textContent = "Aggregate view - description from first item";
+    });
+  }
+
+  /* ===================================
+     EDIT EQUIPMENT MODAL (Individual)
+  =================================== */
+  const editModal = document.getElementById("modalEditEquipment");
+  let currentGroupItems = [];
+
+  if (editModal) {
+    editModal.addEventListener("show.bs.modal", async (event) => {
+      const button = event.relatedTarget;
+      const name = button.getAttribute("data-name");
+      const category = button.getAttribute("data-category");
+      const status = button.getAttribute("data-status");
+
+      // Get the selector element
+      const selector = document.getElementById("editEquipmentIdSelector");
+      if (!selector) {
+        console.error("Edit ID selector not found");
+        return;
+      }
+
+      // Show loading state
+      selector.innerHTML = '<option value="">-- Loading IDs... --</option>';
+
+      // Fetch all items in this group
+      try {
+        const response = await fetch(`equipment/getGroupItems?name=${encodeURIComponent(name)}&type=${encodeURIComponent(category)}&status=${encodeURIComponent(status)}`);
+        const data = await response.json();
+        
+        if (data.items && data.items.length > 0) {
+          currentGroupItems = data.items;
+
+          // Populate ID selector
+          selector.innerHTML = '<option value="">-- Select Equipment ID --</option>';
+          currentGroupItems.forEach(item => {
+            const option = document.createElement("option");
+            option.value = item.equipment_id;
+            option.textContent = `ID: ${item.equipment_id} - ${item.available == 1 ? 'Available' : 'Not Available'}`;
+            selector.appendChild(option);
+          });
+
+          // Auto-select first item
+          selector.value = currentGroupItems[0].equipment_id;
+          populateEditForm(currentGroupItems[0]);
+
+          // Handle ID selection change (remove old listeners first)
+          const newSelector = selector.cloneNode(true);
+          selector.parentNode.replaceChild(newSelector, selector);
+          
+          newSelector.addEventListener("change", function() {
+            const selectedId = this.value;
+            const selectedItem = currentGroupItems.find(item => item.equipment_id == selectedId);
+            if (selectedItem) {
+              populateEditForm(selectedItem);
+            }
+          });
+        } else {
+          selector.innerHTML = '<option value="">-- No items found --</option>';
+        }
+      } catch (error) {
+        console.error("Error fetching group items:", error);
+        selector.innerHTML = '<option value="">-- Error loading IDs --</option>';
+      }
+    });
+  }
+
+  function populateEditForm(item) {
+    document.getElementById("editName").value = item.equipment_name || "";
+    document.getElementById("editCategory").value = item.equipment_type || "";
+    document.getElementById("editStatus").value = item.status || "active";
+    document.getElementById("editAvailable").value = item.available || 0;
+    document.getElementById("editDescription").value = item.description || "";
+    
+    const imageSrc = item.image ? `img/${item.image}` : "img/indextech.avif";
+    document.getElementById("editImagePreview").src = imageSrc;
+  }
+
+  // Handle Edit Form Submission
+  const saveEditBtn = document.getElementById("saveEditEquipment");
+  if (saveEditBtn) {
+    saveEditBtn.addEventListener("click", async function() {
+      const selector = document.getElementById("editEquipmentIdSelector");
+      const selectedId = selector ? selector.value : null;
+
+      if (!selectedId) {
+        alert("Please select an equipment ID to edit");
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append("equipment_name", document.getElementById("editName").value);
+      formData.append("equipment_type", document.getElementById("editCategory").value);
+      formData.append("status", document.getElementById("editStatus").value);
+      formData.append("available", document.getElementById("editAvailable").value);
+      formData.append("description", document.getElementById("editDescription").value);
+
+      // Handle image upload if file is selected
+      const imageInput = document.querySelector("#modalEditEquipment input[type='file']");
+      if (imageInput && imageInput.files.length > 0) {
+        formData.append("equipment_image", imageInput.files[0]);
+      }
+
+      try {
+        const response = await fetch(`equipment/update/${selectedId}`, {
+          method: "POST",
+          body: formData
+        });
+
+        const result = await response.json();
+        
+        if (result.success) {
+          alert("Equipment updated successfully!");
+          location.reload();
+        } else {
+          alert("Failed to update equipment: " + (result.error || "Unknown error"));
+        }
+      } catch (error) {
+        console.error("Error updating equipment:", error);
+        alert("An error occurred while updating equipment");
+      }
+    });
+  }
+
+  /* ===================================
+     ADD EQUIPMENT MODAL (Batch Create)
+  =================================== */
+  const addModal = document.getElementById("modalAddEquipment");
+  if (addModal) {
+    const addForm = document.querySelector("#modalAddEquipment form");
+    if (!addForm) {
+      // Create form if not exists
+      const saveBtn = document.querySelector("#modalAddEquipment .equipment-btn");
+      if (saveBtn) {
+        saveBtn.addEventListener("click", async function() {
+          const name = document.querySelector("#modalAddEquipment input[placeholder*='Laptop']").value;
+          const category = document.querySelector("#modalAddEquipment select").value;
+          const quantity = document.querySelector("#modalAddEquipment input[type='number']").value;
+          const description = document.querySelector("#modalAddEquipment textarea").value;
+          const imageFile = document.querySelector("#modalAddEquipment input[type='file']").files[0];
+
+          if (!name || !category || !quantity || quantity < 1) {
+            alert("Please fill all required fields");
+            return;
+          }
+
+          const formData = new FormData();
+          formData.append("equipment_name", name);
+          formData.append("equipment_type", category);
+          formData.append("quantity", quantity);
+          formData.append("description", description);
+          if (imageFile) {
+            formData.append("equipment_image", imageFile);
+          }
+
+          try {
+            const response = await fetch("equipment/add", {
+              method: "POST",
+              body: formData
+            });
+
+            if (response.ok) {
+              alert(`${quantity} equipment item(s) added successfully!`);
+              location.reload();
+            } else {
+              alert("Failed to add equipment");
+            }
+          } catch (error) {
+            console.error("Error adding equipment:", error);
+            alert("An error occurred while adding equipment");
+          }
+        });
+      }
+    }
+  }
+
+  /* ===================================
+     DEACTIVATE/ACTIVATE MODAL (Individual)
+  =================================== */
+  const confirmModal = document.getElementById("modalConfirmStatus");
+  let confirmGroupItems = [];
+
+  if (confirmModal) {
+    confirmModal.addEventListener("show.bs.modal", async (event) => {
+      const button = event.relatedTarget;
+      const name = button.getAttribute("data-name");
+      const category = button.getAttribute("data-category");
+      const status = button.getAttribute("data-status");
+
+      document.getElementById("confirmEquipmentName").textContent = name || "Unknown";
+      
+      const action = status === "active" ? "Deactivate" : "Activate";
+      document.getElementById("confirmActionLabel").textContent = action;
+      document.getElementById("confirmActionLabelInline").textContent = action.toLowerCase();
+
+      // Get the selector element
+      const selector = document.getElementById("confirmEquipmentIdSelector");
+      if (!selector) {
+        console.error("Confirm ID selector not found");
+        return;
+      }
+
+      // Show loading state
+      selector.innerHTML = '<option value="">-- Loading IDs... --</option>';
+
+      // Fetch all items in this group
+      try {
+        const response = await fetch(`equipment/getGroupItems?name=${encodeURIComponent(name)}&type=${encodeURIComponent(category)}&status=${encodeURIComponent(status)}`);
+        const data = await response.json();
+        
+        if (data.items && data.items.length > 0) {
+          confirmGroupItems = data.items;
+
+          // Populate ID selector
+          selector.innerHTML = '<option value="">-- Select Equipment ID --</option>';
+          confirmGroupItems.forEach(item => {
+            const option = document.createElement("option");
+            option.value = item.equipment_id;
+            option.textContent = `ID: ${item.equipment_id} - ${item.available == 1 ? 'Available' : 'Not Available'}`;
+            selector.appendChild(option);
+          });
+
+          // Auto-select first item
+          if (confirmGroupItems.length > 0) {
+            selector.value = confirmGroupItems[0].equipment_id;
+          }
+        } else {
+          selector.innerHTML = '<option value="">-- No items found --</option>';
+        }
+      } catch (error) {
+        console.error("Error fetching group items for confirm:", error);
+        selector.innerHTML = '<option value="">-- Error loading IDs --</option>';
+      }
+    });
+  }
+
+  // Handle Confirm Button
+  const confirmProceedBtn = document.getElementById("confirmProceedBtn");
+  if (confirmProceedBtn) {
+    confirmProceedBtn.addEventListener("click", async function() {
+      const selector = document.getElementById("confirmEquipmentIdSelector");
+      const selectedId = selector ? selector.value : null;
+
+      if (!selectedId) {
+        alert("Please select an equipment ID");
+        return;
+      }
+
+      try {
+        const response = await fetch(`equipment/toggleStatus/${selectedId}`, {
+          method: "POST"
+        });
+
+        const result = await response.json();
+        
+        if (result.success) {
+          alert(result.message || "Equipment status updated!");
+          location.reload();
+        } else {
+          alert("Failed to update status: " + (result.error || "Unknown error"));
+        }
+      } catch (error) {
+        console.error("Error toggling status:", error);
+        alert("An error occurred while updating status");
+      }
+    });
+  }
+});
+
+// ----------------------------------------------------------
+// RESET PASSWORD FORM VALIDATION
+// ----------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+    const resetForm = document.getElementById('resetForm');
+    const newPassword = document.getElementById('new_password');
+    const confirmPassword = document.getElementById('confirm_password');
+
+    function checkPasswordMatch() {
+        if (confirmPassword.value && confirmPassword.value !== newPassword.value) {
+            confirmPassword.classList.add('is-invalid');
+        } else {
+            confirmPassword.classList.remove('is-invalid');
+        }
+    }
+
+    if (newPassword && confirmPassword) {
+        newPassword.addEventListener('input', checkPasswordMatch);
+        confirmPassword.addEventListener('input', checkPasswordMatch);
+    }
+
+    if (resetForm) {
+        resetForm.addEventListener('submit', function(e) {
+            if (newPassword.value !== confirmPassword.value) {
+                e.preventDefault();
+                confirmPassword.classList.add('is-invalid');
+                return false;
+            }
+        });
+    }
+});
+
+// ----------------------------------------------------------
+// FORGOT PASSWORD FORM - LOADING STATE
+// ----------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function() {
+    const forgotForm = document.getElementById('forgotForm');
+    const btnSendReset = document.getElementById('btnSendReset');
+    
+    if (forgotForm && btnSendReset) {
+        forgotForm.addEventListener('submit', function() {
+            const btnText = btnSendReset.querySelector('.btn-text');
+            const btnSpinner = btnSendReset.querySelector('.btn-spinner');
+            
+            if (btnText) btnText.style.display = 'none';
+            if (btnSpinner) btnSpinner.style.display = 'inline';
+            btnSendReset.disabled = true;
+        });
+    }
 });

@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Models\Users_model;
-use App\Models\Equipment_model;
 
 class AdminController extends BaseController
 {
@@ -201,30 +200,7 @@ class AdminController extends BaseController
     }
 
     // ===============================
-    // EQUIPMENT MANAGEMENT (Merged)
-    // ===============================
-    public function equipment()
-    {
-        $equipmentModel = new Equipment_model();
-
-        // Group equipment by name, type & status
-        $equipment = $equipmentModel
-            ->select('equipment_name, equipment_type, status, COUNT(*) as total_qty, SUM(available) as available_qty')
-            ->groupBy(['equipment_name', 'equipment_type', 'status'])
-            ->findAll();
-
-        $data = [
-            'title' => 'Equipment Management - ITSO EMS',
-            'bodyClass' => 'equipment-page',
-            'active' => 'equipment',
-            'equipment' => $equipment,
-        ];
-
-        return view('include/head_view', $data)
-            . view('include/nav_view', $data)
-            . view('equipment_view', $data)
-            . view('include/foot_view', $data);
-    }
+    // EQUIPMENT MANAGEMENT (Mer
 
     // ===============================
 // Add New User (Admin creates account)
