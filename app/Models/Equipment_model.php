@@ -13,8 +13,13 @@ class Equipment_model extends Model
         'equipment_type',
         'available',
         'status',
+        'image',
+        'description'
     ];
 
-    // Optional: return results as arrays
+    // Return results as arrays
     protected $returnType = 'array';
+    
+    // Enable timestamps if you have created_at/updated_at columns
+    // protected $useTimestamps = true;
 }
