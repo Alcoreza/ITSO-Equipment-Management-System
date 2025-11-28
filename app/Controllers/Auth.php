@@ -279,15 +279,15 @@ class Auth extends BaseController
             return redirect()->back()->withInput();
         }
 
-        // Check if passwords match
-        if ($newPassword !== $confirmPassword) {
-            $session->setFlashdata('error', 'Passwords do not match.');
-            return redirect()->back()->withInput();
-        }
-
         // Check password length (minimum 8 characters)
         if (strlen($newPassword) < 8) {
             $session->setFlashdata('error', 'Password must be at least 8 characters.');
+            return redirect()->back()->withInput();
+        }
+
+        // Check if passwords match
+        if ($newPassword !== $confirmPassword) {
+            $session->setFlashdata('error', 'Passwords do not match.');
             return redirect()->back()->withInput();
         }
 
@@ -366,7 +366,7 @@ class Auth extends BaseController
         $confirm = $request->getPost('confirm_password');
 
         // Validate all required fields are filled
-        if (empty($fullname) || empty($email) || empty($role) || empty($password)) {
+        if (empty($fullname) || empty($email) || empty($role) || empty($password) || empty($confirm)) {
             $session->setFlashdata('error', 'All fields are required.');
             return redirect()->back()->withInput();
         }
@@ -418,7 +418,8 @@ class Auth extends BaseController
             'role'        => $role,
             'token'       => $token,
             'is_verified' => 0,  // Email not verified yet
-            'status'      => 1   // Active by default
+            'status'      => 1,  // Active by default
+            'is_deactivated' => 0
         ];
 
         // Prepare verification email

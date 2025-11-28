@@ -15,14 +15,12 @@ class Equipment_model extends Model
         'available',
         'status',
         'image',
-        'description',
+        'description'
     ];
 
     // Return results as arrays
     protected $returnType = 'array';
-
-    // Must be typed as array to match CodeIgniter\BaseModel in PHP 8+
-    protected array $casts = [
-        'available' => 'integer',
-    ];
+    
+    // Enable timestamps if you have created_at/updated_at columns
+    // protected $useTimestamps = true;
 }

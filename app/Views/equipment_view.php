@@ -27,98 +27,92 @@
                 </button>
             </div>
 
+            <!-- Flash Messages -->
+            <?php if (session()->getFlashdata('success')): ?>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <?= session()->getFlashdata('success') ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            <?php endif; ?>
+
+            <?php if (session()->getFlashdata('error')): ?>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <?= session()->getFlashdata('error') ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            <?php endif; ?>
+
             <!-- Filters -->
-            <div class="equipment-filters mb-3 d-flex gap-2 align-items-center">
-                <select class="form-select equipment-input" id="filterCategory" style="max-width:220px;">
-                    <option value="">All Categories</option>
-                    <option value="Laptop">Laptop</option>
-                    <option value="Drawing Tablet">Drawing Tablet</option>
-                    <option value="Remote Control">Remote Control</option>
-                    <option value="Projector">Projector</option>
-                    <option value="Cable">Cable</option>
-                    <option value="Accessory">Accessory</option>
-                    <option value="Others">Others</option>
-                </select>
+            <div class="equipment-filters mb-3">
+                <form method="get" action="<?= base_url('equipment') ?>" id="filterForm">
+                    <select name="category" class="form-select equipment-input" id="filterCategory" onchange="this.form.submit()">
+                        <option value="">All Categories</option>
+                        <option value="Laptop" <?= (isset($filterCategory) && $filterCategory === 'Laptop') ? 'selected' : '' ?>>Laptop</option>
+                        <option value="Drawing Tablet" <?= (isset($filterCategory) && $filterCategory === 'Drawing Tablet') ? 'selected' : '' ?>>Drawing Tablet</option>
+                        <option value="Remote Control" <?= (isset($filterCategory) && $filterCategory === 'Remote Control') ? 'selected' : '' ?>>Remote Control</option>
+                        <option value="Projector" <?= (isset($filterCategory) && $filterCategory === 'Projector') ? 'selected' : '' ?>>Projector</option>
+                        <option value="Cable" <?= (isset($filterCategory) && $filterCategory === 'Cable') ? 'selected' : '' ?>>Cable</option>
+                        <option value="Accessory" <?= (isset($filterCategory) && $filterCategory === 'Accessory') ? 'selected' : '' ?>>Accessory</option>
+                        <option value="Others" <?= (isset($filterCategory) && $filterCategory === 'Others') ? 'selected' : '' ?>>Others</option>
+                    </select>
 
-                <select class="form-select equipment-input" id="filterStatus" style="max-width:160px;">
-                    <option value="">All Status</option>
-                    <option value="active">Active</option>
-                    <option value="inactive">Inactive</option>
-                </select>
-
-                <input id="searchInput" class="form-control equipment-input" placeholder="Search by name" style="max-width:300px;">
+                    <select name="status" class="form-select equipment-input" id="filterStatus" onchange="this.form.submit()">
+                        <option value="">All Status</option>
+                        <option value="active" <?= (isset($filterStatus) && $filterStatus === 'active') ? 'selected' : '' ?>>Active</option>
+                        <option value="inactive" <?= (isset($filterStatus) && $filterStatus === 'inactive') ? 'selected' : '' ?>>Inactive</option>
+                    </select>
+                </form>
             </div>
 
-            <!-- EQUIPMENT CARDS GRID (aggregated) -->
+            <!-- EQUIPMENT CARDS GRID -->
             <div class="equipment-grid">
-                <?php if (!empty($equipment) && is_array($equipment)): ?>
+                <?php if (!empty($equipment)): ?>
                     <?php foreach ($equipment as $eq): ?>
-                        <?php
-                            // Use rep_id as representative ID (default selection when editing)
-                            $repId = $eq['rep_id'] ?? ($eq['equipment_id'] ?? '');
-                            $imageUrl = !empty($eq['image']) ? base_url('uploads/' . $eq['image']) : base_url('public/img/indextech.avif');
-                            // aggregated quantities
-                            $totalQty = $eq['total_qty'] ?? 1;
-                            $availableQty = $eq['available_qty'] ?? 0;
-                            $status = $eq['status'] ?? 'active';
-                            $name = $eq['equipment_name'] ?? '';
-                            $type = $eq['equipment_type'] ?? '';
-                            $description = $eq['description'] ?? '';
-                        ?>
-                        <div class="equipment-card equipment-card-item <?= ($status === 'inactive') ? 'inactive-item' : '' ?>"
-                             data-id="<?= htmlspecialchars($repId) ?>"
-                             data-rep-id="<?= htmlspecialchars($repId) ?>"
-                             data-name="<?= htmlspecialchars($name) ?>"
-                             data-type="<?= htmlspecialchars($type) ?>"
-                             data-status="<?= htmlspecialchars($status) ?>"
-                             data-total="<?= htmlspecialchars($totalQty) ?>"
-                             data-available="<?= htmlspecialchars($availableQty) ?>"
-                             data-image="<?= htmlspecialchars($imageUrl) ?>"
-                             data-description="<?= htmlspecialchars($description) ?>">
+                        <div class="equipment-card <?= $eq['status'] === 'inactive' ? 'inactive-item' : '' ?>" 
+                             data-category="<?= htmlspecialchars($eq['equipment_type']) ?>" 
+                             data-status="<?= htmlspecialchars($eq['status']) ?>"
+                             data-name="<?= htmlspecialchars($eq['equipment_name']) ?>"
+                             data-available="<?= $eq['available_qty'] ?>"
+                             data-total="<?= $eq['total_qty'] ?>">
 
                             <!-- IMAGE -->
-                            <img src="<?= $imageUrl ?>" class="equipment-card-img" alt="<?= htmlspecialchars($name) ?>">
+                            <img src="<?= !empty($eq['image']) ? base_url('public/img/' . $eq['image']) : base_url('public/img/indextech.avif') ?>" class="equipment-card-img">
 
                             <!-- INFO -->
                             <div class="equipment-card-info">
-                                <h6 class="equipment-name"><?= htmlspecialchars($name) ?></h6>
+                                <h6 class="equipment-name"><?= htmlspecialchars($eq['equipment_name']) ?></h6>
                                 <p class="equipment-meta">
-                                    <?= htmlspecialchars($type) ?> • Available: <?= htmlspecialchars($availableQty) ?> / <?= htmlspecialchars($totalQty) ?>
+                                    <?= htmlspecialchars($eq['equipment_type']) ?> • Available: <?= $eq['available_qty'] ?> / <?= $eq['total_qty'] ?>
                                 </p>
-                                <span class="equipment-tag"><?= htmlspecialchars($type) ?></span>
+                                <span class="equipment-tag"><?= htmlspecialchars($eq['equipment_type']) ?></span>
                             </div>
 
                             <!-- ACTIONS -->
                             <div class="equipment-actions">
                                 <button class="equipment-action-btn equipment-action-view" data-bs-toggle="modal"
                                     data-bs-target="#modalViewEquipment"
-                                    data-id="<?= htmlspecialchars($repId) ?>"
-                                    data-name="<?= htmlspecialchars($name) ?>"
-                                    data-type="<?= htmlspecialchars($type) ?>"
-                                    data-status="<?= htmlspecialchars($status) ?>"
-                                    data-available="<?= htmlspecialchars($availableQty) ?>"
-                                    data-image="<?= htmlspecialchars($imageUrl) ?>"
-                                    data-description="<?= htmlspecialchars($description) ?>">
+                                    data-name="<?= htmlspecialchars($eq['equipment_name']) ?>"
+                                    data-category="<?= htmlspecialchars($eq['equipment_type']) ?>"
+                                    data-status="<?= htmlspecialchars($eq['status']) ?>"
+                                    data-available="<?= $eq['available_qty'] ?>"
+                                    data-total="<?= $eq['total_qty'] ?>"
+                                    data-image="<?= !empty($eq['image']) ? base_url('public/img/' . $eq['image']) : base_url('public/img/indextech.avif') ?>">
                                     <i class="bi bi-eye"></i>
                                 </button>
 
                                 <button class="equipment-action-btn equipment-action-edit" data-bs-toggle="modal"
                                     data-bs-target="#modalEditEquipment"
-                                    data-id="<?= htmlspecialchars($repId) ?>"
-                                    data-name="<?= htmlspecialchars($name) ?>"
-                                    data-type="<?= htmlspecialchars($type) ?>"
-                                    data-status="<?= htmlspecialchars($status) ?>"
-                                    data-available="<?= htmlspecialchars($availableQty) ?>"
-                                    data-image="<?= htmlspecialchars($imageUrl) ?>"
-                                    data-description="<?= htmlspecialchars($description) ?>">
+                                    data-name="<?= htmlspecialchars($eq['equipment_name']) ?>"
+                                    data-category="<?= htmlspecialchars($eq['equipment_type']) ?>"
+                                    data-status="<?= htmlspecialchars($eq['status']) ?>">
                                     <i class="bi bi-pencil"></i>
                                 </button>
 
                                 <button class="equipment-action-btn equipment-action-danger" data-bs-toggle="modal"
                                     data-bs-target="#modalConfirmStatus"
-                                    data-id="<?= htmlspecialchars($repId) ?>"
-                                    data-name="<?= htmlspecialchars($name) ?>"
-                                    data-status="<?= htmlspecialchars($status) ?>">
+                                    data-name="<?= htmlspecialchars($eq['equipment_name']) ?>"
+                                    data-category="<?= htmlspecialchars($eq['equipment_type']) ?>"
+                                    data-status="<?= htmlspecialchars($eq['status']) ?>">
                                     <i class="bi bi-power"></i>
                                 </button>
                             </div>
@@ -129,61 +123,261 @@
                 <?php endif; ?>
             </div>
 
-            <!-- ADD, VIEW, EDIT, CONFIRM MODALS (same markup as before, with edit select) -->
+            <!-- PAGINATION -->
+            <div class="users-pagination-wrapper">
+                <div class="users-pagination">
+                    <nav aria-label="Equipment pagination">
+                        <ul class="pagination justify-content-center">
+                            <?php if (isset($pager) && $pager): ?>
+                                <?php
+                                // Get current page
+                                $currentPage = $pager->getCurrentPage();
+                                $totalPages = $pager->getPageCount();
+                                
+                                // Build query string to preserve filters
+                                $queries = [];
+                                if (!empty($filterCategory)) $queries['category'] = $filterCategory;
+                                if (!empty($filterStatus)) $queries['status'] = $filterStatus;
+                                $queryString = !empty($queries) ? '&' . http_build_query($queries) : '';
+                                ?>
+                                
+                                <!-- Previous Button -->
+                                <li class="page-item <?= $currentPage <= 1 ? 'disabled' : '' ?>">
+                                    <a class="page-link" href="<?= base_url('equipment?page=' . ($currentPage - 1) . $queryString) ?>" <?= $currentPage <= 1 ? 'tabindex="-1"' : '' ?>>
+                                        Previous
+                                    </a>
+                                </li>
 
-            <!-- ADD EQUIPMENT MODAL (frontend-only) -->
-            <div class="modal fade" id="modalAddEquipment" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered modal-md">
-                    <div class="modal-content equipment-modal">
+                                <!-- Page Numbers -->
+                                <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+                                    <li class="page-item <?= $currentPage === $i ? 'active' : '' ?>">
+                                        <a class="page-link" href="<?= base_url('equipment?page=' . $i . $queryString) ?>">
+                                            <?= $i ?>
+                                        </a>
+                                    </li>
+                                <?php endfor; ?>
 
-                        <div class="equipment-modal-header">
-                            <div class="equipment-modal-icon-circle">
-                                <i class="bi bi-plus-lg"></i>
-                            </div>
-                            <h5 class="modal-title">Add Equipment</h5>
-                            <button type="button" class="btn-close equipment-close" data-bs-dismiss="modal"></button>
+                                <!-- Next Button -->
+                                <li class="page-item <?= $currentPage >= $totalPages ? 'disabled' : '' ?>">
+                                    <a class="page-link" href="<?= base_url('equipment?page=' . ($currentPage + 1) . $queryString) ?>" <?= $currentPage >= $totalPages ? 'tabindex="-1"' : '' ?>>
+                                        Next
+                                    </a>
+                                </li>
+                            <?php endif; ?>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+<!-- ============================= -->
+<!-- ADD EQUIPMENT MODAL          -->
+<!-- ============================= -->
+<div class="modal fade" id="modalAddEquipment" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content equipment-modal">
+
+            <div class="equipment-modal-header">
+                <div class="equipment-modal-icon-circle">
+                    <i class="bi bi-plus-lg"></i>
+                </div>
+                <h5 class="modal-title">Add Equipment</h5>
+                <button type="button" class="btn-close equipment-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <form id="formAddEquipment" action="<?= base_url('equipment/add') ?>" method="POST" enctype="multipart/form-data">
+                <?= csrf_field() ?>
+                
+                <div class="equipment-modal-body">
+                    <div class="mb-3">
+                        <label class="equipment-label">Item Name <span class="text-danger">*</span></label>
+                        <input type="text" name="equipment_name" class="form-control equipment-input" placeholder="Laptop, HDMI cable..." required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="equipment-label">Category <span class="text-danger">*</span></label>
+                        <select name="equipment_type" class="form-select equipment-input" required>
+                            <option value="" disabled selected>Select category</option>
+                            <option value="Laptop">Laptop</option>
+                            <option value="Drawing Tablet">Drawing Tablet</option>
+                            <option value="Remote Control">Remote Control</option>
+                            <option value="Projector">Projector</option>
+                            <option value="Cable">Cable</option>
+                            <option value="Accessory">Accessory</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="equipment-label">Total Quantity <span class="text-danger">*</span></label>
+                        <input type="number" name="quantity" class="form-control equipment-input" placeholder="1" min="1" required>
+                        <small class="text-muted">Creates multiple items if quantity > 1</small>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="equipment-label">Upload Image</label>
+                        <input type="file" name="equipment_image" class="form-control equipment-input" accept="image/*">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="equipment-label">Description</label>
+                        <textarea name="description" class="form-control equipment-input" rows="3" placeholder="Optional notes..."></textarea>
+                    </div>
+                </div>
+
+                <div class="equipment-modal-footer">
+                    <button type="submit" class="btn equipment-btn w-100">
+                        <span class="btn-text">Add Equipment</span>
+                        <span class="btn-spinner" style="display: none;">
+                            <span class="spinner-border spinner-border-sm" role="status"></span> Adding...
+                        </span>
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- PREMIUM VIEW EQUIPMENT MODAL -->
+<!-- ============================= -->
+<div class="modal fade" id="modalViewEquipment" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg equipment-modal-view-dialog">
+        <div class="modal-content equipment-modal-view">
+
+            <div class="equipment-modal-view-header d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="equipment-view-title m-0">Equipment Details</h5>
+                    <small class="equipment-view-sub">Aggregate view of grouped equipment</small>
+                </div>
+
+                <button type="button" class="btn-close equipment-close-light" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="equipment-modal-view-body">
+
+                <div class="equipment-view-image-wrapper mb-4">
+                    <img id="viewImage" src="" class="equipment-view-img" alt="Equipment image">
+                </div>
+
+                <div class="equipment-view-info-grid">
+
+                    <div class="equipment-view-info-card">
+                        <p class="info-label">Item Name</p>
+                        <p class="info-value" id="viewName">-</p>
+                    </div>
+
+                    <div class="equipment-view-info-card">
+                        <p class="info-label">Category</p>
+                        <p class="info-value" id="viewCategory">-</p>
+                    </div>
+
+                    <div class="equipment-view-info-card">
+                        <p class="info-label">Status</p>
+                        <p class="info-value" id="viewStatus">-</p>
+                    </div>
+
+                    <div class="equipment-view-info-card">
+                        <p class="info-label">Total Quantity</p>
+                        <p class="info-value" id="viewTotal">-</p>
+                    </div>
+
+                    <div class="equipment-view-info-card">
+                        <p class="info-label">Available</p>
+                        <p class="info-value" id="viewAvailable">-</p>
+                    </div>
+
+                </div>
+
+                <div class="equipment-view-description mt-4">
+                    <p class="info-label mb-1">Description</p>
+                    <p class="description-box" id="viewDescription">Loading...</p>
+                </div>
+
+            </div>
+
+            <div class="equipment-modal-view-footer">
+                <button class="btn equipment-btn px-4" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- EDIT EQUIPMENT MODAL         -->
+<!-- ============================= -->
+<div class="modal fade" id="modalEditEquipment" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg equipment-modal-view-dialog">
+        <div class="modal-content equipment-modal-view equipment-modal-edit">
+
+            <div class="equipment-modal-view-header d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="equipment-view-title m-0">Edit Equipment</h5>
+                    <small class="equipment-view-sub">Update individual equipment item</small>
+                </div>
+
+                <button type="button" class="btn-close equipment-close-light" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="equipment-modal-view-body">
+
+                <div class="equipment-view-image-wrapper mb-3">
+                    <img id="editImagePreview" src="public/img/indextech.avif" class="equipment-view-img" alt="">
+                    <div class="mt-2" style="display:flex;gap:.5rem;align-items:center;">
+                        <label class="equipment-label mb-0">Replace Image</label>
+                        <input type="file" id="editImageFile" class="form-control equipment-input" style="max-width:320px;" accept="image/*">
+                    </div>
+                </div>
+
+                <form id="formEditEquipment" autocomplete="off">
+                    <?= csrf_field() ?>
+                    
+                    <!-- ID Selector for selecting specific equipment to edit -->
+                    <div id="editIdSelectorContainer" class="mb-3">
+                        <label class="equipment-label">Select Equipment ID to Edit <span class="text-danger">*</span></label>
+                        <select id="editEquipmentIdSelector" class="form-select equipment-input" required>
+                            <option value="">-- Loading IDs... --</option>
+                        </select>
+                        <small class="text-muted">Choose which specific item to edit from this group</small>
+                    </div>
+                    
+                    <div class="equipment-view-info-grid">
+
+                        <div class="equipment-view-info-card">
+                            <label class="info-label">Item Name</label>
+                            <input id="editName" name="equipment_name" class="form-control equipment-input info-value-input" required>
                         </div>
 
-                        <div class="equipment-modal-body">
-                            <form id="formAddEquipment" autocomplete="off">
-                                <div class="mb-3">
-                                    <label class="equipment-label">Item Name</label>
-                                    <input id="addName" name="equipment_name" type="text" class="form-control equipment-input" placeholder="Laptop, HDMI cable..." required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="equipment-label">Category</label>
-                                    <select id="addType" name="equipment_type" class="form-select equipment-input" required>
-                                        <option disabled selected>Select category</option>
-                                        <option value="Laptop">Laptop</option>
-                                        <option value="Drawing Tablet">Drawing Tablet</option>
-                                        <option value="Remote Control">Remote Control</option>
-                                        <option value="Projector">Projector</option>
-                                        <option value="Cable">Cable</option>
-                                        <option value="Accessory">Accessory</option>
-                                        <option value="Others">Others</option>
-                                    </select>
-                                </div>
-
-                                <div class="mb-3 form-check">
-                                    <input id="addAvailable" name="available" type="checkbox" class="form-check-input" checked>
-                                    <label class="form-check-label">Available</label>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="equipment-label">Upload Image</label>
-                                    <input id="addImage" name="image" type="file" class="form-control equipment-input">
-                                </div>
-
-                                <div class="mb-3">
-                                    <label class="equipment-label">Description</label>
-                                    <textarea id="addDescription" name="description" class="form-control equipment-input" rows="3" placeholder="Optional notes..."></textarea>
-                                </div>
-                            </form>
+                        <div class="equipment-view-info-card">
+                            <label class="info-label">Category</label>
+                            <select id="editCategory" name="equipment_type" class="form-select equipment-input" required>
+                                <option value="Laptop">Laptop</option>
+                                <option value="Drawing Tablet">Drawing Tablet</option>
+                                <option value="Remote Control">Remote Control</option>
+                                <option value="Projector">Projector</option>
+                                <option value="Cable">Cable</option>
+                                <option value="Accessory">Accessory</option>
+                                <option value="Others">Others</option>
+                            </select>
                         </div>
 
-                        <div class="equipment-modal-footer">
-                            <button id="btnAddEquipment" class="btn equipment-btn w-100">Save (Frontend Only)</button>
+                        <div class="equipment-view-info-card">
+                            <label class="info-label">Status</label>
+                            <select id="editStatus" name="status" class="form-select equipment-input" required>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                            </select>
+                        </div>
+
+                        <div class="equipment-view-info-card">
+                            <label class="info-label">Available</label>
+                            <select id="editAvailable" name="available" class="form-select equipment-input" required>
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
                         </div>
 
                     </div>
@@ -246,107 +440,65 @@
                         </div>
 
                     </div>
+                </form>
+
+            </div>
+
+            <div class="equipment-modal-view-footer d-flex gap-2 justify-content-end">
+                <button class="btn equipment-btn-ghost" data-bs-dismiss="modal">Cancel</button>
+                <button id="saveEditEquipment" class="btn equipment-btn equipment-btn-strong">
+                    <span class="btn-text">Save changes</span>
+                    <span class="btn-spinner" style="display: none;">
+                        <span class="spinner-border spinner-border-sm" role="status"></span> Saving...
+                    </span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- ========================================= -->
+<!-- CONFIRM ACTIVATE / DEACTIVATE MODAL      -->
+<!-- ========================================= -->
+<div class="modal fade" id="modalConfirmStatus" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm modal-confirm-dialog">
+        <div class="modal-content equipment-modal-confirm-new">
+
+            <div class="confirm-topstrip"></div>
+
+            <div class="confirm-header d-flex align-items-center gap-3">
+                <div class="confirm-icon-wrap">
+                    <i class="bi bi-power"></i>
                 </div>
             </div>
 
-            <!-- EDIT EQUIPMENT MODAL -->
-            <div class="modal fade" id="modalEditEquipment" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered modal-lg equipment-modal-view-dialog">
-                    <div class="modal-content equipment-modal-view equipment-modal-edit">
-
-                        <div class="equipment-modal-view-header d-flex justify-content-between align-items-center">
-                            <div>
-                                <h5 class="equipment-view-title m-0">Edit Equipment</h5>
-                                <small class="equipment-view-sub">Update item information</small>
-                            </div>
-
-                            <button type="button" class="btn-close equipment-close-light" data-bs-dismiss="modal"></button>
-                        </div>
-
-                        <div class="equipment-modal-view-body">
-
-                            <div class="equipment-view-image-wrapper mb-3">
-                                <img id="editEquipmentImage" src="" class="equipment-view-img" alt="Equipment image">
-                                <div class="mt-2" style="display:flex;gap:.5rem;align-items:center;">
-                                    <label class="equipment-label mb-0">Replace Image</label>
-                                    <input id="editImageFile" type="file" class="form-control equipment-input" style="max-width:320px;">
-                                </div>
-                            </div>
-
-                            <form id="formEditEquipment" autocomplete="off">
-                                <!-- Hidden field used by JS and the save action -->
-                                <input type="hidden" id="editEquipmentIDHidden" name="equipment_id" value="">
-
-                                <div class="equipment-view-info-grid">
-
-                                    <div class="equipment-view-info-card">
-                                        <label class="info-label">Item Name</label>
-                                        <input id="editEquipmentName" name="equipment_name" class="form-control equipment-input info-value-input">
-                                    </div>
-
-                                    <div class="equipment-view-info-card">
-                                        <label class="info-label">Category</label>
-                                        <select id="editEquipmentType" name="equipment_type" class="form-select equipment-input">
-                                            <option value="Laptop">Laptop</option>
-                                            <option value="Drawing Tablet">Drawing Tablet</option>
-                                            <option value="Remote Control">Remote Control</option>
-                                            <option value="Projector">Projector</option>
-                                            <option value="Cable">Cable</option>
-                                            <option value="Accessory">Accessory</option>
-                                            <option value="Others">Others</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="equipment-view-info-card">
-                                        <label class="info-label">Status</label>
-                                        <select id="editEquipmentStatus" name="status" class="form-select equipment-input">
-                                            <option value="active">Active</option>
-                                            <option value="inactive">Inactive</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="equipment-view-info-card">
-                                        <label class="info-label">Available</label>
-                                        <select id="editEquipmentAvailable" name="available" class="form-select equipment-input">
-                                            <option value="1">Yes</option>
-                                            <option value="0">No</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="equipment-view-info-card">
-                                        <label class="info-label">ID</label>
-                                        <!-- select to choose which specific equipment record to edit -->
-                                        <select id="editEquipmentSelect" name="ID" class="form-select equipment-input">
-                                            <option disabled selected>Select ID</option>
-                                            <!-- options will be populated by main.js based on the equipment_name of the card -->
-                                        </select>
-                                    </div>
-
-                                </div>
-
-                                <div class="equipment-view-description mt-4">
-                                    <label class="info-label mb-1">Description</label>
-                                    <textarea id="editEquipmentDescription" name="description" class="form-control description-box" rows="4"></textarea>
-                                </div>
-                            </form>
-
-                        </div>
-
-                        <div class="equipment-modal-view-footer d-flex gap-2 justify-content-end">
-                            <button class="btn equipment-btn-ghost" data-bs-dismiss="modal">Cancel</button>
-                            <button id="saveEditEquipment" class="btn equipment-btn equipment-btn-strong">Save changes</button>
-                        </div>
-
-                    </div>
+                <div class="confirm-title-wrap">
+                    <h5 id="confirmActionLabel" class="confirm-title mb-0">Deactivate</h5>
+                    <small class="confirm-sub">This will change the item's status</small>
                 </div>
             </div>
 
-            <!-- CONFIRM ACTIVATE / DEACTIVATE MODAL -->
-            <div class="modal fade" id="modalConfirmStatus" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-sm modal-confirm-dialog">
-                    <div class="modal-content equipment-modal-confirm-new">
+            <div class="confirm-body">
+                <!-- ID Selector for selecting specific equipment to deactivate/activate -->
+                <div id="confirmIdSelectorContainer" class="mb-3">
+                    <label class="form-label">Select Equipment ID <span class="text-danger">*</span></label>
+                    <select id="confirmEquipmentIdSelector" class="form-select">
+                        <option value="">-- Loading IDs... --</option>
+                    </select>
+                    <small class="text-muted d-block mt-1">Choose which specific item to toggle</small>
+                </div>
+                
+                <p class="mb-2 confirm-text">
+                    Are you sure you want to
+                    <strong><span id="confirmActionLabelInline">deactivate</span></strong>
+                    this equipment item?
+                </p>
 
-                        <div class="confirm-topstrip"></div>
+                <p class="mb-0 confirm-item">
+                    Item: <strong id="confirmEquipmentName">-</strong>
+                </p>
 
                         <div class="confirm-header d-flex align-items-center gap-3">
                             <div class="users-modal-icon-circle">
@@ -383,6 +535,20 @@
                     </div>
                 </div>
             </div>
+
+            <div class="confirm-footer d-flex gap-2">
+                <button type="button" class="btn confirm-btn-ghost" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn confirm-btn-danger" id="confirmProceedBtn">
+                    <span class="btn-text">Yes, proceed</span>
+                    <span class="btn-spinner" style="display: none;">
+                        <span class="spinner-border spinner-border-sm" role="status"></span>
+                    </span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
 
         </div>
     </main>
