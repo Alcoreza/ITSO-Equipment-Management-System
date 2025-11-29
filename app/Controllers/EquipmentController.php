@@ -8,21 +8,46 @@ class EquipmentController extends BaseController
     public function index()
     {
         $equipmentModel = new Equipment_model();
+        $request = service('request');
 
-        // Group equipment by name, type & status - NOW INCLUDES IMAGE
-        $equipment = $equipmentModel
+        // Get filter parameters from URL/query string
+        $filterCategory = $request->getGet('category');
+        $filterStatus = $request->getGet('status');
+
+        // Pagination settings
+        $perPage = 6;
+
+        // Start building query - group by name, type & status
+        $builder = $equipmentModel
             ->select('equipment_name, equipment_type, status, 
                       COUNT(*) as total_qty, 
                       SUM(available) as available_qty,
                       MAX(image) as image')
-            ->groupBy(['equipment_name', 'equipment_type', 'status'])
-            ->findAll();
+            ->groupBy(['equipment_name', 'equipment_type', 'status']);
+
+        // Apply category filter if provided
+        if ($filterCategory && !empty($filterCategory)) {
+            $builder->where('equipment_type', $filterCategory);
+        }
+
+        // Apply status filter if provided
+        if ($filterStatus !== null && $filterStatus !== '') {
+            $builder->where('status', $filterStatus);
+        }
+
+        // Paginate filtered results
+        $equipment = $builder->paginate($perPage);
+        $pager = $equipmentModel->pager;
 
         $data = [
             'title' => 'Equipment Management - ITSO EMS',
             'bodyClass' => 'equipment-page',
             'active' => 'equipment',
             'equipment' => $equipment,
+            'pager' => $pager,
+            'perPage' => $perPage,
+            'filterCategory' => $filterCategory ?? '',
+            'filterStatus' => $filterStatus ?? ''
         ];
 
         return view('include/head_view', $data)

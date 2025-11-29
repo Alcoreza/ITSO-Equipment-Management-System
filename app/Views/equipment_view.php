@@ -38,22 +38,24 @@
 
             <!-- Filters -->
             <div class="equipment-filters mb-3">
-                <select class="form-select equipment-input" id="filterCategory">
-                    <option value="">All Categories</option>
-                    <option value="Laptop">Laptop</option>
-                    <option value="Drawing Tablet">Drawing Tablet</option>
-                    <option value="Remote Control">Remote Control</option>
-                    <option value="Projector">Projector</option>
-                    <option value="Cable">Cable</option>
-                    <option value="Accessory">Accessory</option>
-                    <option value="Others">Others</option>
-                </select>
+                <form method="get" action="<?= base_url('equipment') ?>" id="filterForm">
+                    <select name="category" class="form-select equipment-input" id="filterCategory" onchange="this.form.submit()">
+                        <option value="">All Categories</option>
+                        <option value="Laptop" <?= (isset($filterCategory) && $filterCategory === 'Laptop') ? 'selected' : '' ?>>Laptop</option>
+                        <option value="Drawing Tablet" <?= (isset($filterCategory) && $filterCategory === 'Drawing Tablet') ? 'selected' : '' ?>>Drawing Tablet</option>
+                        <option value="Remote Control" <?= (isset($filterCategory) && $filterCategory === 'Remote Control') ? 'selected' : '' ?>>Remote Control</option>
+                        <option value="Projector" <?= (isset($filterCategory) && $filterCategory === 'Projector') ? 'selected' : '' ?>>Projector</option>
+                        <option value="Cable" <?= (isset($filterCategory) && $filterCategory === 'Cable') ? 'selected' : '' ?>>Cable</option>
+                        <option value="Accessory" <?= (isset($filterCategory) && $filterCategory === 'Accessory') ? 'selected' : '' ?>>Accessory</option>
+                        <option value="Others" <?= (isset($filterCategory) && $filterCategory === 'Others') ? 'selected' : '' ?>>Others</option>
+                    </select>
 
-                <select class="form-select equipment-input" id="filterStatus">
-                    <option value="">All Status</option>
-                    <option value="active">Active</option>
-                    <option value="inactive">Inactive</option>
-                </select>
+                    <select name="status" class="form-select equipment-input" id="filterStatus" onchange="this.form.submit()">
+                        <option value="">All Status</option>
+                        <option value="active" <?= (isset($filterStatus) && $filterStatus === 'active') ? 'selected' : '' ?>>Active</option>
+                        <option value="inactive" <?= (isset($filterStatus) && $filterStatus === 'inactive') ? 'selected' : '' ?>>Inactive</option>
+                    </select>
+                </form>
             </div>
 
             <!-- EQUIPMENT CARDS GRID -->
@@ -113,6 +115,52 @@
                 <?php else: ?>
                     <p>No equipment found.</p>
                 <?php endif; ?>
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="users-pagination-wrapper">
+                <div class="users-pagination">
+                    <nav aria-label="Equipment pagination">
+                        <ul class="pagination justify-content-center">
+                            <?php if (isset($pager) && $pager): ?>
+                                <?php
+                                // Get current page
+                                $currentPage = $pager->getCurrentPage();
+                                $totalPages = $pager->getPageCount();
+                                
+                                // Build query string to preserve filters
+                                $queries = [];
+                                if (!empty($filterCategory)) $queries['category'] = $filterCategory;
+                                if (!empty($filterStatus)) $queries['status'] = $filterStatus;
+                                $queryString = !empty($queries) ? '&' . http_build_query($queries) : '';
+                                ?>
+                                
+                                <!-- Previous Button -->
+                                <li class="page-item <?= $currentPage <= 1 ? 'disabled' : '' ?>">
+                                    <a class="page-link" href="<?= base_url('equipment?page=' . ($currentPage - 1) . $queryString) ?>" <?= $currentPage <= 1 ? 'tabindex="-1"' : '' ?>>
+                                        Previous
+                                    </a>
+                                </li>
+
+                                <!-- Page Numbers -->
+                                <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+                                    <li class="page-item <?= $currentPage === $i ? 'active' : '' ?>">
+                                        <a class="page-link" href="<?= base_url('equipment?page=' . $i . $queryString) ?>">
+                                            <?= $i ?>
+                                        </a>
+                                    </li>
+                                <?php endfor; ?>
+
+                                <!-- Next Button -->
+                                <li class="page-item <?= $currentPage >= $totalPages ? 'disabled' : '' ?>">
+                                    <a class="page-link" href="<?= base_url('equipment?page=' . ($currentPage + 1) . $queryString) ?>" <?= $currentPage >= $totalPages ? 'tabindex="-1"' : '' ?>>
+                                        Next
+                                    </a>
+                                </li>
+                            <?php endif; ?>
+                        </ul>
+                    </nav>
+                </div>
             </div>
 
 <!-- ============================= -->
