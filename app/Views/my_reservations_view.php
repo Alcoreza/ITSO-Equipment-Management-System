@@ -70,61 +70,6 @@
                                                 data-bs-target="#cancelModal<?= $res['id'] ?>">
                                             <i class="bi bi-x-circle"></i> Cancel
                                         </button>
-
-                                        <!-- Reschedule Modal -->
-                                        <div class="modal fade" id="rescheduleModal<?= $res['id'] ?>" tabindex="-1">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title">Reschedule Reservation</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                                    </div>
-                                                    <form method="post" action="<?= base_url('reservation/rescheduleReservation/' . $res['id']) ?>">
-                                                        <div class="modal-body">
-                                                            <p><strong>Equipment:</strong> <?= esc($res['equipment_name']) ?></p>
-                                                            <p><strong>Current Date:</strong> <?= date('F d, Y', strtotime($res['reserve_date'])) ?></p>
-                                                            <div class="form-group mt-3">
-                                                                <label for="new_date<?= $res['id'] ?>">Select New Date:</label>
-                                                                <input type="date" class="form-control" 
-                                                                       id="new_date<?= $res['id'] ?>" 
-                                                                       name="new_date" 
-                                                                       min="<?= date('Y-m-d', strtotime('+1 day')) ?>" 
-                                                                       required>
-                                                                <small class="text-muted">Must be at least one day in advance</small>
-                                                            </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                            <button type="submit" class="btn btn-warning">Reschedule</button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Cancel Modal -->
-                                        <div class="modal fade" id="cancelModal<?= $res['id'] ?>" tabindex="-1">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title">Cancel Reservation</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <p>Are you sure you want to cancel this reservation?</p>
-                                                        <p><strong>Equipment:</strong> <?= esc($res['equipment_name']) ?></p>
-                                                        <p><strong>Reserved Date:</strong> <?= date('F d, Y', strtotime($res['reserve_date'])) ?></p>
-                                                        <p class="text-danger"><small>This action cannot be undone.</small></p>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                        <form method="post" action="<?= base_url('reservation/cancelReservation/' . $res['id']) ?>" style="display:inline;">
-                                                            <button type="submit" class="btn btn-danger">Cancel Reservation</button>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
@@ -135,3 +80,65 @@
         </div>
     </main>
 </div>
+
+<!-- MODALS SECTION - Outside of table -->
+<?php if (!empty($reservations)): ?>
+    <?php foreach ($reservations as $res): ?>
+        
+        <!-- Reschedule Modal -->
+        <div class="modal fade" id="rescheduleModal<?= $res['id'] ?>" tabindex="-1" aria-labelledby="rescheduleModalLabel<?= $res['id'] ?>" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="rescheduleModalLabel<?= $res['id'] ?>">Reschedule Reservation</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form method="post" action="<?= base_url('reservation/rescheduleReservation/' . $res['id']) ?>">
+                        <div class="modal-body">
+                            <p><strong>Equipment:</strong> <?= esc($res['equipment_name']) ?></p>
+                            <p><strong>Current Date:</strong> <?= date('F d, Y', strtotime($res['reserve_date'])) ?></p>
+                            <div class="form-group mt-3">
+                                <label for="new_date<?= $res['id'] ?>">Select New Date:</label>
+                                <input type="date" class="form-control" 
+                                       id="new_date<?= $res['id'] ?>" 
+                                       name="new_date" 
+                                       min="<?= date('Y-m-d', strtotime('+1 day')) ?>" 
+                                       required>
+                                <small class="text-muted">Must be at least one day in advance</small>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-warning">Reschedule</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cancel Modal -->
+        <div class="modal fade" id="cancelModal<?= $res['id'] ?>" tabindex="-1" aria-labelledby="cancelModalLabel<?= $res['id'] ?>" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cancelModalLabel<?= $res['id'] ?>">Cancel Reservation</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to cancel this reservation?</p>
+                        <p><strong>Equipment:</strong> <?= esc($res['equipment_name']) ?></p>
+                        <p><strong>Reserved Date:</strong> <?= date('F d, Y', strtotime($res['reserve_date'])) ?></p>
+                        <p class="text-danger"><small>This action cannot be undone.</small></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <form method="post" action="<?= base_url('reservation/cancelReservation/' . $res['id']) ?>" style="display:inline;">
+                            <button type="submit" class="btn btn-danger">Cancel Reservation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <?php endforeach; ?>
+<?php endif; ?>

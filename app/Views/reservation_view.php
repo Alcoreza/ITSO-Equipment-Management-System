@@ -10,6 +10,9 @@
             <div class="mb-4 text-center">
                 <h1 class="reservation-title">Reserve Equipment</h1>
                 <p class="reservation-sub">Fill out the information below to reserve equipment.</p>
+                <div class="alert-modern alert-modern-info mt-3" style="color:#000;">
+                    <i class="bi bi-info-circle me-2"></i><strong>Note:</strong> Only Associates can make equipment reservations.
+                </div>
             </div>
 
 
@@ -46,9 +49,10 @@
                 <!-- Email -->
                 <div class="form-group mb-3">
                     <label class="reservation-label" for="email">
-                        <i class="bi bi-envelope-fill me-2"></i> Email
+                        <i class="bi bi-envelope-fill me-2"></i> Email (Associate Only)
                     </label>
                     <input type="email" class="reservation-input" id="email" name="email" placeholder="example@feutech.edu.ph" required>
+                    <small class="text-muted d-block mt-1">Must be registered as an Associate to make reservations</small>
                 </div>
 
                 <!-- Equipment Selection -->
@@ -93,9 +97,10 @@
 
             <div class="text-center">
                 <h5 class="mb-3">Manage Your Reservations</h5>
+                <p class="text-muted mb-3"><small>Associates only - Enter your email to view and manage reservations</small></p>
                 <form method="get" action="<?= base_url('reservation/myReservations') ?>" class="d-flex gap-2 justify-content-center">
                     <input type="email" name="email" class="reservation-input" style="max-width: 300px;" 
-                           placeholder="Enter your email" required>
+                           placeholder="Enter your Associate email" required>
                     <button type="submit" class="reservation-btn">View My Reservations</button>
                 </form>
             </div>

@@ -70,6 +70,12 @@ class ReservationController extends BaseController
             return redirect()->back()->withInput();
         }
 
+        // Check if user is an Associate
+        if (isset($user['role']) && $user['role'] !== 'Associate') {
+            session()->setFlashdata('error', 'Only Associates can make reservations. Your role: ' . ucfirst($user['role']));
+            return redirect()->back()->withInput();
+        }
+
         if (isset($user['status']) && $user['status'] != 1) {
             session()->setFlashdata('error', 'This account is inactive and cannot make reservations.');
             return redirect()->back()->withInput();
@@ -134,6 +140,20 @@ class ReservationController extends BaseController
             return redirect()->to('/reservation');
         }
 
+        // Verify the user exists and is an Associate
+        $usersModel = new Users_model();
+        $user = $usersModel->where('email', $email)->first();
+
+        if (!$user) {
+            session()->setFlashdata('error', 'User not found.');
+            return redirect()->to('/reservation');
+        }
+
+        if (isset($user['role']) && $user['role'] !== 'Associate') {
+            session()->setFlashdata('error', 'Only Associates can view reservations. Your role: ' . ucfirst($user['role']));
+            return redirect()->to('/reservation');
+        }
+
         $reservationModel = new Reservations_model();
         $equipmentModel = new Equipment_model();
         
@@ -179,6 +199,15 @@ class ReservationController extends BaseController
             return redirect()->back();
         }
 
+        // Verify user is an Associate
+        $usersModel = new Users_model();
+        $user = $usersModel->where('email', $reservation['email'])->first();
+        
+        if (!$user || $user['role'] !== 'Associate') {
+            session()->setFlashdata('error', 'Unauthorized action.');
+            return redirect()->back();
+        }
+
         // Update reservation status to cancelled
         $reservationModel->update($id, ['status' => 'cancelled']);
 
@@ -206,6 +235,15 @@ class ReservationController extends BaseController
 
         if ($reservation['status'] != 'reserved') {
             session()->setFlashdata('error', 'This reservation cannot be rescheduled.');
+            return redirect()->back();
+        }
+
+        // Verify user is an Associate
+        $usersModel = new Users_model();
+        $user = $usersModel->where('email', $reservation['email'])->first();
+        
+        if (!$user || $user['role'] !== 'Associate') {
+            session()->setFlashdata('error', 'Unauthorized action.');
             return redirect()->back();
         }
 

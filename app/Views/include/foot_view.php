@@ -4,11 +4,7 @@
         <div class="row align-items-center gy-3">
 
             <div class="col-md-4 text-center text-md-start">
-                <a href="<?= site_url('/') ?>" class="d-inline-flex align-items-center text-decoration-none">
-                    <img src="<?= base_url('../../public/img/indextech.avif') ?>" alt="ITSO logo"
-                        style="height:40px; margin-right:10px;">
-                    <span class="text-primary-strong">ITSO EMS</span>
-                </a>
+                <div class="h5 mb-0">FEU ITSO</div>
                 <div class="text-muted small mt-2">
                     Information Technology Services Office — FEU
                 </div>
