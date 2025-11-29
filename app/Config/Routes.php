@@ -68,9 +68,12 @@ $routes->post('/return/submit', 'ReturnController::submit');
 // ============================================
 // RESERVATION
 // ============================================
-$routes->get('/reservation', 'ReservationController::index');
-$routes->post('/reservation/submit', 'ReservationController::submitReservation');
+$routes->get('reservation', 'ReservationController::index');
+$routes->post('reservation/submit', 'ReservationController::submitReservation');
 $routes->post('reservation/submitReservation', 'ReservationController::submitReservation');
+$routes->get('reservation/myReservations', 'ReservationController::myReservations');
+$routes->post('reservation/cancelReservation/(:num)', 'ReservationController::cancelReservation/$1');
+$routes->post('reservation/rescheduleReservation/(:num)', 'ReservationController::rescheduleReservation/$1');
 
 // ============================================
 // REPORTS

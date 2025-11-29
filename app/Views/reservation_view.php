@@ -73,7 +73,9 @@
                     <label class="reservation-label" for="reserve_date">
                         <i class="bi bi-calendar-fill me-2"></i> Reservation Date
                     </label>
-                    <input type="date" class="reservation-input" id="reserve_date" name="reserve_date" required>
+                    <input type="date" class="reservation-input" id="reserve_date" name="reserve_date" 
+                           min="<?= date('Y-m-d', strtotime('+1 day')) ?>" required>
+                    <small class="text-muted d-block mt-1">Reservations must be made at least one day in advance</small>
                 </div>
 
                 <!-- Optional Notes -->
@@ -86,6 +88,17 @@
 
                 <button type="submit" class="reservation-btn mt-3">Reserve Equipment</button>
             </form>
+
+            <hr class="my-4">
+
+            <div class="text-center">
+                <h5 class="mb-3">Manage Your Reservations</h5>
+                <form method="get" action="<?= base_url('reservation/myReservations') ?>" class="d-flex gap-2 justify-content-center">
+                    <input type="email" name="email" class="reservation-input" style="max-width: 300px;" 
+                           placeholder="Enter your email" required>
+                    <button type="submit" class="reservation-btn">View My Reservations</button>
+                </form>
+            </div>
         </div>
     </main>
 </div>
