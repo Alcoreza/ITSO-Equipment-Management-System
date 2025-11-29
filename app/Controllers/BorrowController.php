@@ -83,7 +83,7 @@ class BorrowController extends BaseController
 
         // Insert borrow record
         $borrowModel = new Borrowed_model();
-        $borrowModel->insert([
+        $borrowId = $borrowModel->insert([
             'borrower_name'   => $borrowerName,
             'borrower_id'     => $borrower_id,
             'email'           => $email,
@@ -95,7 +95,56 @@ class BorrowController extends BaseController
         // Mark equipment as unavailable
         $equipmentModel->update($equipment_id, ['available' => 0]);
 
-        session()->setFlashdata('success', 'Equipment borrow recorded successfully!');
+        // Send confirmation email
+        $this->sendBorrowEmail($borrowerName, $email, $equipment_name, $return_date, $equipment_id);
+
+        session()->setFlashdata('success', 'Equipment borrow recorded successfully! Confirmation email has been sent.');
         return redirect()->to('/borrow');
+    }
+
+    private function sendBorrowEmail($borrowerName, $email, $equipment_name, $return_date, $equipment_id)
+    {
+        // Format the return date
+        $formattedReturnDate = !empty($return_date) ? date('F d, Y', strtotime($return_date)) : 'Not specified';
+        $borrowDate = date('F d, Y');
+
+        // Prepare email message
+        $message = "<h2>Hello, " . esc($borrowerName) . "!</h2><br>"
+            . "<p>This email confirms that you have borrowed equipment from ITSO EMS.</p>"
+            . "<div style='background-color:#f8f9fa;padding:20px;border-radius:8px;margin:20px 0;'>"
+            . "<h3 style='margin-top:0;color:#007bff;'>Borrow Details</h3>"
+            . "<p><strong>Equipment:</strong> " . esc($equipment_name) . "</p>"
+            . "<p><strong>Equipment ID:</strong> #" . esc($equipment_id) . "</p>"
+            . "<p><strong>Borrowed By:</strong> " . esc($borrowerName) . "</p>"
+            . "<p><strong>Email:</strong> " . esc($email) . "</p>"
+            . "<p><strong>Borrow Date:</strong> " . $borrowDate . "</p>"
+            . "<p><strong>Expected Return Date:</strong> " . $formattedReturnDate . "</p>"
+            . "</div>"
+            . "<div style='background-color:#fff3cd;padding:15px;border-left:4px solid #ffc107;margin:20px 0;'>"
+            . "<p style='margin:0;'><strong>⚠️ Important Reminders:</strong></p>"
+            . "<ul style='margin-top:10px;'>"
+            . "<li>Please take good care of the equipment</li>"
+            . "<li>Return the equipment on or before the expected return date</li>"
+            . "<li>Report any damage or issues immediately to the ITSO office</li>"
+            . "<li>Late returns may affect future borrowing privileges</li>"
+            . "</ul>"
+            . "</div>"
+            . "<p>If you have any questions or concerns, please contact the ITSO office.</p>"
+            . "<br><p>Best regards,<br>ITSO EMS Team</p>";
+
+        // Send email
+        $emailService = service('email');
+        $fromEmail = env('SITE_EMAIL', 'noreply@itsoems.com');
+        $fromName = env('SITE_NAME', 'ITSO EMS');
+        $emailService->setFrom($fromEmail, $fromName);
+        $emailService->setTo($email);
+        $emailService->setSubject('ITSO EMS - Equipment Borrow Confirmation');
+        $emailService->setMessage($message);
+
+        if (!$emailService->send()) {
+            log_message('error', 'Borrow confirmation email failed to send to ' . $email);
+        } else {
+            log_message('info', 'Borrow confirmation email sent to ' . $email . ' for equipment: ' . $equipment_name);
+        }
     }
 }

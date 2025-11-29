@@ -97,7 +97,7 @@ class ReservationController extends BaseController
         }
 
         // Insert reservation
-        $reservationModel->insert([
+        $reservationId = $reservationModel->insert([
             'user_id' => $user_id,
             'email' => $email,
             'equipment_id' => $equipment_id,
@@ -109,7 +109,51 @@ class ReservationController extends BaseController
         // Mark equipment as unavailable
         $equipmentModel->update($equipment_id, ['available' => 0]);
 
-        session()->setFlashdata('success', 'Equipment reserved successfully!');
+        // Send confirmation email
+        $this->sendReservationEmail($associateName, $email, $equipment_name, $reserve_date, $notes, $equipment_id);
+
+        session()->setFlashdata('success', 'Equipment reserved successfully! Confirmation email has been sent.');
         return redirect()->to('/reservation');
+    }
+
+    private function sendReservationEmail($associateName, $email, $equipment_name, $reserve_date, $notes, $equipment_id)
+    {
+        // Format the reservation date
+        $formattedDate = date('F d, Y', strtotime($reserve_date));
+
+        // Prepare email message
+        $message = "<h2>Hello, " . esc($associateName) . "!</h2><br>"
+            . "<p>Your equipment reservation has been confirmed.</p>"
+            . "<div style='background-color:#f8f9fa;padding:20px;border-radius:8px;margin:20px 0;'>"
+            . "<h3 style='margin-top:0;color:#007bff;'>Reservation Details</h3>"
+            . "<p><strong>Equipment:</strong> " . esc($equipment_name) . "</p>"
+            . "<p><strong>Equipment ID:</strong> #" . esc($equipment_id) . "</p>"
+            . "<p><strong>Reserved Date:</strong> " . $formattedDate . "</p>"
+            . "<p><strong>Reserved By:</strong> " . esc($associateName) . "</p>"
+            . "<p><strong>Email:</strong> " . esc($email) . "</p>";
+        
+        if (!empty($notes)) {
+            $message .= "<p><strong>Notes:</strong> " . esc($notes) . "</p>";
+        }
+        
+        $message .= "</div>"
+            . "<p>Please make sure to pick up the equipment on the reserved date.</p>"
+            . "<p>If you need to cancel or modify your reservation, please contact the ITSO office immediately.</p>"
+            . "<br><p>Best regards,<br>ITSO EMS Team</p>";
+
+        // Send email
+        $emailService = service('email');
+        $fromEmail = env('SITE_EMAIL', 'noreply@itsoems.com');
+        $fromName = env('SITE_NAME', 'ITSO EMS');
+        $emailService->setFrom($fromEmail, $fromName);
+        $emailService->setTo($email);
+        $emailService->setSubject('ITSO EMS - Equipment Reservation Confirmation');
+        $emailService->setMessage($message);
+
+        if (!$emailService->send()) {
+            log_message('error', 'Reservation confirmation email failed to send to ' . $email);
+        } else {
+            log_message('info', 'Reservation confirmation email sent to ' . $email . ' for equipment: ' . $equipment_name);
+        }
     }
 }
