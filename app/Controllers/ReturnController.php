@@ -105,9 +105,12 @@ class ReturnController extends BaseController
         $borrow_id    = $borrow['id'];
         $equipment_id = $borrow['equipment_id'];
         
-        // Get the original borrow date if available
-        $borrow_date = isset($borrow['created_at']) ? $borrow['created_at'] : null;
+        // Get the expected return date from borrowed_items
         $expected_return_date = isset($borrow['return_date']) ? $borrow['return_date'] : null;
+        
+        // Try to get actual borrow date from database if created_at exists
+        // Since borrowed_items doesn't have created_at, we'll use NULL
+        $borrow_date = null;
 
         // Insert return record
         $returnedModel = new Returned_model();
@@ -141,7 +144,6 @@ class ReturnController extends BaseController
     {
         // Format dates
         $formattedReturnDate = date('F d, Y', strtotime($return_date));
-        $formattedBorrowDate = $borrow_date ? date('F d, Y', strtotime($borrow_date)) : 'N/A';
         $formattedExpectedReturnDate = $expected_return_date ? date('F d, Y', strtotime($expected_return_date)) : 'Not specified';
 
         // Calculate if return is late
@@ -161,7 +163,6 @@ class ReturnController extends BaseController
             . "<p><strong>Equipment ID:</strong> #" . esc($equipment_id) . "</p>"
             . "<p><strong>Returned By:</strong> " . esc($borrowerName) . "</p>"
             . "<p><strong>Email:</strong> " . esc($email) . "</p>"
-            . "<p><strong>Borrow Date:</strong> " . $formattedBorrowDate . "</p>"
             . "<p><strong>Expected Return Date:</strong> " . $formattedExpectedReturnDate . "</p>"
             . "<p><strong>Actual Return Date:</strong> " . $formattedReturnDate . "</p>";
 
